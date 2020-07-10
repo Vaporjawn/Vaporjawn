@@ -1,4 +1,4 @@
-<p>
+<p align="center">
 <img src="https://greekmeleehell.files.wordpress.com/2017/11/gif-4.gif">
  </p>
 <!--
