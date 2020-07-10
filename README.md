@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://greekmeleehell.files.wordpress.com/2017/11/gif-4.gif">
+<img src="https://greekmeleehell.files.wordpress.com/2017/11/gif-4.gif" width=300px>
  </p>
 <!--
 **vaporjawn/vaporjawn** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
