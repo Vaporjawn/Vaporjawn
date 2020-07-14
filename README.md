@@ -18,8 +18,8 @@
 <a href="https://leetcode.com/vaporjawn/">
   <img align="left" alt="Vcitor's Leetcode" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/leetcode.svg" />
 </a>
-<a href="https://www.codechef.com/users/abhisheknaidu">
-  <img align="left" alt="Victor's Codechef" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/codechef.svg" />
+<a href="https://www.instagram.com/vaporjawn">
+  <img align="left" alt="Victor's instagram" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg" />
 </a>
 
 <br />
