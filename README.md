@@ -55,7 +55,7 @@ Hi, I'm Victor Williams, a Full Stack Developer 🚀 from Philadelphia, currentl
 
 
 
-![Victor's github stats](https://github-readme-stats.vercel.app/api?username=vaporjawn&show_icons=true&hide_border=true)
+![Victor's github stats](https://github-readme-stats.vercel.app/api?username=vaporjawn)
 
 ⭐️ From [Vaporjawn](https://github.com/vaporjawn)
 
