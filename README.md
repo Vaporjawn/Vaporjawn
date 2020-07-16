@@ -34,7 +34,7 @@ Hi, I'm Victor Williams, a Full Stack Developer 🚀 from Philadelphia, currentl
 - 💬 Ask me about anything, I am happy to help;
 - ⚡️ Fun-Fact: Anything is possible;
 - 📫 How to reach me: vrwilliams719@gmail.com;
-- 📝[Resume](https://vaporjawn.github.io/Resume.html)
+- 📝[Resume](https://vaporjawn.github.io/Resume.html)<--------------
 
 **Languages and Tools:**  
 
