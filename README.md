@@ -1,4 +1,3 @@
-<body style="border-style: dashed;">
 ### Hey 👋🏽, I'm [Victor!](https://vaporjawn.github.io) 
 
 <a href="https://twitter.com/vaporjawn" target="_blank">
