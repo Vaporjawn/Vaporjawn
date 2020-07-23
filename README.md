@@ -1,22 +1,22 @@
 <body style="border-style: dashed;">
 ### Hey 👋🏽, I'm [Victor!](https://vaporjawn.github.io) 
 
-<a href="https://twitter.com/vaporjawn">
+<a href="https://twitter.com/vaporjawn" target="_blank">
   <img align="left" alt="Victor Williams | Twitter" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg" />
 </a>
-<a href="https://www.linkedin.com/in/victorwilliams719/">
+<a href="https://www.linkedin.com/in/victorwilliams719/" target="_blank">
   <img align="left" alt="Victor's LinkdeIN" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />
 </a>
-<a href="https://t.me/todoslosdias">
+<a href="https://t.me/todoslosdias" target="_blank">
   <img align="left" alt="Victor's Telegram" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/telegram.svg" />
 </a>
-<a href="https://www.reddit.com/user/todoslosdays/">
+<a href="https://www.reddit.com/user/todoslosdays/" target="_blank">
   <img align="left" alt="Victor's Reddit" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/reddit.svg" />
 </a>
-<a href="https://leetcode.com/vaporjawn/">
+<a href="https://leetcode.com/vaporjawn/" target="_blank">
   <img align="left" alt="Vcitor's Leetcode" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/leetcode.svg" />
 </a>
-<a href="https://www.instagram.com/vaporjawn">
+<a href="https://www.instagram.com/vaporjawn" target="_blank">
   <img align="left" alt="Victor's instagram" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg" />
 </a>
 
