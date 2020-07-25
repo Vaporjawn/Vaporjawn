@@ -1,4 +1,4 @@
-### Hey 👋🏽, I'm [Victor!](https://vaporjawn.github.io) 
+### Hey 👋🏽, I'm [Victor!](https://vaporjawn.github.io)<img src="https://media.giphy.com/media/mGcNjsfWAjY5AEZNw6/giphy.gif" width="50">
 
 <a href="https://twitter.com/vaporjawn" target="_blank">
   <img align="left" alt="Victor Williams | Twitter" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg" />
@@ -22,7 +22,7 @@
 <br />
 <br />
 
-Hi, I'm Victor Williams, a Full Stack Developer 🚀 from Philadelphia, currently, I'm a Software Engineer at 🙍🏽‍♂️ [@BankMobile](https://bankmobile.com). I'm a creative problem solving enthusiast, with a constantly growing love for languages. Beside's programming, I enjoy Super Smash Bros Melee for the Nintendo GameCube.
+Hi, I'm Victor Williams, a Full Stack Developer 🚀 from Philadelphia, currently, I'm a Software Engineer at 🙍🏽‍♂️ [@BankMobile](https://bankmobile.com). I'm a creative problem solving enthusiast, with a constantly growing love for languages. Beside's programming, I enjoy Super Smash Bros Melee for the Nintendo GameCube. <img src="https://media.giphy.com/media/VgCDAzcKvsR6OM0uWg/giphy.gif" width="50">
 
   <img align="right" alt="GIF" src="https://greekmeleehell.files.wordpress.com/2017/11/gif-4.gif" />
   
