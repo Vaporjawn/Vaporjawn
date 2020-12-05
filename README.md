@@ -58,4 +58,4 @@
 
 ⭐️ From [Vaporjawn](https://github.com/vaporjawn)
 ### [What is 20XX?](https://gist.github.com/Vaporjawn/b5b21498b3c73b371ec13d673fb53497#file-20xx)
-### [What is Vaporjawn](https://vaporjawn.github.io/Vaporjawn/)
+### [What is Vaporjawn](https://vaporjawn.dev/Vaporjawn.html)
