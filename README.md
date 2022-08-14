@@ -7,7 +7,11 @@
 
 [![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-0e76a8?style=flat-square&logo=Linkedin)](https://linkedin.com/in/victorwilliams719) [![Instagram Badge](https://img.shields.io/badge/-Instagram-pink?style=flat-square&logo=Instagram)](https://instagram.com/Vaporjawn) [![Twitter Badge](https://img.shields.io/badge/-Twitter-00c7ff?style=flat-square&logo=Twitter&logoColor=white)](https://twitter.com/Vaporjawn) [![Twitch Badge](https://img.shields.io/badge/-Twitch-6441a5?style=flat-square&logo=Twitch&logoColor=white)](https://twitch.tv/Vaporjawn) [![YouTube Badge](https://img.shields.io/badge/-YouTube-e00000?style=flat-square&logo=YouTube&logoColor=white)](https://www.youtube.com/channel/UCK6-NQMyD3TREhUFU5Ithlg) [![Steam Badge](https://img.shields.io/badge/-Steam-black?style=flat-square&logo=Steam&logoColor=white)](https://steamcommunity.com/id/vaporjawn)
 
+<div align="Center">
+
 ### Hey 👋🏽, I'm [Victor!](https://vaporjawn.github.io)<img src="https://media.giphy.com/media/mGcNjsfWAjY5AEZNw6/giphy.gif" width="50">
+
+</div>
 
 ![](https://komarev.com/ghpvc/?username=Vaporjawn&color=blueviolet&label=People+Who+Aren't+Minding+Their+Business&style=plastic)
 
@@ -31,7 +35,7 @@
 ![Contributions](https://github-readme-streak-stats.herokuapp.com/?user=Vaporjawn&theme=radical)
 
 **Languages and Tools:**  
-
+<div align="Center">
 <code><img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/typescript/typescript.png"></code>
 <code><img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png"></code>
 <code><img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/nodejs/nodejs.png"></code>
@@ -55,4 +59,5 @@
 
 ⭐️ [Vaporjawn](https://github.com/vaporjawn) ⭐️
 
+</div>
 </div>
