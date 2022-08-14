@@ -1,4 +1,4 @@
-<div style="text-align: center;">
+<div align="Center">
 
 <img src="./.vscode/1.png" align="center" style="align: center; width: 60%">
 </img>
