@@ -1,3 +1,5 @@
+<div style="text-align: center;">
+
 [![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-0e76a8?style=flat-square&logo=Linkedin)](https://linkedin.com/in/victorwilliams719) [![Instagram Badge](https://img.shields.io/badge/-Instagram-pink?style=flat-square&logo=Instagram)](https://instagram.com/Vaporjawn) [![Twitter Badge](https://img.shields.io/badge/-Twitter-00c7ff?style=flat-square&logo=Twitter&logoColor=white)](https://twitter.com/Vaporjawn) [![Twitch Badge](https://img.shields.io/badge/-Twitch-6441a5?style=flat-square&logo=Twitch&logoColor=white)](https://twitch.tv/Vaporjawn) [![YouTube Badge](https://img.shields.io/badge/-YouTube-e00000?style=flat-square&logo=YouTube&logoColor=white)](https://www.youtube.com/channel/UCK6-NQMyD3TREhUFU5Ithlg) [![Steam Badge](https://img.shields.io/badge/-Steam-black?style=flat-square&logo=Steam&logoColor=white)](https://steamcommunity.com/id/vaporjawn)
 
 ### Hey 👋🏽, I'm [Victor!](https://vaporjawn.github.io)<img src="https://media.giphy.com/media/mGcNjsfWAjY5AEZNw6/giphy.gif" width="50">
@@ -11,8 +13,6 @@
 <img src="https://media.giphy.com/media/VgCDAzcKvsR6OM0uWg/giphy.gif" width="50">
 
   <img align="right" alt="GIF" src="https://greekmeleehell.files.wordpress.com/2017/11/gif-4.gif" />
-
-  
 
 **Talking about Personal Stuffs:**
 
@@ -45,6 +45,8 @@
 
 ![Favorite Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=vaporjawn&langs_count=10&hide_border=true&layout=compact&theme=radical)
 
-![test](https://github-profile-trophy.vercel.app/?username=thewoodenman&theme=radical)
+![Trophies](https://github-profile-trophy.vercel.app/?username=thewoodenman&theme=radical)
 
 ⭐️ [Vaporjawn](https://github.com/vaporjawn) ⭐️
+
+</div>
