@@ -2,6 +2,8 @@
 
 <img src="./.vscode/1.png" align="center" style="align: center; width: 60%">
 </img>
+<br/>
+<br/>
 
 [![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-0e76a8?style=flat-square&logo=Linkedin)](https://linkedin.com/in/victorwilliams719) [![Instagram Badge](https://img.shields.io/badge/-Instagram-pink?style=flat-square&logo=Instagram)](https://instagram.com/Vaporjawn) [![Twitter Badge](https://img.shields.io/badge/-Twitter-00c7ff?style=flat-square&logo=Twitter&logoColor=white)](https://twitter.com/Vaporjawn) [![Twitch Badge](https://img.shields.io/badge/-Twitch-6441a5?style=flat-square&logo=Twitch&logoColor=white)](https://twitch.tv/Vaporjawn) [![YouTube Badge](https://img.shields.io/badge/-YouTube-e00000?style=flat-square&logo=YouTube&logoColor=white)](https://www.youtube.com/channel/UCK6-NQMyD3TREhUFU5Ithlg) [![Steam Badge](https://img.shields.io/badge/-Steam-black?style=flat-square&logo=Steam&logoColor=white)](https://steamcommunity.com/id/vaporjawn)
 
@@ -44,6 +46,8 @@
 <code><img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/mysql/mysql.png"></code>
 <code><img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png"></code>
 <code><img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/terminal/terminal.png"></code>
+
+<br/>
 
 ![Favorite Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=vaporjawn&langs_count=10&hide_border=true&layout=compact&theme=radical)
 
