@@ -1,6 +1,6 @@
 <div align="Center">
 
-<img src="./.vscode/1.png" align="center" style="align: center; width: 60%">
+<img src="./.vscode/1.png" style="width: 60%">
 </img>
 <br/>
 <br/>
@@ -31,8 +31,6 @@
 - 💬 𝙰𝚜𝚔 𝚖𝚎 𝚊𝚋𝚘𝚞𝚝 𝚊𝚗𝚢𝚝𝚑𝚒𝚗𝚐, 𝙸 𝚊𝚖 𝚑𝚊𝚙𝚙𝚢 𝚝𝚘 𝚑𝚎𝚕𝚙;
 - ⚡️ 𝙵𝚞𝚗-𝙵𝚊𝚌𝚝: 𝙰𝚗𝚢𝚝𝚑𝚒𝚗𝚐 𝚒𝚜 𝚙𝚘𝚜𝚜𝚒𝚋𝚕𝚎;
 - 📫 𝙷𝚘𝚠 𝚝𝚘 𝚛𝚎𝚊𝚌𝚑 𝚖𝚎: [𝚟𝚒𝚌𝚝𝚘𝚛.𝚠𝚒𝚕𝚕𝚒𝚊𝚖𝚜.𝚍𝚎𝚟@𝚐𝚖𝚊𝚒𝚕.𝚌𝚘𝚖;](mailto:victor.williams.dev@gmail.com)
-- 
-<div align="Center">
 
 ![Contributions](https://github-readme-streak-stats.herokuapp.com/?user=Vaporjawn&theme=radical)
 
@@ -52,7 +50,6 @@
 <code><img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png"></code>
 <code><img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/terminal/terminal.png"></code>
 
-<br/>
 
 ![Favorite Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=vaporjawn&langs_count=10&hide_border=true&layout=compact&theme=radical)
 
@@ -60,5 +57,4 @@
 
 ⭐️ [Vaporjawn](https://github.com/vaporjawn) ⭐️
 
-</div>
 </div>
