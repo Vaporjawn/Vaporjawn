@@ -17,13 +17,13 @@
 
 𝑯𝒊, 𝑰'𝒎 𝑽𝒊𝒄𝒕𝒐𝒓 𝑾𝒊𝒍𝒍𝒊𝒂𝒎𝒔, 𝒂 𝑭𝒖𝒍𝒍 𝑺𝒕𝒂𝒄𝒌 𝑺𝒐𝒇𝒕𝒘𝒂𝒓𝒆 𝑬𝒏𝒈𝒊𝒏𝒆𝒆𝒓 🚀 𝒇𝒓𝒐𝒎 𝑷𝒉𝒊𝒍𝒂𝒅𝒆𝒍𝒑𝒉𝒊𝒂. 𝑰'𝒎 𝒂 𝒄𝒓𝒆𝒂𝒕𝒊𝒗𝒆 𝒑𝒓𝒐𝒃𝒍𝒆𝒎 𝒔𝒐𝒍𝒗𝒊𝒏𝒈 𝒆𝒏𝒕𝒉𝒖𝒔𝒊𝒂𝒔𝒕, 𝒘𝒊𝒕𝒉 𝒂 𝒄𝒐𝒏𝒔𝒕𝒂𝒏𝒕𝒍𝒚 𝒈𝒓𝒐𝒘𝒊𝒏𝒈 𝒍𝒐𝒗𝒆 𝒇𝒐𝒓 𝒍𝒂𝒏𝒈𝒖𝒂𝒈𝒆𝒔. 𝑩𝒆𝒔𝒊𝒅𝒆'𝒔 𝒑𝒓𝒐𝒈𝒓𝒂𝒎𝒎𝒊𝒏𝒈, 𝑰 𝒆𝒏𝒋𝒐𝒚 𝑺𝒖𝒑𝒆𝒓 𝑺𝒎𝒂𝒔𝒉 𝑩𝒓𝒐𝒔 𝑴𝒆𝒍𝒆𝒆 𝒇𝒐𝒓 𝒕𝒉𝒆 𝑵𝒊𝒏𝒕𝒆𝒏𝒅𝒐 𝑮𝒂𝒎𝒆𝑪𝒖𝒃𝒆.
 
-![Victor's github stats](https://github-readme-stats.vercel.app/api?username=vaporjawn&show_icons=true&hide_border=true&theme=radical)
+![Victor's GitHub stats](https://github-readme-stats.vercel.app/api?username=vaporjawn&show_icons=true&hide_border=true&theme=radical)
 
 <img src="https://media.giphy.com/media/VgCDAzcKvsR6OM0uWg/giphy.gif" width="50">
 
   <img align="right" alt="GIF" src="https://greekmeleehell.files.wordpress.com/2017/11/gif-4.gif" />
 
-**Talking about Personal Stuffs:**
+**𝕋𝕒𝕝𝕜𝕚𝕟𝕘 𝕒𝕓𝕠𝕦𝕥 ℙ𝕖𝕣𝕤𝕠𝕟𝕒𝕝 𝕊𝕥𝕦𝕗𝕗𝕤:**
 
 - 👨🏽‍💻 𝙸’𝚖 𝚌𝚞𝚛𝚛𝚎𝚗𝚝𝚕𝚢 𝚠𝚘𝚛𝚔𝚒𝚗𝚐 𝚘𝚗 𝚒𝚖𝚙𝚛𝚘𝚟𝚒𝚗𝚐 𝚖𝚢 𝚝𝚎𝚌𝚑𝚜𝚔𝚒𝚕𝚕;
 - 🌱 𝙸’𝚖 𝚌𝚞𝚛𝚛𝚎𝚗𝚝𝚕𝚢 𝚕𝚎𝚊𝚛𝚗𝚒𝚗𝚐 𝙼𝚊𝚌𝚑𝚒𝚗𝚎 𝙻𝚎𝚊𝚛𝚗𝚒𝚗𝚐;
@@ -33,6 +33,8 @@
 - 📫 𝙷𝚘𝚠 𝚝𝚘 𝚛𝚎𝚊𝚌𝚑 𝚖𝚎: [𝚟𝚒𝚌𝚝𝚘𝚛.𝚠𝚒𝚕𝚕𝚒𝚊𝚖𝚜.𝚍𝚎𝚟@𝚐𝚖𝚊𝚒𝚕.𝚌𝚘𝚖;](mailto:victor.williams.dev@gmail.com)
 
 ![Contributions](https://github-readme-streak-stats.herokuapp.com/?user=Vaporjawn&theme=radical)
+![GitHub Activity Graph](https://activity-graph.herokuapp.com/graph?username=Vaporjawn&bg_color=240a36&color=f04005&line=f04005&point=ffffff&area=true&hide_border=true)  </p>
+
 
 **Languages and Tools:**  
 <code><img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/typescript/typescript.png"></code>
