@@ -50,7 +50,6 @@
 <code><img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png"></code>
 <code><img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/terminal/terminal.png"></code>
 
-
 ![Favorite Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=vaporjawn&langs_count=10&hide_border=true&layout=compact&theme=radical)
 
 ![Trophies](https://github-profile-trophy.vercel.app/?username=thewoodenman&theme=radical)
@@ -58,3 +57,8 @@
 ⭐️ [Vaporjawn](https://github.com/vaporjawn) ⭐️
 
 </div>
+
+<!-- [![Discord](https://img.shields.io/discord/853396660331085824.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/xHdCpcPHRE)
+<a href="https://www.youtube.com/c/theobrowne1017"><img src="https://img.shields.io/youtube/channel/subscribers/UCbRP3c757lWg9M-U7TyEkXA?style=social" alt="Youtube" /></a>
+<a href="https://twitter.com/t3dotgg"><img src="https://img.shields.io/twitter/follow/t3dotgg?label=Twitter&style=social" alt="Twitter"></a>
+ <a href="https://twitch.tv/Vaporjawn"><img src="https://img.shields.io/twitch/status/Vaporjawn?label=Twitch" alt="Twitch"> -->
