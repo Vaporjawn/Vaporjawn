@@ -58,6 +58,8 @@
 
 ⭐️ [Vaporjawn](https://github.com/vaporjawn) ⭐️
 
+[![wakatime](https://wakatime.com/badge/user/a582e39e-ff7e-4474-95bf-f5e003eb3d40.svg)](https://wakatime.com/@a582e39e-ff7e-4474-95bf-f5e003eb3d40)
+
 </div>
 
 <!-- [![Discord](https://img.shields.io/discord/853396660331085824.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/xHdCpcPHRE)
