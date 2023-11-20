@@ -58,7 +58,7 @@
 
 ⭐️ [Vaporjawn](https://github.com/vaporjawn) ⭐️
 
-[![wakatime](https://wakatime.com/badge/user/a582e39e-ff7e-4474-95bf-f5e003eb3d40.svg)](https://wakatime.com/@a582e39e-ff7e-4474-95bf-f5e003eb3d40)
+[![Coding Hours:](https://wakatime.com/badge/user/a582e39e-ff7e-4474-95bf-f5e003eb3d40.svg)](https://wakatime.com/@a582e39e-ff7e-4474-95bf-f5e003eb3d40)
 
 </div>
 
