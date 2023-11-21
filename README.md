@@ -15,6 +15,7 @@
 
 <div align="Center">
 
+<!-- https://shields.io/badges -->
 ![status](https://img.shields.io/badge/Status-Coding-c70000)
 
 ### Hey 👋🏽, I'm [Victor!](https://vaporjawn.github.io)<img src="https://media.giphy.com/media/mGcNjsfWAjY5AEZNw6/giphy.gif" width="50">
@@ -22,8 +23,6 @@
 </div>
 
 ![](https://komarev.com/ghpvc/?username=Vaporjawn&color=blueviolet&label=Visitors&style=plastic)
-
-
 
 </div>
 
