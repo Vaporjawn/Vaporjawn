@@ -19,21 +19,16 @@
 
 </div>
 
-<div align="Center" style="display: flex, flex-direction: row">
-
-<div style="margin: 5px">
+<div style="display: flex; justify-content: space-between; align-items: center;">
 
 ![status](https://img.shields.io/badge/Status-Coding-c70000)
 
-![](https://komarev.com/ghpvc/?username=Vaporjawn&color=blueviolet&label=People+Who+Aren't+Minding+Their+Business&style=plastic)
+![](https://komarev.com/ghpvc/?username=Vaporjawn&color=blueviolet&label=Visitors&style=plastic)
 
 ![](https://img.shields.io/badge/dynamic/json?&label=Stars%20Received&color=black&style=plastic&style=for-the-badge&query=%24.stars&url=https://api.github-star-counter.workers.dev/user/Vaporjawn)
 
 [![Coding Hours:](https://wakatime.com/badge/user/a582e39e-ff7e-4474-95bf-f5e003eb3d40.svg)](https://wakatime.com/@a582e39e-ff7e-4474-95bf-f5e003eb3d40)
 
-![Operating Systems](https://img.shields.io/badge/OS-macOS_Windows_Linux-253469)
-
-</div>
 
 </div>
 
@@ -77,6 +72,9 @@
 ![Favorite Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=vaporjawn&langs_count=10&hide_border=true&layout=compact&theme=radical)
 
 ![Trophies](https://github-profile-trophy.vercel.app/?username=thewoodenman&theme=radical)
+
+
+![Operating Systems](https://img.shields.io/badge/Operating_Systems:-macOS,_Windows,_Linux-253469)
 
 ⭐️ [Vaporjawn](https://github.com/vaporjawn) ⭐️
 
