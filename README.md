@@ -1,3 +1,9 @@
+<!-- ____   ____                            __
+\   \ /   /____  ______   ___________ |__|____ __  _  ______
+ \   Y   /\__  \ \____ \ /  _ \_  __ \|  \__  \\ \/ \/ /    \
+  \     /  / __ \|  |_> >  <_> )  | \/|  |/ __ \\     /   |  \
+   \___/  (____  /   __/ \____/|__/\__|  (____  /\/\_/|___|  /
+               \/|__|             \______|    \/           \/  -->
 <div align="Center">
 
 <img src="./.vscode/1.png" style="width: 60%">
@@ -13,7 +19,23 @@
 
 </div>
 
+<div align="Center" style="display: flex, flex-direction: row">
+
+<div style="margin: 5px">
+
+![status](https://img.shields.io/badge/Status-Coding-c70000)
+
 ![](https://komarev.com/ghpvc/?username=Vaporjawn&color=blueviolet&label=People+Who+Aren't+Minding+Their+Business&style=plastic)
+
+![](https://img.shields.io/badge/dynamic/json?&label=Stars%20Received&color=black&style=plastic&style=for-the-badge&query=%24.stars&url=https://api.github-star-counter.workers.dev/user/Vaporjawn)
+
+[![Coding Hours:](https://wakatime.com/badge/user/a582e39e-ff7e-4474-95bf-f5e003eb3d40.svg)](https://wakatime.com/@a582e39e-ff7e-4474-95bf-f5e003eb3d40)
+
+![Operating Systems](https://img.shields.io/badge/OS-macOS_Windows_Linux-253469)
+
+</div>
+
+</div>
 
 𝑯𝒊, 𝑰'𝒎 𝑽𝒊𝒄𝒕𝒐𝒓 𝑾𝒊𝒍𝒍𝒊𝒂𝒎𝒔, 𝒂 𝑭𝒖𝒍𝒍 𝑺𝒕𝒂𝒄𝒌 𝑺𝒐𝒇𝒕𝒘𝒂𝒓𝒆 𝑬𝒏𝒈𝒊𝒏𝒆𝒆𝒓 🚀 𝒇𝒓𝒐𝒎 𝑷𝒉𝒊𝒍𝒂𝒅𝒆𝒍𝒑𝒉𝒊𝒂. 𝑰'𝒎 𝒂 𝒄𝒓𝒆𝒂𝒕𝒊𝒗𝒆 𝒑𝒓𝒐𝒃𝒍𝒆𝒎 𝒔𝒐𝒍𝒗𝒊𝒏𝒈 𝒆𝒏𝒕𝒉𝒖𝒔𝒊𝒂𝒔𝒕, 𝒘𝒊𝒕𝒉 𝒂 𝒄𝒐𝒏𝒔𝒕𝒂𝒏𝒕𝒍𝒚 𝒈𝒓𝒐𝒘𝒊𝒏𝒈 𝒍𝒐𝒗𝒆 𝒇𝒐𝒓 𝒍𝒂𝒏𝒈𝒖𝒂𝒈𝒆𝒔. 𝑩𝒆𝒔𝒊𝒅𝒆'𝒔 𝒑𝒓𝒐𝒈𝒓𝒂𝒎𝒎𝒊𝒏𝒈, 𝑰 𝒆𝒏𝒋𝒐𝒚 𝑺𝒖𝒑𝒆𝒓 𝑺𝒎𝒂𝒔𝒉 𝑩𝒓𝒐𝒔 𝑴𝒆𝒍𝒆𝒆 𝒇𝒐𝒓 𝒕𝒉𝒆 𝑵𝒊𝒏𝒕𝒆𝒏𝒅𝒐 𝑮𝒂𝒎𝒆𝑪𝒖𝒃𝒆.
 
@@ -36,7 +58,7 @@
 ![GitHub Activity Graph](https://activity-graph.herokuapp.com/graph?username=Vaporjawn&bg_color=240a36&color=f04005&line=f04005&point=ffffff&area=true&hide_border=true)  </p>
 
 
-**Languages and Tools:**  
+**Languages and Tools:**
 <code><img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/typescript/typescript.png"></code>
 <code><img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png"></code>
 <code><img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/nodejs/nodejs.png"></code>
@@ -58,7 +80,6 @@
 
 ⭐️ [Vaporjawn](https://github.com/vaporjawn) ⭐️
 
-[![Coding Hours:](https://wakatime.com/badge/user/a582e39e-ff7e-4474-95bf-f5e003eb3d40.svg)](https://wakatime.com/@a582e39e-ff7e-4474-95bf-f5e003eb3d40)
 
 </div>
 
