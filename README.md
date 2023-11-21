@@ -54,7 +54,6 @@
 <div align="Center">
 
 ![Contributions](https://github-readme-streak-stats.herokuapp.com/?user=Vaporjawn&theme=radical)
-![GitHub Activity Graph](https://activity-graph.herokuapp.com/graph?username=Vaporjawn&bg_color=240a36&color=f04005&line=f04005&point=ffffff&area=true&hide_border=true)  </p>
 
 
 **Languages and Tools:**
@@ -81,6 +80,7 @@
 ![Operating Systems](https://img.shields.io/badge/Operating_Systems:-macOS,_Windows,_Linux-253469)
 
 ⭐️ [Vaporjawn](https://github.com/vaporjawn) ⭐️
+
 [![Coding Hours:](https://wakatime.com/badge/user/a582e39e-ff7e-4474-95bf-f5e003eb3d40.svg)](https://wakatime.com/@a582e39e-ff7e-4474-95bf-f5e003eb3d40)
 
 </div>
