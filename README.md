@@ -82,6 +82,8 @@
 
 [![Coding Hours:](https://wakatime.com/badge/user/a582e39e-ff7e-4474-95bf-f5e003eb3d40.svg)](https://wakatime.com/@a582e39e-ff7e-4474-95bf-f5e003eb3d40)
 
+![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
+
 </div>
 </div>
 
