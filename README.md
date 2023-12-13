@@ -73,6 +73,10 @@
 
 ![Favorite Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=vaporjawn&langs_count=10&hide_border=true&layout=compact&theme=radical)
 
+<a href="https://github.com/vaporjawn">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=vaporjawn&theme=xcode&hide_border=true" align="center" alt="GitHub Activity Graph" />
+</a>
+
 ![Trophies](https://github-profile-trophy.vercel.app/?username=thewoodenman&theme=radical)
 
 
