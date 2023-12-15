@@ -77,8 +77,11 @@
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=vaporjawn&theme=xcode&hide_border=true" align="center" alt="GitHub Activity Graph" />
 </a>
 
-![Trophies](https://github-profile-trophy.vercel.app/?username=thewoodenman&theme=radical)
+<a href="https://wakatime.com"><img src="https://wakatime.com/share/@Vaporjawn/7ad8de02-5dab-4fba-977c-0c4c44fc63b8.png" /></a>
 
+<a href="https://wakatime.com"><img src="https://wakatime.com/share/@Vaporjawn/f4c61307-82ae-43e1-8b08-5f54f7577e2f.png" /></a>
+
+![Trophies](https://github-profile-trophy.vercel.app/?username=thewoodenman&theme=radical)
 
 ![Operating Systems](https://img.shields.io/badge/Operating_Systems:-macOS,_Windows,_Linux-253469)
 
