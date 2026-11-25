@@ -85,11 +85,12 @@ export const renderLanguageChartSvg = (languages, colors, rangeText, icons = new
       const y = 96 + index * ROW_HEIGHT;
       const icon = icons.get(language.name.toLowerCase());
       const glyph = icon
-        ? `<path transform="translate(33 ${y - 14}) scale(0.5833)" d="${icon.path}" fill="${readableOnDark(icon.hex)}"/>`
-        : `<text x="40" y="${y}" font-size="9" font-weight="700" fill="${colorOf(language)}" text-anchor="middle">${escapeXml(language.name.slice(0, 2))}</text>`;
-      return `<rect x="30" y="${y - 17}" width="20" height="20" rx="4" fill="${TILE_FILL}"/>
+        ? `<path transform="translate(55 ${y - 14}) scale(0.5833)" d="${icon.path}" fill="${readableOnDark(icon.hex)}"/>`
+        : `<text x="62" y="${y}" font-size="9" font-weight="700" fill="${colorOf(language)}" text-anchor="middle">${escapeXml(language.name.slice(0, 2))}</text>`;
+      return `<rect x="30" y="${y - 14}" width="14" height="14" rx="3" fill="${colorOf(language)}"/>
+  <rect x="52" y="${y - 17}" width="20" height="20" rx="4" fill="${TILE_FILL}"/>
   ${glyph}
-  <text x="60" y="${y}" font-size="15" fill="#d6dde6">${escapeXml(language.name)} (${language.percent.toFixed(1)}%)</text>`;
+  <text x="82" y="${y}" font-size="15" fill="#d6dde6">${escapeXml(language.name)} (${language.percent.toFixed(1)}%)</text>`;
     })
     .join("\n  ");
 

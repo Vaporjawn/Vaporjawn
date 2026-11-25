@@ -210,6 +210,8 @@ test("renderLanguageChartSvg draws logos for known languages and letter badges f
   assert.match(svg, /d="M0 0L24 24z" fill="#3178C6"/);
   assert.match(svg, /d="M1 1h2" fill="#d6dde6"/);
   assert.match(svg, />C#<\/text>/);
+  assert.equal((svg.match(/<rect x="30" /g) ?? []).length, 3);
+  assert.match(svg, /<rect x="30" y="\d+" width="14" height="14" rx="3" fill="hsl\(/);
 });
 
 test("updateReadme isolates failures, skips keyless sections and never leaks the key", async () => {
