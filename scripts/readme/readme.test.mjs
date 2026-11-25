@@ -264,7 +264,7 @@ test("updateReadme isolates failures, skips keyless sections and never leaks the
     try {
       const result = await updateReadme({ readmePath, artistsSvgPath: join(dir, "a", "top.svg"), artistsSvgHref: "./a/top.svg", wakatimeSvgPath: join(dir, "a", "waka.svg"), wakatimeSvgHref: "./a/waka.svg", wakatimeUser: "Vaporjawn", githubUser: "Vaporjawn", lastfmUser: "Vaporjawn", feedUrl: "https://x/rss.xml", lastfmApiKey: "SECRETKEY123" });
       assert.equal(result.changed, true);
-      assert.equal(result.failures.length, 3);
+      assert.equal(result.failures.length, 4); // blog, artists, Steam and the WakaTime chart (503 stand-in)
       assert.ok(result.failures.every((failure) => !failure.includes("SECRETKEY123")));
       const text = await readFile(readmePath, "utf8");
       assert.match(text, /\[\*\*r\*\*\]\(u\)/);
@@ -272,7 +272,7 @@ test("updateReadme isolates failures, skips keyless sections and never leaks the
       assert.match(text, /old TOP_ARTISTS/);
 
       const keyless = await updateReadme({ readmePath, artistsSvgPath: join(dir, "a", "top.svg"), artistsSvgHref: "./a/top.svg", wakatimeSvgPath: join(dir, "a", "waka.svg"), wakatimeSvgHref: "./a/waka.svg", wakatimeUser: "Vaporjawn", githubUser: "Vaporjawn", lastfmUser: "Vaporjawn", feedUrl: "https://x/rss.xml" });
-      assert.deepEqual(keyless.skipped, ["TOP_ARTISTS (no API key)"]);
+      assert.deepEqual(keyless.skipped, ["GITHUB_CARDS (no GitHub token)", "TOP_ARTISTS (no API key)"]);
     } finally {
       globalThis.fetch = realFetch;
     }

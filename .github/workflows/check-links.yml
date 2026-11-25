@@ -1,0 +1,38 @@
+name: Check README links
+
+# Weekly check that every link and image in the README still works. When
+# something is broken it opens (or updates) one issue labelled
+# "readme-link-check", and closes it again once everything is healthy.
+on:
+  schedule:
+    - cron: "41 8 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Run script tests
+        run: node --test "scripts/**/*.test.mjs"
+
+      - name: Check README links and images
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_RUN_ID: ${{ github.run_id }}
+          GITHUB_SERVER_URL: ${{ github.server_url }}
+        run: node scripts/check-links.mjs

@@ -1,3 +1,4 @@
+import { fetchImageDataUri } from "./fetchImageDataUri.mjs";
 import { fetchJson } from "./fetchJson.mjs";
 
 const MAX_IMAGE_BYTES = 250_000;
@@ -22,19 +23,7 @@ export const fetchArtistImage = async (artistName, fetchImplementation = fetch) 
     const match = (search?.data ?? []).find(
       (artist) => String(artist.name).toLowerCase() === artistName.toLowerCase() && artist.picture_big,
     );
-    if (!match || !String(match.picture_big).startsWith("https://")) {
-      return null;
-    }
-    const response = await fetchImplementation(match.picture_big, { signal: AbortSignal.timeout(20_000) });
-    const contentType = response.headers.get("content-type") ?? "";
-    if (!response.ok || !contentType.startsWith("image/jpeg")) {
-      return null;
-    }
-    const bytes = Buffer.from(await response.arrayBuffer());
-    if (bytes.length === 0 || bytes.length > MAX_IMAGE_BYTES) {
-      return null;
-    }
-    return `data:image/jpeg;base64,${bytes.toString("base64")}`;
+    return match ? await fetchImageDataUri(match.picture_big, MAX_IMAGE_BYTES, fetchImplementation) : null;
   } catch {
     return null;
   }

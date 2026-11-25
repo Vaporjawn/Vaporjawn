@@ -34,26 +34,22 @@ Currently building native Mac apps in Rust and Swift. Open to collaborating on w
 [![Stars received: 38](https://img.shields.io/badge/Stars%20Received-38-black?style=for-the-badge)](https://github.com/Vaporjawn?tab=repositories&sort=stargazers)
 <!-- STARS:END -->
 
+<!-- GITHUB_CARDS:START -->
 <table>
 <tr>
 <td width="50%">
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=vaporjawn&show_icons=true&hide_border=true&theme=radical">
-  <img alt="Victor's GitHub stats" src="https://github-readme-stats.vercel.app/api?username=vaporjawn&show_icons=true&hide_border=true&theme=default" width="100%">
-</picture>
+<img src="./assets/github-stats.svg?v=4ae893fd" alt="Victor Williams&#39;s GitHub stats: 38 stars, 14,800 contributions in the last year, 171 pull requests, 86 issues, 127 public repositories" width="100%">
 
 </td>
 <td width="50%">
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com/?user=Vaporjawn&theme=radical">
-  <img alt="Victor's GitHub contribution streak" src="https://streak-stats.demolab.com/?user=Vaporjawn&theme=default" width="100%">
-</picture>
+<img src="./assets/github-streak.svg?v=22d48463" alt="GitHub contribution streak: 26,557 total contributions, 44 day current streak, 858 day longest streak" width="100%">
 
 </td>
 </tr>
 </table>
+<!-- GITHUB_CARDS:END -->
 
 [![Coding hours on WakaTime](https://wakatime.com/badge/user/a582e39e-ff7e-4474-95bf-f5e003eb3d40.svg)](https://wakatime.com/@a582e39e-ff7e-4474-95bf-f5e003eb3d40)
 
@@ -115,6 +111,22 @@ Currently building native Mac apps in Rust and Swift. Open to collaborating on w
 
 </details>
 <!-- TOP_ARTISTS:END -->
+
+<!-- STEAM_GAMES:START -->
+<a href="https://steamcommunity.com/id/vaporjawn"><img src="./assets/steam-games.svg?v=9c47cc72" alt="Steam games: AdVenture Capitalist, 224 hours on record, 0.2 in the last 2 weeks; Crusader Kings III, 1,567 hours on record; Overwatch®, 1,114 hours on record; Sid Meier&#39;s Civilization VI, 1,072 hours on record; Stellaris, 718 hours on record; Victoria 3, 612 hours on record" width="100%"></a>
+
+<details>
+<summary>Game list (from <a href="https://steamcommunity.com/id/vaporjawn">Steam</a>)</summary>
+
+1. [**AdVenture Capitalist**](https://store.steampowered.com/app/346900): 224 hrs on record, 0.2 hrs in the last 2 weeks
+2. [**Crusader Kings III**](https://store.steampowered.com/app/1158310): 1,567 hrs on record
+3. [**Overwatch®**](https://store.steampowered.com/app/2357570): 1,114 hrs on record
+4. [**Sid Meier's Civilization VI**](https://store.steampowered.com/app/289070): 1,072 hrs on record
+5. [**Stellaris**](https://store.steampowered.com/app/281990): 718 hrs on record
+6. [**Victoria 3**](https://store.steampowered.com/app/529340): 612 hrs on record
+
+</details>
+<!-- STEAM_GAMES:END -->
 
 </div>
 
