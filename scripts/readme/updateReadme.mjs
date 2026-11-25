@@ -1,27 +1,37 @@
-import { readFile, writeFile } from "node:fs/promises";
+import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { dirname } from "node:path";
+import { fetchArtistImage } from "./fetchArtistImage.mjs";
 import { fetchBlogPosts } from "./fetchBlogPosts.mjs";
 import { fetchRecentRepos } from "./fetchRecentRepos.mjs";
 import { fetchTopArtists } from "./fetchTopArtists.mjs";
+import { fetchTotalStars } from "./fetchTotalStars.mjs";
 import { renderBlogPosts } from "./renderBlogPosts.mjs";
 import { renderRecentRepos } from "./renderRecentRepos.mjs";
+import { renderStarBadge } from "./renderStarBadge.mjs";
 import { renderTopArtists } from "./renderTopArtists.mjs";
+import { renderTopArtistsSvg } from "./renderTopArtistsSvg.mjs";
 import { replaceSection } from "./replaceSection.mjs";
 
 /**
- * Refreshes the auto-generated README sections (recent repositories, latest
- * blog posts, most played artists). Each section is independent: when one
+ * Refreshes the auto-generated README sections (star count, recent repositories,
+ * latest blog posts, most played artists). Each section is independent: when one
  * source fails, that section keeps its previous text and the failure is
  * reported, but the others still update.
  *
- * @param {{ readmePath: string, githubUser: string, lastfmUser: string, feedUrl: string, lastfmApiKey?: string, githubToken?: string }} options - Where to read and write, and which accounts to read.
+ * @param {{ readmePath: string, artistsSvgPath: string, artistsSvgHref: string, githubUser: string, lastfmUser: string, feedUrl: string, lastfmApiKey?: string, githubToken?: string }} options - Where to read and write, and which accounts to read.
  * @returns {Promise<{ changed: boolean, failures: string[], skipped: string[] }>} What happened.
  */
 export const updateReadme = async (options) => {
   const original = await readFile(options.readmePath, "utf8");
   const failures = [];
   const skipped = [];
+  let svgChanged = false;
 
   const sections = [
+    {
+      name: "STARS",
+      build: async () => renderStarBadge(await fetchTotalStars(options.githubUser, options.githubToken)),
+    },
     {
       name: "RECENT_REPOS",
       build: async () => renderRecentRepos(await fetchRecentRepos(options.githubUser, 5, options.githubToken)),
@@ -32,7 +42,21 @@ export const updateReadme = async (options) => {
     },
     {
       name: "TOP_ARTISTS",
-      build: async () => renderTopArtists(await fetchTopArtists(options.lastfmApiKey, options.lastfmUser, 8)),
+      build: async () => {
+        const artists = await fetchTopArtists(options.lastfmApiKey, options.lastfmUser, 8);
+        const withImages = [];
+        for (const artist of artists) {
+          withImages.push({ ...artist, imageDataUri: await fetchArtistImage(artist.name) });
+        }
+        const svg = renderTopArtistsSvg(withImages);
+        const previousSvg = await readFile(options.artistsSvgPath, "utf8").catch(() => "");
+        if (svg !== previousSvg) {
+          await mkdir(dirname(options.artistsSvgPath), { recursive: true });
+          await writeFile(options.artistsSvgPath, svg);
+          svgChanged = true;
+        }
+        return renderTopArtists(artists, options.artistsSvgHref);
+      },
       requires: options.lastfmApiKey,
     },
   ];
@@ -50,8 +74,8 @@ export const updateReadme = async (options) => {
     }
   }
 
-  const changed = updated !== original;
-  if (changed) {
+  const changed = updated !== original || svgChanged;
+  if (updated !== original) {
     await writeFile(options.readmePath, updated);
   }
   return { changed, failures, skipped };

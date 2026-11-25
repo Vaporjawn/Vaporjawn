@@ -16,7 +16,7 @@
 [![Portfolio](https://img.shields.io/badge/-Portfolio-6366f1?style=flat-square&logo=googlechrome&logoColor=white)](https://vaporjawn.dev) [![Music](https://img.shields.io/badge/-Music-7c3aed?style=flat-square&logo=applemusic&logoColor=white)](https://vaporjawn.com) [![Resume](https://img.shields.io/badge/-Resume-0f766e?style=flat-square&logo=readdotcv&logoColor=white)](https://vaporjawn.dev/resume) [![Blog RSS](https://img.shields.io/badge/-Blog_RSS-ee802f?style=flat-square&logo=rss&logoColor=white)](https://vaporjawn.dev/rss.xml) [![Sponsor](https://img.shields.io/badge/-Sponsor-ea4aaa?style=flat-square&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/Vaporjawn)
 
 <!-- https://shields.io/badges -->
-![Status: Coding](https://img.shields.io/badge/Status-Coding-c70000)
+![Status: Coding](https://img.shields.io/badge/Status-Coding-c70000) ![Operating systems: macOS, Windows, Linux](https://img.shields.io/badge/Operating_Systems:-macOS,_Windows,_Linux-253469) [![Coding hours on WakaTime](https://wakatime.com/badge/user/a582e39e-ff7e-4474-95bf-f5e003eb3d40.svg)](https://wakatime.com/@a582e39e-ff7e-4474-95bf-f5e003eb3d40)
 
 ### Hey 👋🏽, I'm [Victor!](https://vaporjawn.dev) <img src="https://media.giphy.com/media/mGcNjsfWAjY5AEZNw6/giphy.gif" alt="Waving hand animation" width="50">
 
@@ -24,30 +24,55 @@
 
 </div>
 
-Hi, I'm Victor Williams, a Full Stack Software Engineer 🚀 from Philadelphia. I'm a creative problem solving enthusiast with a constantly growing love for languages. Besides programming, I enjoy Super Smash Bros. Melee for the Nintendo GameCube.
-
-- 👨🏽‍💻 I'm currently working on improving my tech skills
-- 🌱 I'm currently learning Machine Learning
-- 👯 I'm looking to collaborate on Web Projects
-- 💬 Ask me about anything, I am happy to help
-- ⚡️ Fun fact: anything is possible
-- 📫 How to reach me: [victor.williams.dev@gmail.com](mailto:victor.williams.dev@gmail.com)
-- 💖 Like what I build? [Sponsor me on GitHub](https://github.com/sponsors/Vaporjawn)
-
 <div align="center">
 
-![Stars received](https://img.shields.io/badge/dynamic/json?&label=Stars%20Received&color=black&style=for-the-badge&query=%24.stars&url=https://api.github-star-counter.workers.dev/user/Vaporjawn)
+Hi, I'm Victor Williams, a Full Stack Software Engineer 🚀 from Philadelphia. I'm a creative problem solving enthusiast with a constantly growing love for languages. Besides programming, I enjoy Super Smash Bros. Melee for the Nintendo GameCube.
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=vaporjawn&show_icons=true&hide_border=true&theme=radical">
-  <img alt="Victor's GitHub stats" src="https://github-readme-stats.vercel.app/api?username=vaporjawn&show_icons=true&hide_border=true&theme=default">
-</picture>
+👨🏽‍💻 I'm currently working on improving my tech skills<br/>
+🌱 I'm currently learning Machine Learning<br/>
+👯 I'm looking to collaborate on Web Projects<br/>
+💬 Ask me about anything, I am happy to help<br/>
+⚡️ Fun fact: anything is possible<br/>
+📫 How to reach me: [victor.williams.dev@gmail.com](mailto:victor.williams.dev@gmail.com)<br/>
+💖 Like what I build? [Sponsor me on GitHub](https://github.com/sponsors/Vaporjawn)
 
 </div>
 
-## 🎧 Most played artists this month
+<div align="center">
+
+<!-- STARS:START -->
+![Stars received: 38](https://img.shields.io/badge/Stars%20Received-38-black?style=for-the-badge)
+<!-- STARS:END -->
+
+<table>
+<tr>
+<td width="50%">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=vaporjawn&show_icons=true&hide_border=true&theme=radical">
+  <img alt="Victor's GitHub stats" src="https://github-readme-stats.vercel.app/api?username=vaporjawn&show_icons=true&hide_border=true&theme=default" width="100%">
+</picture>
+
+</td>
+<td width="50%">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com/?user=Vaporjawn&theme=radical">
+  <img alt="Victor's GitHub contribution streak" src="https://streak-stats.demolab.com/?user=Vaporjawn&theme=default" width="100%">
+</picture>
+
+</td>
+</tr>
+</table>
+
+</div>
 
 <!-- TOP_ARTISTS:START -->
+<a href="https://www.last.fm/user/Vaporjawn/library/artists?date_preset=LAST_30_DAYS"><img src="./assets/top-artists.svg" alt="Top artists over the last 30 days: Future, 207 plays; Yeat, 84 plays; Drake, 70 plays; driftive dreams, 61 plays; In Love With a Ghost, 56 plays; nettspend, 52 plays; Adamn Killa, 49 plays; Karrahbooo, 42 plays" width="100%"></a>
+
+<details>
+<summary>Artist list (from <a href="https://www.last.fm/user/Vaporjawn">Last.fm</a>)</summary>
+
 1. [**Future**](https://www.last.fm/music/Future): 207 plays
 2. [**Yeat**](https://www.last.fm/music/Yeat): 84 plays
 3. [**Drake**](https://www.last.fm/music/Drake): 70 plays
@@ -57,20 +82,27 @@ Hi, I'm Victor Williams, a Full Stack Software Engineer 🚀 from Philadelphia. 
 7. [**Adamn Killa**](https://www.last.fm/music/Adamn+Killa): 49 plays
 8. [**Karrahbooo**](https://www.last.fm/music/Karrahbooo): 42 plays
 
-<sub>Most played artists over the past 30 days, from [Last.fm](https://www.last.fm/user/Vaporjawn).</sub>
+</details>
 <!-- TOP_ARTISTS:END -->
 
-## 🛠️ Recently active repositories
+<table>
+<tr>
+<td valign="top" width="50%">
+
+### 🛠️ Recently active repositories
 
 <!-- RECENT_REPOS:START -->
+- [**universities**](https://github.com/Vaporjawn/universities): instant access to a global list of institutions plus an optional, rate‑limited scraper that augments each with descriptive, academic, and classification metadata via a TypeScript API \& CLI <sub>(updated 2026-11-25, TypeScript)</sub>
 - [**Vaporjawn.github.io**](https://github.com/Vaporjawn/Vaporjawn.github.io): my personal website <sub>(updated 2026-11-09, TypeScript)</sub>
 - [**Crescendia-releases**](https://github.com/Vaporjawn/Crescendia-releases): Installers for Crescendia <sub>(updated 2026-10-29)</sub>
 - [**orderbook\_synchronization**](https://github.com/Vaporjawn/orderbook_synchronization): Create a ReactJS UI component to synchronize and display an orderbook using websocket updates. <sub>(updated 2026-10-26, HTML)</sub>
 - [**Smash-Thumbnail-Generator**](https://github.com/Vaporjawn/Smash-Thumbnail-Generator) <sub>(updated 2026-10-26, TypeScript)</sub>
-- [**Password-Generator**](https://github.com/Vaporjawn/Password-Generator): Generate custom and secure passwords based on your chosen parameters. <sub>(updated 2026-10-26, TypeScript)</sub>
 <!-- RECENT_REPOS:END -->
 
-## ✍️ Latest from the blog
+</td>
+<td valign="top" width="50%">
+
+### ✍️ Latest from the blog
 
 <!-- BLOG_POSTS:START -->
 - [Presenting the Trade-off Instead of Guessing](https://vaporjawn.dev/blog/presenting-the-trade-off-instead-of-guessing) (2026-08-10)
@@ -82,17 +114,15 @@ Hi, I'm Victor Williams, a Full Stack Software Engineer 🚀 from Philadelphia. 
 [More posts on vaporjawn.dev](https://vaporjawn.dev/blog) · [RSS feed](https://vaporjawn.dev/rss.xml)
 <!-- BLOG_POSTS:END -->
 
-<div align="center">
+</td>
+</tr>
+</table>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com/?user=Vaporjawn&theme=radical">
-  <img alt="Victor's GitHub contribution streak" src="https://streak-stats.demolab.com/?user=Vaporjawn&theme=default">
-</picture>
+<div align="center">
 
 **Languages and Tools:**
 
 <code><img height="20" alt="TypeScript" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/typescript/typescript.png"></code> <code><img height="20" alt="React" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png"></code> <code><img height="20" alt="Node.js" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/nodejs/nodejs.png"></code> <code><img height="20" alt=".NET" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/dotnet/dotnet.png"></code> <code><img height="20" alt="Ruby" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/ruby/ruby.png"></code> <code><img height="20" alt="C#" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/csharp/csharp.png"></code> <code><img height="20" alt="JavaScript" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png"></code> <code><img height="20" alt="Vue" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/vue/vue.png"></code> <code><img height="20" alt="GraphQL" src="https://raw.githubusercontent.com/github/explore/5c058a388828bb5fde0bcafd4bc867b5bb3f26f3/topics/graphql/graphql.png"></code> <code><img height="20" alt="C++" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/cpp/cpp.png"></code> <code><img height="20" alt="Python" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/python/python.png"></code> <code><img height="20" alt="MySQL" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/mysql/mysql.png"></code> <code><img height="20" alt="Git" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png"></code> <code><img height="20" alt="Terminal" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/terminal/terminal.png"></code>
-
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=vaporjawn&langs_count=10&hide_border=true&layout=compact&theme=radical">
@@ -112,17 +142,13 @@ Hi, I'm Victor Williams, a Full Stack Software Engineer 🚀 from Philadelphia. 
 
 <img src="https://github-trophies.vercel.app/?username=Vaporjawn" alt="GitHub trophies for Vaporjawn">
 
-![Operating systems: macOS, Windows, Linux](https://img.shields.io/badge/Operating_Systems:-macOS,_Windows,_Linux-253469)
-
 ⭐️ [Vaporjawn](https://github.com/vaporjawn) ⭐️
-
-[![Coding hours on WakaTime](https://wakatime.com/badge/user/a582e39e-ff7e-4474-95bf-f5e003eb3d40.svg)](https://wakatime.com/@a582e39e-ff7e-4474-95bf-f5e003eb3d40)
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical">
   <img alt="Random programming quote" src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=default">
 </picture>
 
-<sub>The artists, repositories and blog sections refresh daily through [a GitHub Action](.github/workflows/update-readme.yml). Credits: waving hand GIF via [GIPHY](https://giphy.com); stats cards by [github-readme-stats](https://github.com/anuraghazra/github-readme-stats), [streak-stats](https://github.com/DenverCoder1/github-readme-streak-stats), [github-readme-activity-graph](https://github.com/Ashutosh00710/github-readme-activity-graph), [github-trophies](https://github-trophies.vercel.app) and [quotes-github-readme](https://github.com/PiyushSuthar/github-readme-quotes); icons from [GitHub Explore](https://github.com/github/explore); badges by [Shields.io](https://shields.io); coding time by [WakaTime](https://wakatime.com); listening data by [Last.fm](https://www.last.fm).</sub>
+<!-- The artists, repositories and blog sections refresh daily through [a GitHub Action](.github/workflows/update-readme.yml). Credits: waving hand GIF via [GIPHY](https://giphy.com); stats cards by [github-readme-stats](https://github.com/anuraghazra/github-readme-stats), [streak-stats](https://github.com/DenverCoder1/github-readme-streak-stats), [github-readme-activity-graph](https://github.com/Ashutosh00710/github-readme-activity-graph), [github-trophies](https://github-trophies.vercel.app) and [quotes-github-readme](https://github.com/PiyushSuthar/github-readme-quotes); icons from [GitHub Explore](https://github.com/github/explore); badges by [Shields.io](https://shields.io); coding time by [WakaTime](https://wakatime.com); listening data by [Last.fm](https://www.last.fm). -->
 
 </div>

@@ -13,6 +13,8 @@ import { updateReadme } from "./readme/updateReadme.mjs";
 const main = async () => {
   const result = await updateReadme({
     readmePath: fileURLToPath(new URL("../README.md", import.meta.url)),
+    artistsSvgPath: fileURLToPath(new URL("../assets/top-artists.svg", import.meta.url)),
+    artistsSvgHref: "./assets/top-artists.svg",
     githubUser: "Vaporjawn",
     lastfmUser: "Vaporjawn",
     feedUrl: "https://vaporjawn.dev/rss.xml",

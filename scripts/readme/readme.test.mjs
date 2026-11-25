@@ -4,13 +4,17 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { test } from "node:test";
 import { escapeMarkdown } from "./escapeMarkdown.mjs";
+import { fetchArtistImage } from "./fetchArtistImage.mjs";
 import { fetchBlogPosts } from "./fetchBlogPosts.mjs";
 import { fetchRecentRepos } from "./fetchRecentRepos.mjs";
 import { fetchTopArtists } from "./fetchTopArtists.mjs";
+import { fetchTotalStars } from "./fetchTotalStars.mjs";
 import { parseRssItems } from "./parseRssItems.mjs";
 import { renderBlogPosts } from "./renderBlogPosts.mjs";
 import { renderRecentRepos } from "./renderRecentRepos.mjs";
+import { renderStarBadge } from "./renderStarBadge.mjs";
 import { renderTopArtists } from "./renderTopArtists.mjs";
+import { renderTopArtistsSvg } from "./renderTopArtistsSvg.mjs";
 import { replaceSection } from "./replaceSection.mjs";
 import { updateReadme } from "./updateReadme.mjs";
 
@@ -49,10 +53,41 @@ test("fetchTopArtists maps the Last.fm response and rejects API errors", async (
   await assert.rejects(fetchTopArtists("k", "u", 5, fakeFetch(500, {})), /HTTP 500/);
 });
 
-test("renderTopArtists numbers artists and handles an empty month", () => {
-  const text = renderTopArtists([{ name: "A_B", url: "https://x/y", playCount: 1234 }]);
-  assert.match(text, /^1\. \[\*\*A\\_B\*\*\]\(https:\/\/x\/y\): 1,234 plays/);
-  assert.equal(renderTopArtists([]), "_No scrobbles in the past 30 days._");
+test("renderTopArtists links the grid image, escapes alt text and lists artists", () => {
+  const text = renderTopArtists([{ name: 'A_B "x"', url: "https://x/y", playCount: 1234 }], "./assets/top-artists.svg");
+  assert.match(text, /<img src="\.\/assets\/top-artists\.svg" alt="Top artists over the last 30 days: A_B &#34;x&#34;, 1,234 plays"/);
+  assert.match(text, /1\. \[\*\*A\\_B "x"\*\*\]\(https:\/\/x\/y\): 1,234 plays/);
+  assert.equal(renderTopArtists([], "./a.svg"), "_No scrobbles in the past 30 days._");
+});
+
+test("renderTopArtistsSvg draws a tile per artist, escapes names and falls back without a photo", () => {
+  const svg = renderTopArtistsSvg([
+    { name: "Future", playCount: 207, imageDataUri: "data:image/jpeg;base64,AAAA" },
+    { name: "<script>&", playCount: 1, imageDataUri: null },
+    { name: "A very long artist name that must be cut", playCount: 5, imageDataUri: null },
+  ]);
+  assert.equal((svg.match(/<image /g) ?? []).length, 1);
+  assert.match(svg, /207 plays/);
+  assert.match(svg, /1 play</);
+  assert.match(svg, /&#60;script&#62;&#38;/);
+  assert.doesNotMatch(svg, /<script>/);
+  assert.match(svg, /A very long artist …|A very long artist n…|A very long artist na…/);
+  assert.match(svg, /viewBox="0 0 1692 \d+"/);
+  assert.ok(renderTopArtistsSvg([]).includes("Top Artists"));
+});
+
+test("fetchArtistImage accepts only an exact-name match with a small JPEG", async () => {
+  const jpeg = Buffer.from("fakejpeg");
+  const route = (search, imageHeaders = { "content-type": "image/jpeg" }, imageBody = jpeg) => async (url) =>
+    String(url).includes("api.deezer.com")
+      ? new Response(JSON.stringify({ data: search }))
+      : new Response(imageBody, { headers: imageHeaders });
+  const ok = [{ name: "Future", picture_big: "https://img/f.jpg" }];
+  assert.equal(await fetchArtistImage("future", route(ok)), `data:image/jpeg;base64,${jpeg.toString("base64")}`);
+  assert.equal(await fetchArtistImage("Future", route([{ name: "Drake", picture_big: "https://img/d.jpg" }])), null);
+  assert.equal(await fetchArtistImage("Future", route(ok, { "content-type": "text/html" })), null);
+  assert.equal(await fetchArtistImage("Future", route(ok, undefined, Buffer.alloc(300_000))), null);
+  assert.equal(await fetchArtistImage("Future", async () => { throw new Error("offline"); }), null);
 });
 
 test("parseRssItems reads CDATA and plain values and honours the limit", () => {
@@ -95,10 +130,19 @@ test("renderRecentRepos formats description and language", () => {
   assert.equal(text, "- [**r**](u): d <sub>(updated 2026-11-02, Rust)</sub>");
 });
 
+test("fetchTotalStars sums stars across pages and ignores forks", async () => {
+  const fullPage = Array.from({ length: 100 }, () => ({ fork: false, stargazers_count: 1 }));
+  let calls = 0;
+  const paged = async () => new Response(JSON.stringify(calls++ === 0 ? fullPage : [{ fork: false, stargazers_count: 5 }, { fork: true, stargazers_count: 99 }]));
+  assert.equal(await fetchTotalStars("u", undefined, paged), 105);
+  await assert.rejects(fetchTotalStars("u", undefined, fakeFetch(200, { nope: 1 })), /unexpected/);
+  assert.match(renderStarBadge(38), /Stars%20Received-38-black/);
+});
+
 test("updateReadme isolates failures, skips keyless sections and never leaks the key", async () => {
   const dir = await mkdtemp(join(tmpdir(), "readme-test-"));
   const readmePath = join(dir, "README.md");
-  const sections = ["RECENT_REPOS", "BLOG_POSTS", "TOP_ARTISTS"]
+  const sections = ["STARS", "RECENT_REPOS", "BLOG_POSTS", "TOP_ARTISTS"]
     .map((name) => `<!-- ${name}:START -->\nold ${name}\n<!-- ${name}:END -->`)
     .join("\n");
   try {
@@ -111,7 +155,7 @@ test("updateReadme isolates failures, skips keyless sections and never leaks the
       return new Response("", { status: 503 });
     };
     try {
-      const result = await updateReadme({ readmePath, githubUser: "Vaporjawn", lastfmUser: "Vaporjawn", feedUrl: "https://x/rss.xml", lastfmApiKey: "SECRETKEY123" });
+      const result = await updateReadme({ readmePath, artistsSvgPath: join(dir, "a", "top.svg"), artistsSvgHref: "./a/top.svg", githubUser: "Vaporjawn", lastfmUser: "Vaporjawn", feedUrl: "https://x/rss.xml", lastfmApiKey: "SECRETKEY123" });
       assert.equal(result.changed, true);
       assert.equal(result.failures.length, 2);
       assert.ok(result.failures.every((failure) => !failure.includes("SECRETKEY123")));
@@ -120,7 +164,7 @@ test("updateReadme isolates failures, skips keyless sections and never leaks the
       assert.match(text, /old BLOG_POSTS/);
       assert.match(text, /old TOP_ARTISTS/);
 
-      const keyless = await updateReadme({ readmePath, githubUser: "Vaporjawn", lastfmUser: "Vaporjawn", feedUrl: "https://x/rss.xml" });
+      const keyless = await updateReadme({ readmePath, artistsSvgPath: join(dir, "a", "top.svg"), artistsSvgHref: "./a/top.svg", githubUser: "Vaporjawn", lastfmUser: "Vaporjawn", feedUrl: "https://x/rss.xml" });
       assert.deepEqual(keyless.skipped, ["TOP_ARTISTS (no API key)"]);
     } finally {
       globalThis.fetch = realFetch;
