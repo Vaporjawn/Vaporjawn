@@ -138,7 +138,7 @@ test("fetchBlogPosts rejects an empty feed and a failed request", async () => {
 
 test("renderBlogPosts lists posts with dates", () => {
   const text = renderBlogPosts([{ title: "T", link: "https://a/1", publishedAt: new Date("2026-08-10T00:00:00Z") }]);
-  assert.equal(text.split("\n")[0], "- [T](https://a/1) ![Published Aug 10, 2026](https://img.shields.io/badge/Aug_10%2C_2026-30363d?style=flat-square)");
+  assert.equal(text.split("\n")[0], "- [T](https://a/1) [![Published Aug 10, 2026](https://img.shields.io/badge/Aug_10%2C_2026-30363d?style=flat-square)](https://a/1)");
   assert.equal(renderBlogPosts([{ title: "N", link: "https://a/2", publishedAt: null }]).split("\n")[0], "- [N](https://a/2)");
 });
 
@@ -163,7 +163,7 @@ test("renderDateChip formats compact dates and rejects invalid ones", () => {
 
 test("renderRecentRepos formats description and language", () => {
   const text = renderRecentRepos([{ name: "r", url: "u", description: "d", language: "Rust", pushedAt: "2026-11-02" }]);
-  assert.equal(text, "- [**r**](u): d ![Updated Nov 2, 2026](https://img.shields.io/badge/Nov_2%2C_2026-30363d?style=flat-square) <sub>Rust</sub>");
+  assert.equal(text, "- [**r**](u): d [![Updated Nov 2, 2026](https://img.shields.io/badge/Nov_2%2C_2026-30363d?style=flat-square)](u/commits) <sub>Rust</sub>");
 });
 
 test("fetchTotalStars sums stars across pages and ignores forks", async () => {
@@ -172,7 +172,7 @@ test("fetchTotalStars sums stars across pages and ignores forks", async () => {
   const paged = async () => new Response(JSON.stringify(calls++ === 0 ? fullPage : [{ fork: false, stargazers_count: 5 }, { fork: true, stargazers_count: 99 }]));
   assert.equal(await fetchTotalStars("u", undefined, paged), 105);
   await assert.rejects(fetchTotalStars("u", undefined, fakeFetch(200, { nope: 1 })), /unexpected/);
-  assert.match(renderStarBadge(38), /Stars%20Received-38-black/);
+  assert.match(renderStarBadge(38, "Vaporjawn"), /^\[!\[Stars received: 38\]\(https:\/\/img\.shields\.io\/badge\/Stars%20Received-38-black\?style=for-the-badge\)\]\(https:\/\/github\.com\/Vaporjawn\?tab=repositories&sort=stargazers\)$/);
 });
 
 test("fetchWakatimeLanguages drops Other, rescales to 100 and sorts", async () => {

@@ -36,7 +36,7 @@ export const updateReadme = async (options) => {
   const sections = [
     {
       name: "STARS",
-      build: async () => renderStarBadge(await fetchTotalStars(options.githubUser, options.githubToken)),
+      build: async () => renderStarBadge(await fetchTotalStars(options.githubUser, options.githubToken), options.githubUser),
     },
     {
       name: "RECENT_REPOS",
