@@ -34,7 +34,7 @@ jobs:
           node-version: 22
 
       - name: Run script tests
-        run: node --test scripts/readme/
+        run: node --test "scripts/readme/*.test.mjs"
 
       - name: Refresh README sections
         env:
