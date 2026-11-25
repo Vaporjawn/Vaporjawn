@@ -16,17 +16,15 @@
 [![Portfolio](https://img.shields.io/badge/-Portfolio-6366f1?style=flat-square&logo=googlechrome&logoColor=white)](https://vaporjawn.dev) [![Music](https://img.shields.io/badge/-Music-7c3aed?style=flat-square&logo=applemusic&logoColor=white)](https://vaporjawn.com) [![Resume](https://img.shields.io/badge/-Resume-0f766e?style=flat-square&logo=readdotcv&logoColor=white)](https://vaporjawn.dev/resume) [![Blog RSS](https://img.shields.io/badge/-Blog_RSS-ee802f?style=flat-square&logo=rss&logoColor=white)](https://vaporjawn.dev/rss.xml) [![Sponsor](https://img.shields.io/badge/-Sponsor-ea4aaa?style=flat-square&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/Vaporjawn)
 
 <!-- https://shields.io/badges -->
-![Status: Coding](https://img.shields.io/badge/Status-Coding-c70000) ![Operating systems: macOS, Windows, Linux](https://img.shields.io/badge/Operating_Systems:-macOS,_Windows,_Linux-253469) [![Coding hours on WakaTime](https://wakatime.com/badge/user/a582e39e-ff7e-4474-95bf-f5e003eb3d40.svg)](https://wakatime.com/@a582e39e-ff7e-4474-95bf-f5e003eb3d40)
+![Profile visitors](https://komarev.com/ghpvc/?username=Vaporjawn&color=blueviolet&label=Visitors&style=plastic) ![Status: Coding](https://img.shields.io/badge/Status-Coding-c70000) ![Operating systems: macOS, Windows, Linux](https://img.shields.io/badge/Operating_Systems:-macOS,_Windows,_Linux-253469) [![Coding hours on WakaTime](https://wakatime.com/badge/user/a582e39e-ff7e-4474-95bf-f5e003eb3d40.svg)](https://wakatime.com/@a582e39e-ff7e-4474-95bf-f5e003eb3d40)
 
 ### Hey 👋🏽, I'm [Victor!](https://vaporjawn.dev) <img src="https://media.giphy.com/media/mGcNjsfWAjY5AEZNw6/giphy.gif" alt="Waving hand animation" width="50">
-
-![Profile visitors](https://komarev.com/ghpvc/?username=Vaporjawn&color=blueviolet&label=Visitors&style=plastic)
 
 </div>
 
 <div align="center">
 
-Hi, I'm Victor, a full-stack engineer from Philadelphia. I build with TypeScript, React and Node, and lately with Rust and Swift for native Mac apps. I like turning messy problems into small tools people actually use, and I'm always picking up a new language, human or programming: I even build tools for Esperanto. Off the clock I make music as Vaporjawn and play Super Smash Bros. Melee.
+Hi, I'm Victor, a full-stack engineer from Philadelphia. I build with ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white) ![React](https://img.shields.io/badge/React-20232a?style=flat-square&logo=react&logoColor=61DAFB) and ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white), and lately with ![Rust](https://img.shields.io/badge/Rust-b7410e?style=flat-square&logo=rust&logoColor=white) and ![Swift](https://img.shields.io/badge/Swift-F05138?style=flat-square&logo=swift&logoColor=white) for native ![Mac](https://img.shields.io/badge/Mac-555555?style=flat-square&logo=apple&logoColor=white) apps. I like turning messy problems into small tools people actually use, and I'm always picking up a new language, human or programming: I even build tools for ![Esperanto](https://img.shields.io/badge/Esperanto-009900?style=flat-square). Off the clock I make music as ![Vaporjawn](https://img.shields.io/badge/Vaporjawn-7c3aed?style=flat-square) and play ![Super Smash Bros. Melee](https://img.shields.io/badge/Super_Smash_Bros._Melee-5a4fcf?style=flat-square).
 
 🍎 I'm currently building native Mac apps in Rust and Swift<br/>
 🌐 I'm looking to collaborate on web projects<br/>
