@@ -5,12 +5,15 @@ import { join } from "node:path";
 import { test } from "node:test";
 import { escapeMarkdown } from "./escapeMarkdown.mjs";
 import { fetchArtistImage } from "./fetchArtistImage.mjs";
+import { fetchLanguageColors } from "./fetchLanguageColors.mjs";
 import { fetchBlogPosts } from "./fetchBlogPosts.mjs";
 import { fetchRecentRepos } from "./fetchRecentRepos.mjs";
 import { fetchTopArtists } from "./fetchTopArtists.mjs";
 import { fetchTotalStars } from "./fetchTotalStars.mjs";
+import { fetchWakatimeLanguages } from "./fetchWakatimeLanguages.mjs";
 import { parseRssItems } from "./parseRssItems.mjs";
 import { renderBlogPosts } from "./renderBlogPosts.mjs";
+import { renderLanguageChartSvg } from "./renderLanguageChartSvg.mjs";
 import { renderRecentRepos } from "./renderRecentRepos.mjs";
 import { renderStarBadge } from "./renderStarBadge.mjs";
 import { renderTopArtists } from "./renderTopArtists.mjs";
@@ -139,6 +142,42 @@ test("fetchTotalStars sums stars across pages and ignores forks", async () => {
   assert.match(renderStarBadge(38), /Stars%20Received-38-black/);
 });
 
+test("fetchWakatimeLanguages drops Other, rescales to 100 and sorts", async () => {
+  const body = { data: { human_readable_range: "since Feb 28 2020", languages: [
+    { name: "Other", percent: 50, ai_coding_seconds: "1", manual_coding_seconds: "0" },
+    { name: "Markdown", percent: 10, ai_coding_seconds: "100", manual_coding_seconds: "20" },
+    { name: "TypeScript", percent: 30, ai_coding_seconds: "300", manual_coding_seconds: "0" },
+    { name: "other", percent: 5 },
+  ] } };
+  const result = await fetchWakatimeLanguages("u", fakeFetch(200, body));
+  assert.deepEqual(result.languages.map((language) => language.name), ["TypeScript", "Markdown"]);
+  assert.ok(Math.abs(result.languages.reduce((sum, language) => sum + language.percent, 0) - 100) < 1e-9);
+  assert.equal(Math.round(result.languages[0].percent), 75);
+  assert.equal(result.languages[1].seconds, 120);
+  assert.equal(result.rangeText, "since Feb 28 2020");
+  await assert.rejects(fetchWakatimeLanguages("u", fakeFetch(200, { data: { languages: [{ name: "Other", percent: 99 }] } })), /no languages besides Other/);
+  await assert.rejects(fetchWakatimeLanguages("u", fakeFetch(200, { data: {} })), /no language stats/);
+});
+
+test("fetchLanguageColors keeps valid colours and survives an outage", async () => {
+  const colors = await fetchLanguageColors(fakeFetch(200, { data: [{ name: "TypeScript", color: "#3178c6" }, { name: "Bad", color: "red" }] }));
+  assert.deepEqual([...colors], [["typescript", "#3178c6"]]);
+  assert.equal((await fetchLanguageColors(fakeFetch(500, {}))).size, 0);
+});
+
+test("renderLanguageChartSvg draws one slice per language, a capped legend, and never mentions Other as a slice", () => {
+  const languages = Array.from({ length: 20 }, (_, index) => ({ name: `Lang${index}`, percent: 5 }));
+  const svg = renderLanguageChartSvg(languages, new Map([["lang0", "#112233"]]), "since 2020");
+  assert.equal((svg.match(/<path /g) ?? []).length, 20);
+  assert.equal((svg.match(/<rect x="30"/g) ?? []).length, 16);
+  assert.match(svg, /fill="#112233"/);
+  assert.match(svg, /since 2020/);
+  assert.match(svg, /Lang0 \(5\.0%\)/);
+  assert.doesNotMatch(svg, /Other \(/);
+  const single = renderLanguageChartSvg([{ name: "Solo", percent: 100 }], new Map(), "x");
+  assert.equal((single.match(/<path /g) ?? []).length, 1);
+});
+
 test("updateReadme isolates failures, skips keyless sections and never leaks the key", async () => {
   const dir = await mkdtemp(join(tmpdir(), "readme-test-"));
   const readmePath = join(dir, "README.md");
@@ -155,16 +194,16 @@ test("updateReadme isolates failures, skips keyless sections and never leaks the
       return new Response("", { status: 503 });
     };
     try {
-      const result = await updateReadme({ readmePath, artistsSvgPath: join(dir, "a", "top.svg"), artistsSvgHref: "./a/top.svg", githubUser: "Vaporjawn", lastfmUser: "Vaporjawn", feedUrl: "https://x/rss.xml", lastfmApiKey: "SECRETKEY123" });
+      const result = await updateReadme({ readmePath, artistsSvgPath: join(dir, "a", "top.svg"), artistsSvgHref: "./a/top.svg", wakatimeSvgPath: join(dir, "a", "waka.svg"), wakatimeUser: "Vaporjawn", githubUser: "Vaporjawn", lastfmUser: "Vaporjawn", feedUrl: "https://x/rss.xml", lastfmApiKey: "SECRETKEY123" });
       assert.equal(result.changed, true);
-      assert.equal(result.failures.length, 2);
+      assert.equal(result.failures.length, 3);
       assert.ok(result.failures.every((failure) => !failure.includes("SECRETKEY123")));
       const text = await readFile(readmePath, "utf8");
       assert.match(text, /\[\*\*r\*\*\]\(u\)/);
       assert.match(text, /old BLOG_POSTS/);
       assert.match(text, /old TOP_ARTISTS/);
 
-      const keyless = await updateReadme({ readmePath, artistsSvgPath: join(dir, "a", "top.svg"), artistsSvgHref: "./a/top.svg", githubUser: "Vaporjawn", lastfmUser: "Vaporjawn", feedUrl: "https://x/rss.xml" });
+      const keyless = await updateReadme({ readmePath, artistsSvgPath: join(dir, "a", "top.svg"), artistsSvgHref: "./a/top.svg", wakatimeSvgPath: join(dir, "a", "waka.svg"), wakatimeUser: "Vaporjawn", githubUser: "Vaporjawn", lastfmUser: "Vaporjawn", feedUrl: "https://x/rss.xml" });
       assert.deepEqual(keyless.skipped, ["TOP_ARTISTS (no API key)"]);
     } finally {
       globalThis.fetch = realFetch;

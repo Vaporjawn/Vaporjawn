@@ -136,9 +136,7 @@ Hi, I'm Victor Williams, a Full Stack Software Engineer 🚀 from Philadelphia. 
 </picture>
 </a>
 
-<a href="https://wakatime.com"><img src="https://wakatime.com/share/@Vaporjawn/7ad8de02-5dab-4fba-977c-0c4c44fc63b8.png" alt="WakaTime: languages over the last 30 days"></a>
-
-<a href="https://wakatime.com"><img src="https://wakatime.com/share/@Vaporjawn/f4c61307-82ae-43e1-8b08-5f54f7577e2f.png" alt="WakaTime: languages over the last year"></a>
+<a href="https://wakatime.com/@Vaporjawn"><img src="./assets/wakatime-languages.svg" alt="Languages by coding time on WakaTime, all time, excluding unclassified time" width="800"></a>
 
 <img src="https://github-trophies.vercel.app/?username=Vaporjawn" alt="GitHub trophies for Vaporjawn">
 

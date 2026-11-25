@@ -44,12 +44,12 @@ jobs:
 
       - name: Commit changes
         run: |
-          if [ -z "$(git status --porcelain -- README.md assets/top-artists.svg)" ]; then
+          if [ -z "$(git status --porcelain -- README.md assets/top-artists.svg assets/wakatime-languages.svg)" ]; then
             echo "README is already up to date."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md assets/top-artists.svg
+          git add README.md assets/top-artists.svg assets/wakatime-languages.svg
           git commit -m "Update README sections (artists, repos, blog)"
           git push origin HEAD:main

@@ -1,24 +1,27 @@
-import { mkdir, readFile, writeFile } from "node:fs/promises";
-import { dirname } from "node:path";
+import { readFile, writeFile } from "node:fs/promises";
 import { fetchArtistImage } from "./fetchArtistImage.mjs";
+import { fetchLanguageColors } from "./fetchLanguageColors.mjs";
 import { fetchBlogPosts } from "./fetchBlogPosts.mjs";
 import { fetchRecentRepos } from "./fetchRecentRepos.mjs";
 import { fetchTopArtists } from "./fetchTopArtists.mjs";
 import { fetchTotalStars } from "./fetchTotalStars.mjs";
+import { fetchWakatimeLanguages } from "./fetchWakatimeLanguages.mjs";
 import { renderBlogPosts } from "./renderBlogPosts.mjs";
+import { renderLanguageChartSvg } from "./renderLanguageChartSvg.mjs";
 import { renderRecentRepos } from "./renderRecentRepos.mjs";
 import { renderStarBadge } from "./renderStarBadge.mjs";
 import { renderTopArtists } from "./renderTopArtists.mjs";
 import { renderTopArtistsSvg } from "./renderTopArtistsSvg.mjs";
 import { replaceSection } from "./replaceSection.mjs";
+import { writeFileIfChanged } from "./writeFileIfChanged.mjs";
 
 /**
  * Refreshes the auto-generated README sections (star count, recent repositories,
- * latest blog posts, most played artists). Each section is independent: when one
+ * latest blog posts, most played artists, WakaTime language chart). Each section is independent: when one
  * source fails, that section keeps its previous text and the failure is
  * reported, but the others still update.
  *
- * @param {{ readmePath: string, artistsSvgPath: string, artistsSvgHref: string, githubUser: string, lastfmUser: string, feedUrl: string, lastfmApiKey?: string, githubToken?: string }} options - Where to read and write, and which accounts to read.
+ * @param {{ readmePath: string, artistsSvgPath: string, artistsSvgHref: string, wakatimeSvgPath: string, wakatimeUser: string, githubUser: string, lastfmUser: string, feedUrl: string, lastfmApiKey?: string, githubToken?: string }} options - Where to read and write, and which accounts to read.
  * @returns {Promise<{ changed: boolean, failures: string[], skipped: string[] }>} What happened.
  */
 export const updateReadme = async (options) => {
@@ -49,12 +52,7 @@ export const updateReadme = async (options) => {
           withImages.push({ ...artist, imageDataUri: await fetchArtistImage(artist.name) });
         }
         const svg = renderTopArtistsSvg(withImages);
-        const previousSvg = await readFile(options.artistsSvgPath, "utf8").catch(() => "");
-        if (svg !== previousSvg) {
-          await mkdir(dirname(options.artistsSvgPath), { recursive: true });
-          await writeFile(options.artistsSvgPath, svg);
-          svgChanged = true;
-        }
+        svgChanged = (await writeFileIfChanged(options.artistsSvgPath, svg)) || svgChanged;
         return renderTopArtists(artists, options.artistsSvgHref);
       },
       requires: options.lastfmApiKey,
@@ -72,6 +70,14 @@ export const updateReadme = async (options) => {
     } catch (error) {
       failures.push(`${section.name}: ${error.message.replaceAll(options.lastfmApiKey ?? "\u0000", "***")}`);
     }
+  }
+
+  try {
+    const { languages, rangeText } = await fetchWakatimeLanguages(options.wakatimeUser);
+    const colors = await fetchLanguageColors();
+    svgChanged = (await writeFileIfChanged(options.wakatimeSvgPath, renderLanguageChartSvg(languages, colors, rangeText))) || svgChanged;
+  } catch (error) {
+    failures.push(`WAKATIME_CHART: ${error.message}`);
   }
 
   const changed = updated !== original || svgChanged;

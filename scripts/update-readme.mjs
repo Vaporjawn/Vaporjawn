@@ -15,6 +15,8 @@ const main = async () => {
     readmePath: fileURLToPath(new URL("../README.md", import.meta.url)),
     artistsSvgPath: fileURLToPath(new URL("../assets/top-artists.svg", import.meta.url)),
     artistsSvgHref: "./assets/top-artists.svg",
+    wakatimeSvgPath: fileURLToPath(new URL("../assets/wakatime-languages.svg", import.meta.url)),
+    wakatimeUser: "Vaporjawn",
     githubUser: "Vaporjawn",
     lastfmUser: "Vaporjawn",
     feedUrl: "https://vaporjawn.dev/rss.xml",

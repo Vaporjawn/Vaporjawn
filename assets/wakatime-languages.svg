@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="520" viewBox="0 0 800 520" role="img" aria-label="Languages by coding time, all time, excluding unclassified time" font-family="'SF Mono', 'Menlo', 'Consolas', 'DejaVu Sans Mono', monospace">
+  <rect width="800" height="520" fill="#1f2933"/>
+  <text x="400" y="34" font-size="19" fill="#4aa3df" text-anchor="middle">Languages by coding time</text>
+  <text x="400" y="58" font-size="13" fill="#8a97a6" text-anchor="middle">Excluding &quot;Other&quot; · since Feb 28 2020 · powered by wakatime.com</text>
+  <rect x="30" y="84" width="14" height="14" rx="2" fill="#3178c6"/>
+  <text x="54" y="96" font-size="15" fill="#d6dde6">TypeScript (61.0%)</text>
+  <rect x="30" y="109" width="14" height="14" rx="2" fill="#083fa1"/>
+  <text x="54" y="121" font-size="15" fill="#d6dde6">Markdown (11.7%)</text>
+  <rect x="30" y="134" width="14" height="14" rx="2" fill="#ff3e00"/>
+  <text x="54" y="146" font-size="15" fill="#d6dde6">Svelte (6.0%)</text>
+  <rect x="30" y="159" width="14" height="14" rx="2" fill="#292929"/>
+  <text x="54" y="171" font-size="15" fill="#d6dde6">JSON (3.8%)</text>
+  <rect x="30" y="184" width="14" height="14" rx="2" fill="#e34c26"/>
+  <text x="54" y="196" font-size="15" fill="#d6dde6">HTML (3.1%)</text>
+  <rect x="30" y="209" width="14" height="14" rx="2" fill="#f1e05a"/>
+  <text x="54" y="221" font-size="15" fill="#d6dde6">JavaScript (2.6%)</text>
+  <rect x="30" y="234" width="14" height="14" rx="2" fill="#701516"/>
+  <text x="54" y="246" font-size="15" fill="#d6dde6">Ruby (1.5%)</text>
+  <rect x="30" y="259" width="14" height="14" rx="2" fill="#663399"/>
+  <text x="54" y="271" font-size="15" fill="#d6dde6">CSS (1.3%)</text>
+  <rect x="30" y="284" width="14" height="14" rx="2" fill="hsl(241, 50%, 52%)"/>
+  <text x="54" y="296" font-size="15" fill="#d6dde6">Vue.js (1.2%)</text>
+  <rect x="30" y="309" width="14" height="14" rx="2" fill="#178600"/>
+  <text x="54" y="321" font-size="15" fill="#d6dde6">C# (1.2%)</text>
+  <rect x="30" y="334" width="14" height="14" rx="2" fill="#dea584"/>
+  <text x="54" y="346" font-size="15" fill="#d6dde6">Rust (1.1%)</text>
+  <rect x="30" y="359" width="14" height="14" rx="2" fill="#3572A5"/>
+  <text x="54" y="371" font-size="15" fill="#d6dde6">Python (0.7%)</text>
+  <rect x="30" y="384" width="14" height="14" rx="2" fill="#cb171e"/>
+  <text x="54" y="396" font-size="15" fill="#d6dde6">YAML (0.7%)</text>
+  <rect x="30" y="409" width="14" height="14" rx="2" fill="hsl(292, 50%, 52%)"/>
+  <text x="54" y="421" font-size="15" fill="#d6dde6">Bash (0.6%)</text>
+  <rect x="30" y="434" width="14" height="14" rx="2" fill="#F05138"/>
+  <text x="54" y="446" font-size="15" fill="#d6dde6">Swift (0.5%)</text>
+  <rect x="30" y="459" width="14" height="14" rx="2" fill="hsl(181, 50%, 52%)"/>
+  <text x="54" y="471" font-size="15" fill="#d6dde6">Text (0.5%)</text>
+  <path d="M 580.00 121.00 A 175 175 0 1 1 468.08 430.53 L 510.93 379.03 A 108 108 0 1 0 580.00 188.00 Z" fill="#3178c6"><title>TypeScript 61.04%</title></path>
+  <path d="M 468.08 430.53 A 175 175 0 0 1 406.70 320.36 L 473.05 311.04 A 108 108 0 0 0 510.93 379.03 Z" fill="#083fa1"><title>Markdown 11.73%</title></path>
+  <path d="M 406.70 320.36 A 175 175 0 0 1 409.93 254.76 L 475.04 270.55 A 108 108 0 0 0 473.05 311.04 Z" fill="#ff3e00"><title>Svelte 6.01%</title></path>
+  <path d="M 409.93 254.76 A 175 175 0 0 1 424.38 215.95 L 483.96 246.60 A 108 108 0 0 0 475.04 270.55 Z" fill="#292929"><title>JSON 3.78%</title></path>
+  <path d="M 424.38 215.95 A 175 175 0 0 1 443.14 186.94 L 495.54 228.69 A 108 108 0 0 0 483.96 246.60 Z" fill="#e34c26"><title>HTML 3.15%</title></path>
+  <path d="M 443.14 186.94 A 175 175 0 0 1 462.36 166.44 L 507.40 216.05 A 108 108 0 0 0 495.54 228.69 Z" fill="#f1e05a"><title>JavaScript 2.56%</title></path>
+  <path d="M 462.36 166.44 A 175 175 0 0 1 475.45 155.67 L 515.48 209.39 A 108 108 0 0 0 507.40 216.05 Z" fill="#701516"><title>Ruby 1.54%</title></path>
+  <path d="M 475.45 155.67 A 175 175 0 0 1 486.86 147.84 L 522.52 204.57 A 108 108 0 0 0 515.48 209.39 Z" fill="#663399"><title>CSS 1.26%</title></path>
+  <path d="M 486.86 147.84 A 175 175 0 0 1 498.66 141.05 L 529.80 200.38 A 108 108 0 0 0 522.52 204.57 Z" fill="hsl(241, 50%, 52%)"><title>Vue.js 1.24%</title></path>
+  <path d="M 498.66 141.05 A 175 175 0 0 1 510.33 135.46 L 537.01 196.93 A 108 108 0 0 0 529.80 200.38 Z" fill="#178600"><title>C# 1.18%</title></path>
+  <path d="M 510.33 135.46 A 175 175 0 0 1 521.13 131.20 L 543.67 194.30 A 108 108 0 0 0 537.01 196.93 Z" fill="#dea584"><title>Rust 1.06%</title></path>
+  <path d="M 521.13 131.20 A 175 175 0 0 1 528.54 128.74 L 548.24 192.77 A 108 108 0 0 0 543.67 194.30 Z" fill="#3572A5"><title>Python 0.71%</title></path>
+  <path d="M 528.54 128.74 A 175 175 0 0 1 535.84 126.66 L 552.75 191.50 A 108 108 0 0 0 548.24 192.77 Z" fill="#cb171e"><title>YAML 0.69%</title></path>
+  <path d="M 535.84 126.66 A 175 175 0 0 1 541.91 125.19 L 556.50 190.59 A 108 108 0 0 0 552.75 191.50 Z" fill="hsl(292, 50%, 52%)"><title>Bash 0.57%</title></path>
+  <path d="M 541.91 125.19 A 175 175 0 0 1 547.60 124.03 L 560.00 189.87 A 108 108 0 0 0 556.50 190.59 Z" fill="#F05138"><title>Swift 0.53%</title></path>
+  <path d="M 547.60 124.03 A 175 175 0 0 1 552.88 123.11 L 563.26 189.30 A 108 108 0 0 0 560.00 189.87 Z" fill="hsl(181, 50%, 52%)"><title>Text 0.49%</title></path>
+  <path d="M 552.88 123.11 A 175 175 0 0 1 556.41 122.60 L 565.44 188.99 A 108 108 0 0 0 563.26 189.30 Z" fill="hsl(38, 50%, 52%)"><title>Figma Design 0.32%</title></path>
+  <path d="M 556.41 122.60 A 175 175 0 0 1 559.51 122.20 L 567.36 188.74 A 108 108 0 0 0 565.44 188.99 Z" fill="#e38c00"><title>SQL 0.28%</title></path>
+  <path d="M 559.51 122.20 A 175 175 0 0 1 562.40 121.89 L 569.14 188.55 A 108 108 0 0 0 567.36 188.74 Z" fill="#c6538c"><title>SCSS 0.26%</title></path>
+  <path d="M 562.40 121.89 A 175 175 0 0 1 564.84 121.66 L 570.64 188.41 A 108 108 0 0 0 569.14 188.55 Z" fill="#0060ac"><title>XML 0.22%</title></path>
+  <path d="M 564.84 121.66 A 175 175 0 0 1 566.62 121.51 L 571.74 188.32 A 108 108 0 0 0 570.64 188.41 Z" fill="hsl(42, 50%, 52%)"><title>Fork 0.16%</title></path>
+  <path d="M 566.62 121.51 A 175 175 0 0 1 568.40 121.38 L 572.84 188.24 A 108 108 0 0 0 571.74 188.32 Z" fill="#c1d026"><title>Twig 0.16%</title></path>
+  <path d="M 568.40 121.38 A 175 175 0 0 1 570.18 121.28 L 573.94 188.17 A 108 108 0 0 0 572.84 188.24 Z" fill="#F44D27"><title>Git Config 0.16%</title></path>
+  <path d="M 570.18 121.28 A 175 175 0 0 1 571.08 121.23 L 574.49 188.14 A 108 108 0 0 0 573.94 188.17 Z" fill="#00B4AB"><title>Dart 0.08%</title></path>
+  <path d="M 571.08 121.23 A 175 175 0 0 1 571.97 121.18 L 575.04 188.11 A 108 108 0 0 0 574.49 188.14 Z" fill="#fcb32c"><title>MDX 0.08%</title></path>
+  <path d="M 571.97 121.18 A 175 175 0 0 1 572.86 121.15 L 575.59 188.09 A 108 108 0 0 0 575.04 188.11 Z" fill="hsl(0, 50%, 52%)"><title>Docker 0.08%</title></path>
+  <path d="M 572.86 121.15 A 175 175 0 0 1 573.75 121.11 L 576.14 188.07 A 108 108 0 0 0 575.59 188.09 Z" fill="hsl(105, 50%, 52%)"><title>TSConfig 0.08%</title></path>
+  <path d="M 573.75 121.11 A 175 175 0 0 1 574.42 121.09 L 576.56 188.05 A 108 108 0 0 0 576.14 188.07 Z" fill="#012456"><title>PowerShell 0.06%</title></path>
+  <path d="M 574.42 121.09 A 175 175 0 0 1 575.09 121.07 L 576.97 188.04 A 108 108 0 0 0 576.56 188.05 Z" fill="hsl(98, 50%, 52%)"><title>Todotxt 0.06%</title></path>
+  <path d="M 575.09 121.07 A 175 175 0 0 1 575.76 121.05 L 577.38 188.03 A 108 108 0 0 0 576.97 188.04 Z" fill="hsl(32, 50%, 52%)"><title>Image (svg) 0.06%</title></path>
+  <path d="M 575.76 121.05 A 175 175 0 0 1 576.43 121.04 L 577.80 188.02 A 108 108 0 0 0 577.38 188.03 Z" fill="hsl(157, 50%, 52%)"><title>ERB 0.06%</title></path>
+  <path d="M 576.43 121.04 A 175 175 0 0 1 576.88 121.03 L 578.07 188.02 A 108 108 0 0 0 577.80 188.02 Z" fill="#9c4221"><title>TOML 0.04%</title></path>
+  <path d="M 576.88 121.03 A 175 175 0 0 1 577.32 121.02 L 578.35 188.01 A 108 108 0 0 0 578.07 188.02 Z" fill="#DA3434"><title>CMake 0.04%</title></path>
+  <path d="M 577.32 121.02 A 175 175 0 0 1 577.54 121.02 L 578.48 188.01 A 108 108 0 0 0 578.35 188.01 Z" fill="#10253f"><title>Modula-2 0.02%</title></path>
+  <path d="M 577.54 121.02 A 175 175 0 0 1 577.77 121.01 L 578.62 188.01 A 108 108 0 0 0 578.48 188.01 Z" fill="#2A6277"><title>Java Properties 0.02%</title></path>
+  <path d="M 577.77 121.01 A 175 175 0 0 1 577.99 121.01 L 578.76 188.01 A 108 108 0 0 0 578.62 188.01 Z" fill="#a9188d"><title>Io 0.02%</title></path>
+  <path d="M 577.99 121.01 A 175 175 0 0 1 578.21 121.01 L 578.90 188.01 A 108 108 0 0 0 578.76 188.01 Z" fill="#b07219"><title>Java 0.02%</title></path>
+  <path d="M 578.21 121.01 A 175 175 0 0 1 578.44 121.01 L 579.04 188.00 A 108 108 0 0 0 578.90 188.01 Z" fill="#ff5a03"><title>Astro 0.02%</title></path>
+  <path d="M 578.44 121.01 A 175 175 0 0 1 578.66 121.01 L 579.17 188.00 A 108 108 0 0 0 579.04 188.00 Z" fill="hsl(322, 50%, 52%)"><title>Git 0.02%</title></path>
+  <path d="M 578.66 121.01 A 175 175 0 0 1 578.88 121.00 L 579.31 188.00 A 108 108 0 0 0 579.17 188.00 Z" fill="#438eff"><title>Objective-C 0.02%</title></path>
+  <path d="M 578.88 121.00 A 175 175 0 0 1 579.11 121.00 L 579.45 188.00 A 108 108 0 0 0 579.31 188.00 Z" fill="#d1dbe0"><title>INI 0.02%</title></path>
+  <path d="M 579.11 121.00 A 175 175 0 0 1 579.33 121.00 L 579.59 188.00 A 108 108 0 0 0 579.45 188.00 Z" fill="#237346"><title>CSV 0.02%</title></path>
+  <path d="M 579.33 121.00 A 175 175 0 0 1 579.55 121.00 L 579.72 188.00 A 108 108 0 0 0 579.59 188.00 Z" fill="#1d365d"><title>Less 0.02%</title></path>
+  <path d="M 579.55 121.00 A 175 175 0 0 1 579.78 121.00 L 579.86 188.00 A 108 108 0 0 0 579.72 188.00 Z" fill="hsl(197, 50%, 52%)"><title>Microsoft Visual Studio Solution 0.02%</title></path>
+  <path d="M 579.78 121.00 A 175 175 0 0 1 580.00 121.00 L 580.00 188.00 A 108 108 0 0 0 579.86 188.00 Z" fill="#C1F12E"><title>Batchfile 0.02%</title></path>
+</svg>
