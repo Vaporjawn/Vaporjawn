@@ -41,7 +41,7 @@ Hi, I'm Victor Williams, a Full Stack Software Engineer 🚀 from Philadelphia. 
 <div align="center">
 
 <!-- STARS:START -->
-![Stars received: 38](https://img.shields.io/badge/Stars%20Received-38-black?style=for-the-badge)
+![Stars received: 39](https://img.shields.io/badge/Stars%20Received-39-black?style=for-the-badge)
 <!-- STARS:END -->
 
 <table>
