@@ -26,11 +26,12 @@
 
 <div align="center">
 
-Hi, I'm Victor Williams, a Full Stack Software Engineer 🚀 from Philadelphia. I'm a creative problem solving enthusiast with a constantly growing love for languages. Besides programming, I enjoy Super Smash Bros. Melee for the Nintendo GameCube.
+Hi, I'm Victor, a full-stack engineer from Philadelphia. I build with TypeScript, React and Node, and lately with Rust and Swift for native Mac apps. I like turning messy problems into small tools people actually use, and I'm always picking up a new language, human or programming: I even build tools for Esperanto. Off the clock I make music as Vaporjawn and play Super Smash Bros. Melee.
 
-👨🏽‍💻 I'm currently working on improving my tech skills<br/>
-🌱 I'm currently learning Machine Learning<br/>
-👯 I'm looking to collaborate on Web Projects<br/>
+🍎 I'm currently building native Mac apps in Rust and Swift<br/>
+🌐 I'm looking to collaborate on web projects<br/>
+🎧 I make music as [Vaporjawn](https://vaporjawn.com)<br/>
+🌍 I build tools for Esperanto at [esperantaskanaduko.com](https://esperantaskanaduko.com)<br/>
 💬 Ask me about anything, I am happy to help<br/>
 ⚡️ Fun fact: anything is possible<br/>
 📫 How to reach me: [victor.williams.dev@gmail.com](mailto:victor.williams.dev@gmail.com)<br/>
