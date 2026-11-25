@@ -120,22 +120,6 @@ Hi, I'm Victor Williams, a Full Stack Software Engineer 🚀 from Philadelphia. 
 
 <div align="center">
 
-**Languages and Tools:**
-
-<code><img height="20" alt="TypeScript" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/typescript/typescript.png"></code> <code><img height="20" alt="React" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png"></code> <code><img height="20" alt="Node.js" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/nodejs/nodejs.png"></code> <code><img height="20" alt=".NET" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/dotnet/dotnet.png"></code> <code><img height="20" alt="Ruby" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/ruby/ruby.png"></code> <code><img height="20" alt="C#" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/csharp/csharp.png"></code> <code><img height="20" alt="JavaScript" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png"></code> <code><img height="20" alt="Vue" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/vue/vue.png"></code> <code><img height="20" alt="GraphQL" src="https://raw.githubusercontent.com/github/explore/5c058a388828bb5fde0bcafd4bc867b5bb3f26f3/topics/graphql/graphql.png"></code> <code><img height="20" alt="C++" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/cpp/cpp.png"></code> <code><img height="20" alt="Python" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/python/python.png"></code> <code><img height="20" alt="MySQL" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/mysql/mysql.png"></code> <code><img height="20" alt="Git" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png"></code> <code><img height="20" alt="Terminal" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/terminal/terminal.png"></code>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=vaporjawn&langs_count=10&hide_border=true&layout=compact&theme=radical">
-  <img alt="Victor's most used languages on GitHub" src="https://github-readme-stats.vercel.app/api/top-langs/?username=vaporjawn&langs_count=10&hide_border=true&layout=compact&theme=default">
-</picture>
-
-<a href="https://github.com/vaporjawn">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=vaporjawn&theme=react-dark&hide_border=true">
-  <img alt="GitHub activity graph" src="https://github-readme-activity-graph.vercel.app/graph?username=vaporjawn&theme=xcode&hide_border=true">
-</picture>
-</a>
-
 <a href="https://wakatime.com/@Vaporjawn"><img src="./assets/wakatime-languages.svg" alt="Languages by coding time on WakaTime, all time, excluding unclassified time" width="800"></a>
 
 <img src="https://github-trophies.vercel.app/?username=Vaporjawn" alt="GitHub trophies for Vaporjawn">
@@ -147,6 +131,6 @@ Hi, I'm Victor Williams, a Full Stack Software Engineer 🚀 from Philadelphia. 
   <img alt="Random programming quote" src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=default">
 </picture>
 
-<!-- The artists, repositories and blog sections refresh daily through [a GitHub Action](.github/workflows/update-readme.yml). Credits: waving hand GIF via [GIPHY](https://giphy.com); stats cards by [github-readme-stats](https://github.com/anuraghazra/github-readme-stats), [streak-stats](https://github.com/DenverCoder1/github-readme-streak-stats), [github-readme-activity-graph](https://github.com/Ashutosh00710/github-readme-activity-graph), [github-trophies](https://github-trophies.vercel.app) and [quotes-github-readme](https://github.com/PiyushSuthar/github-readme-quotes); icons from [GitHub Explore](https://github.com/github/explore); badges by [Shields.io](https://shields.io); coding time by [WakaTime](https://wakatime.com); listening data by [Last.fm](https://www.last.fm). -->
+<!-- The artists, repositories and blog sections refresh daily through [a GitHub Action](.github/workflows/update-readme.yml). Credits: waving hand GIF via [GIPHY](https://giphy.com); stats cards by [github-readme-stats](https://github.com/anuraghazra/github-readme-stats), [streak-stats](https://github.com/DenverCoder1/github-readme-streak-stats), [github-trophies](https://github-trophies.vercel.app) and [quotes-github-readme](https://github.com/PiyushSuthar/github-readme-quotes); badges by [Shields.io](https://shields.io); coding time by [WakaTime](https://wakatime.com); listening data by [Last.fm](https://www.last.fm). -->
 
 </div>
