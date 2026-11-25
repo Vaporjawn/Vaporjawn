@@ -92,11 +92,11 @@ Hi, I'm Victor Williams, a Full Stack Software Engineer 🚀 from Philadelphia. 
 ### 🛠️ Recently active repositories
 
 <!-- RECENT_REPOS:START -->
-- [**eslint-plugin-one-function-per-file**](https://github.com/Vaporjawn/eslint-plugin-one-function-per-file): ESLint plugin and preset: one function per file, const arrow functions only, and a TSDoc comment on every named function. <sub>(updated 2026-11-25, TypeScript)</sub>
 - [**universities**](https://github.com/Vaporjawn/universities): instant access to a global list of institutions plus an optional, rate‑limited scraper that augments each with descriptive, academic, and classification metadata via a TypeScript API \& CLI <sub>(updated 2026-11-25, TypeScript)</sub>
+- [**extension-stale-check**](https://github.com/Vaporjawn/extension-stale-check): Detect a stale Chrome extension: compare the manifest the browser loaded against dist/ on disk, in a Playwright run or in your real Chrome profile. <sub>(updated 2026-11-25, TypeScript)</sub>
+- [**eslint-plugin-one-function-per-file**](https://github.com/Vaporjawn/eslint-plugin-one-function-per-file): ESLint plugin and preset: one function per file, const arrow functions only, and a TSDoc comment on every named function. <sub>(updated 2026-11-25, TypeScript)</sub>
 - [**Vaporjawn.github.io**](https://github.com/Vaporjawn/Vaporjawn.github.io): my personal website <sub>(updated 2026-11-09, TypeScript)</sub>
 - [**Crescendia-releases**](https://github.com/Vaporjawn/Crescendia-releases): Installers for Crescendia <sub>(updated 2026-10-29)</sub>
-- [**orderbook\_synchronization**](https://github.com/Vaporjawn/orderbook_synchronization): Create a ReactJS UI component to synchronize and display an orderbook using websocket updates. <sub>(updated 2026-10-26, HTML)</sub>
 <!-- RECENT_REPOS:END -->
 
 </td>

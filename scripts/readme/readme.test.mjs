@@ -5,6 +5,7 @@ import { join } from "node:path";
 import { test } from "node:test";
 import { escapeMarkdown } from "./escapeMarkdown.mjs";
 import { fetchArtistImage } from "./fetchArtistImage.mjs";
+import { fetchLanguageIcons } from "./fetchLanguageIcons.mjs";
 import { fetchLanguageColors } from "./fetchLanguageColors.mjs";
 import { fetchBlogPosts } from "./fetchBlogPosts.mjs";
 import { fetchRecentRepos } from "./fetchRecentRepos.mjs";
@@ -176,6 +177,39 @@ test("renderLanguageChartSvg draws one slice per language, a capped legend, and 
   assert.doesNotMatch(svg, /Other \(/);
   const single = renderLanguageChartSvg([{ name: "Solo", percent: 100 }], new Map(), "x");
   assert.equal((single.match(/<path /g) ?? []).length, 1);
+});
+
+test("fetchLanguageIcons maps names and aliases, skips unsafe or missing logos and survives outages", async () => {
+  const catalog = [
+    { title: "TypeScript", slug: "typescript", hex: "3178C6" },
+    { title: "HTML5", slug: "html5", hex: "E34F26" },
+    { title: "Evil", slug: "evil", hex: "000000" },
+    { title: "BadHex", slug: "badhex", hex: "zzzzzz" },
+  ];
+  const route = async (url) => {
+    const address = String(url);
+    if (address.endsWith("simple-icons.json")) return new Response(JSON.stringify(catalog));
+    if (address.endsWith("/typescript.svg")) return new Response('<svg><title>x</title><path d="M0 0L24 24z"/></svg>');
+    if (address.endsWith("/html5.svg")) return new Response('<svg><path d="M1 1h2"/></svg>');
+    if (address.endsWith("/evil.svg")) return new Response('<svg><path d="M0 0" onload="x"/></svg>'.replace('d="M0 0"', 'd="M0 0&quot;><script>"'));
+    return new Response("", { status: 404 });
+  };
+  const icons = await fetchLanguageIcons(["TypeScript", "HTML", "Evil", "BadHex", "C#", "Nope"], route);
+  assert.deepEqual([...icons.keys()].sort(), ["html", "typescript"]);
+  assert.equal(icons.get("typescript").hex, "3178C6");
+  assert.equal((await fetchLanguageIcons(["TypeScript"], fakeFetch(500, {}))).size, 0);
+});
+
+test("renderLanguageChartSvg draws logos for known languages and letter badges for the rest", () => {
+  const svg = renderLanguageChartSvg(
+    [{ name: "TypeScript", percent: 60 }, { name: "Markdown", percent: 30 }, { name: "C#", percent: 10 }],
+    new Map(),
+    "x",
+    new Map([["typescript", { path: "M0 0L24 24z", hex: "3178C6" }], ["markdown", { path: "M1 1h2", hex: "000000" }]]),
+  );
+  assert.match(svg, /d="M0 0L24 24z" fill="#3178C6"/);
+  assert.match(svg, /d="M1 1h2" fill="#d6dde6"/);
+  assert.match(svg, />C#<\/text>/);
 });
 
 test("updateReadme isolates failures, skips keyless sections and never leaks the key", async () => {

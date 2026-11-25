@@ -6,6 +6,8 @@ const ROW_HEIGHT = 25;
 const CENTER_X = 580;
 const OUTER_RADIUS = 175;
 const INNER_RADIUS = 108;
+const TILE_FILL = "#2e3b49";
+const LIGHT_GLYPH = "#d6dde6";
 const FONT = "'SF Mono', 'Menlo', 'Consolas', 'DejaVu Sans Mono', monospace";
 
 /**
@@ -20,6 +22,19 @@ const fallbackColor = (name) => {
     hash = (hash * 31 + character.charCodeAt(0)) % 360;
   }
   return `hsl(${hash}, 50%, 52%)`;
+};
+
+/**
+ * Chooses a logo colour that stays readable on the dark tile: the brand
+ * colour, or a light grey when the brand colour is nearly black.
+ *
+ * @param {string} hex - Brand colour as `rrggbb`.
+ * @returns {string} A `#rrggbb` colour.
+ */
+const readableOnDark = (hex) => {
+  const [red, green, blue] = [0, 2, 4].map((offset) => parseInt(hex.slice(offset, offset + 2), 16) / 255);
+  const luminance = 0.2126 * red + 0.7152 * green + 0.0722 * blue;
+  return luminance < 0.2 ? LIGHT_GLYPH : `#${hex}`;
 };
 
 /**
@@ -45,9 +60,10 @@ const slicePath = (centerY, startAngle, endAngle) => {
  * @param {{ name: string, percent: number }[]} languages - Languages, largest first, percentages summing to 100.
  * @param {Map<string, string>} colors - Lower-cased language name to colour.
  * @param {string} rangeText - WakaTime's wording for the date range, e.g. "since Feb 28 2020".
+ * @param {Map<string, { path: string, hex: string }>} [icons] - Lower-cased language name to logo path and colour; languages without one get a letter badge.
  * @returns {string} The SVG document text.
  */
-export const renderLanguageChartSvg = (languages, colors, rangeText) => {
+export const renderLanguageChartSvg = (languages, colors, rangeText, icons = new Map()) => {
   const height = 96 + LEGEND_ROWS * ROW_HEIGHT + 24;
   const centerY = 96 + (LEGEND_ROWS * ROW_HEIGHT) / 2;
   const colorOf = (language) => colors.get(language.name.toLowerCase()) ?? fallbackColor(language.name);
@@ -67,8 +83,13 @@ export const renderLanguageChartSvg = (languages, colors, rangeText) => {
     .slice(0, LEGEND_ROWS)
     .map((language, index) => {
       const y = 96 + index * ROW_HEIGHT;
-      return `<rect x="30" y="${y - 12}" width="14" height="14" rx="2" fill="${colorOf(language)}"/>
-  <text x="54" y="${y}" font-size="15" fill="#d6dde6">${escapeXml(language.name)} (${language.percent.toFixed(1)}%)</text>`;
+      const icon = icons.get(language.name.toLowerCase());
+      const glyph = icon
+        ? `<path transform="translate(33 ${y - 14}) scale(0.5833)" d="${icon.path}" fill="${readableOnDark(icon.hex)}"/>`
+        : `<text x="40" y="${y}" font-size="9" font-weight="700" fill="${colorOf(language)}" text-anchor="middle">${escapeXml(language.name.slice(0, 2))}</text>`;
+      return `<rect x="30" y="${y - 17}" width="20" height="20" rx="4" fill="${TILE_FILL}"/>
+  ${glyph}
+  <text x="60" y="${y}" font-size="15" fill="#d6dde6">${escapeXml(language.name)} (${language.percent.toFixed(1)}%)</text>`;
     })
     .join("\n  ");
 

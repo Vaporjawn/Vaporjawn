@@ -1,5 +1,6 @@
 import { readFile, writeFile } from "node:fs/promises";
 import { fetchArtistImage } from "./fetchArtistImage.mjs";
+import { fetchLanguageIcons } from "./fetchLanguageIcons.mjs";
 import { fetchLanguageColors } from "./fetchLanguageColors.mjs";
 import { fetchBlogPosts } from "./fetchBlogPosts.mjs";
 import { fetchRecentRepos } from "./fetchRecentRepos.mjs";
@@ -75,7 +76,8 @@ export const updateReadme = async (options) => {
   try {
     const { languages, rangeText } = await fetchWakatimeLanguages(options.wakatimeUser);
     const colors = await fetchLanguageColors();
-    svgChanged = (await writeFileIfChanged(options.wakatimeSvgPath, renderLanguageChartSvg(languages, colors, rangeText))) || svgChanged;
+    const icons = await fetchLanguageIcons(languages.slice(0, 16).map((language) => language.name));
+    svgChanged = (await writeFileIfChanged(options.wakatimeSvgPath, renderLanguageChartSvg(languages, colors, rangeText, icons))) || svgChanged;
   } catch (error) {
     failures.push(`WAKATIME_CHART: ${error.message}`);
   }
