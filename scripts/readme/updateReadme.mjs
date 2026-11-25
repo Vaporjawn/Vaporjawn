@@ -1,4 +1,5 @@
 import { readFile, writeFile } from "node:fs/promises";
+import { contentHash } from "./contentHash.mjs";
 import { fetchArtistImage } from "./fetchArtistImage.mjs";
 import { fetchLanguageIcons } from "./fetchLanguageIcons.mjs";
 import { fetchLanguageColors } from "./fetchLanguageColors.mjs";
@@ -13,6 +14,7 @@ import { renderRecentRepos } from "./renderRecentRepos.mjs";
 import { renderStarBadge } from "./renderStarBadge.mjs";
 import { renderTopArtists } from "./renderTopArtists.mjs";
 import { renderTopArtistsSvg } from "./renderTopArtistsSvg.mjs";
+import { stampAssetVersion } from "./stampAssetVersion.mjs";
 import { replaceSection } from "./replaceSection.mjs";
 import { writeFileIfChanged } from "./writeFileIfChanged.mjs";
 
@@ -22,7 +24,7 @@ import { writeFileIfChanged } from "./writeFileIfChanged.mjs";
  * source fails, that section keeps its previous text and the failure is
  * reported, but the others still update.
  *
- * @param {{ readmePath: string, artistsSvgPath: string, artistsSvgHref: string, wakatimeSvgPath: string, wakatimeUser: string, githubUser: string, lastfmUser: string, feedUrl: string, lastfmApiKey?: string, githubToken?: string }} options - Where to read and write, and which accounts to read.
+ * @param {{ readmePath: string, artistsSvgPath: string, artistsSvgHref: string, wakatimeSvgPath: string, wakatimeSvgHref: string, wakatimeUser: string, githubUser: string, lastfmUser: string, feedUrl: string, lastfmApiKey?: string, githubToken?: string }} options - Where to read and write, and which accounts to read.
  * @returns {Promise<{ changed: boolean, failures: string[], skipped: string[] }>} What happened.
  */
 export const updateReadme = async (options) => {
@@ -54,7 +56,7 @@ export const updateReadme = async (options) => {
         }
         const svg = renderTopArtistsSvg(withImages);
         svgChanged = (await writeFileIfChanged(options.artistsSvgPath, svg)) || svgChanged;
-        return renderTopArtists(artists, options.artistsSvgHref);
+        return renderTopArtists(artists, `${options.artistsSvgHref}?v=${contentHash(svg)}`);
       },
       requires: options.lastfmApiKey,
     },
@@ -77,7 +79,9 @@ export const updateReadme = async (options) => {
     const { languages, rangeText } = await fetchWakatimeLanguages(options.wakatimeUser);
     const colors = await fetchLanguageColors();
     const icons = await fetchLanguageIcons(languages.slice(0, 16).map((language) => language.name));
-    svgChanged = (await writeFileIfChanged(options.wakatimeSvgPath, renderLanguageChartSvg(languages, colors, rangeText, icons))) || svgChanged;
+    const chartSvg = renderLanguageChartSvg(languages, colors, rangeText, icons);
+    svgChanged = (await writeFileIfChanged(options.wakatimeSvgPath, chartSvg)) || svgChanged;
+    updated = stampAssetVersion(updated, options.wakatimeSvgHref, chartSvg);
   } catch (error) {
     failures.push(`WAKATIME_CHART: ${error.message}`);
   }

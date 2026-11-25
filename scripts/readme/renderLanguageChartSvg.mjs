@@ -7,6 +7,8 @@ const CENTER_X = 580;
 const OUTER_RADIUS = 175;
 const INNER_RADIUS = 108;
 const TILE_FILL = "#2e3b49";
+const GLYPH_WIDTH = 9;
+const DARK_TEXT = "#10161d";
 const LIGHT_GLYPH = "#d6dde6";
 const FONT = "'SF Mono', 'Menlo', 'Consolas', 'DejaVu Sans Mono', monospace";
 
@@ -35,6 +37,21 @@ const readableOnDark = (hex) => {
   const [red, green, blue] = [0, 2, 4].map((offset) => parseInt(hex.slice(offset, offset + 2), 16) / 255);
   const luminance = 0.2126 * red + 0.7152 * green + 0.0722 * blue;
   return luminance < 0.2 ? LIGHT_GLYPH : `#${hex}`;
+};
+
+/**
+ * Chooses black-ish or white text for a highlight of the given colour.
+ *
+ * @param {string} color - A `#rrggbb` or other CSS colour.
+ * @returns {string} The text colour with the better contrast.
+ */
+const textColorOn = (color) => {
+  const match = /^#([0-9a-fA-F]{6})$/.exec(color);
+  if (!match) {
+    return "#ffffff";
+  }
+  const [red, green, blue] = [0, 2, 4].map((offset) => parseInt(match[1].slice(offset, offset + 2), 16) / 255);
+  return 0.2126 * red + 0.7152 * green + 0.0722 * blue > 0.5 ? DARK_TEXT : "#ffffff";
 };
 
 /**
@@ -83,14 +100,17 @@ export const renderLanguageChartSvg = (languages, colors, rangeText, icons = new
     .slice(0, LEGEND_ROWS)
     .map((language, index) => {
       const y = 96 + index * ROW_HEIGHT;
+      const color = colorOf(language);
       const icon = icons.get(language.name.toLowerCase());
       const glyph = icon
-        ? `<path transform="translate(55 ${y - 14}) scale(0.5833)" d="${icon.path}" fill="${readableOnDark(icon.hex)}"/>`
-        : `<text x="62" y="${y}" font-size="9" font-weight="700" fill="${colorOf(language)}" text-anchor="middle">${escapeXml(language.name.slice(0, 2))}</text>`;
-      return `<rect x="30" y="${y - 14}" width="14" height="14" rx="3" fill="${colorOf(language)}"/>
-  <rect x="52" y="${y - 17}" width="20" height="20" rx="4" fill="${TILE_FILL}"/>
+        ? `<path transform="translate(33 ${y - 14}) scale(0.5833)" d="${icon.path}" fill="${readableOnDark(icon.hex)}"/>`
+        : `<text x="40" y="${y}" font-size="9" font-weight="700" fill="${color}" text-anchor="middle">${escapeXml(language.name.slice(0, 2))}</text>`;
+      const label = `${language.name} (${language.percent.toFixed(1)}%)`;
+      const labelWidth = label.length * GLYPH_WIDTH;
+      return `<rect x="30" y="${y - 17}" width="20" height="20" rx="4" fill="${TILE_FILL}"/>
   ${glyph}
-  <text x="82" y="${y}" font-size="15" fill="#d6dde6">${escapeXml(language.name)} (${language.percent.toFixed(1)}%)</text>`;
+  <rect x="58" y="${y - 17}" width="${labelWidth + 16}" height="22" rx="5" fill="${color}"/>
+  <text x="66" y="${y}" font-size="15" font-weight="600" textLength="${labelWidth}" lengthAdjust="spacingAndGlyphs" fill="${textColorOn(color)}">${escapeXml(label)}</text>`;
     })
     .join("\n  ");
 

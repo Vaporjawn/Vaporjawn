@@ -69,7 +69,7 @@ Hi, I'm Victor, a full-stack engineer from Philadelphia. I build with TypeScript
 </div>
 
 <!-- TOP_ARTISTS:START -->
-<a href="https://www.last.fm/user/Vaporjawn/library/artists?date_preset=LAST_30_DAYS"><img src="./assets/top-artists.svg" alt="Top artists over the last 30 days: Future, 207 plays; Yeat, 84 plays; Drake, 70 plays; driftive dreams, 61 plays; In Love With a Ghost, 56 plays; nettspend, 52 plays; Adamn Killa, 49 plays; Karrahbooo, 42 plays" width="100%"></a>
+<a href="https://www.last.fm/user/Vaporjawn/library/artists?date_preset=LAST_30_DAYS"><img src="./assets/top-artists.svg?v=bf5ab743" alt="Top artists over the last 30 days: Future, 207 plays; Yeat, 84 plays; Drake, 70 plays; driftive dreams, 61 plays; In Love With a Ghost, 56 plays; nettspend, 52 plays; Adamn Killa, 49 plays; Karrahbooo, 42 plays" width="100%"></a>
 
 <details>
 <summary>Artist list (from <a href="https://www.last.fm/user/Vaporjawn">Last.fm</a>)</summary>
@@ -93,11 +93,11 @@ Hi, I'm Victor, a full-stack engineer from Philadelphia. I build with TypeScript
 ### 🛠️ Recently active repositories
 
 <!-- RECENT_REPOS:START -->
-- [**universities**](https://github.com/Vaporjawn/universities): instant access to a global list of institutions plus an optional, rate‑limited scraper that augments each with descriptive, academic, and classification metadata via a TypeScript API \& CLI <sub>(updated 2026-11-25, TypeScript)</sub>
-- [**extension-stale-check**](https://github.com/Vaporjawn/extension-stale-check): Detect a stale Chrome extension: compare the manifest the browser loaded against dist/ on disk, in a Playwright run or in your real Chrome profile. <sub>(updated 2026-11-25, TypeScript)</sub>
-- [**eslint-plugin-one-function-per-file**](https://github.com/Vaporjawn/eslint-plugin-one-function-per-file): ESLint plugin and preset: one function per file, const arrow functions only, and a TSDoc comment on every named function. <sub>(updated 2026-11-25, TypeScript)</sub>
-- [**Vaporjawn.github.io**](https://github.com/Vaporjawn/Vaporjawn.github.io): my personal website <sub>(updated 2026-11-09, TypeScript)</sub>
-- [**Crescendia-releases**](https://github.com/Vaporjawn/Crescendia-releases): Installers for Crescendia <sub>(updated 2026-10-29)</sub>
+- [**universities**](https://github.com/Vaporjawn/universities): instant access to a global list of institutions plus an optional, rate‑limited scraper that augments each with descriptive, academic, and classification metadata via a TypeScript API \& CLI ![Updated Nov 25, 2026](https://img.shields.io/badge/Nov_25%2C_2026-30363d?style=flat-square) <sub>TypeScript</sub>
+- [**extension-stale-check**](https://github.com/Vaporjawn/extension-stale-check): Detect a stale Chrome extension: compare the manifest the browser loaded against dist/ on disk, in a Playwright run or in your real Chrome profile. ![Updated Nov 25, 2026](https://img.shields.io/badge/Nov_25%2C_2026-30363d?style=flat-square) <sub>TypeScript</sub>
+- [**eslint-plugin-one-function-per-file**](https://github.com/Vaporjawn/eslint-plugin-one-function-per-file): ESLint plugin and preset: one function per file, const arrow functions only, and a TSDoc comment on every named function. ![Updated Nov 25, 2026](https://img.shields.io/badge/Nov_25%2C_2026-30363d?style=flat-square) <sub>TypeScript</sub>
+- [**Vaporjawn.github.io**](https://github.com/Vaporjawn/Vaporjawn.github.io): my personal website ![Updated Nov 9, 2026](https://img.shields.io/badge/Nov_9%2C_2026-30363d?style=flat-square) <sub>TypeScript</sub>
+- [**Crescendia-releases**](https://github.com/Vaporjawn/Crescendia-releases): Installers for Crescendia ![Updated Oct 29, 2026](https://img.shields.io/badge/Oct_29%2C_2026-30363d?style=flat-square)
 <!-- RECENT_REPOS:END -->
 
 </td>
@@ -106,11 +106,11 @@ Hi, I'm Victor, a full-stack engineer from Philadelphia. I build with TypeScript
 ### ✍️ Latest from the blog
 
 <!-- BLOG_POSTS:START -->
-- [Presenting the Trade-off Instead of Guessing](https://vaporjawn.dev/blog/presenting-the-trade-off-instead-of-guessing) (2026-08-10)
-- [Build vs. Buy: Why My Admin Panel Doesn't Use Firebase Auth](https://vaporjawn.dev/blog/build-vs-buy-admin-auth) (2026-08-01)
-- [My Framework for Cutting Things I Just Built](https://vaporjawn.dev/blog/framework-for-cutting-things) (2026-08-01)
-- [Building a Modern Portfolio with React \+ TypeScript](https://vaporjawn.dev/blog/building-modern-portfolio) (2025-12-25)
-- [Mastering Core Web Vitals for Peak Performance](https://vaporjawn.dev/blog/mastering-core-web-vitals) (2025-12-20)
+- [Presenting the Trade-off Instead of Guessing](https://vaporjawn.dev/blog/presenting-the-trade-off-instead-of-guessing) ![Published Aug 10, 2026](https://img.shields.io/badge/Aug_10%2C_2026-30363d?style=flat-square)
+- [Build vs. Buy: Why My Admin Panel Doesn't Use Firebase Auth](https://vaporjawn.dev/blog/build-vs-buy-admin-auth) ![Published Aug 1, 2026](https://img.shields.io/badge/Aug_1%2C_2026-30363d?style=flat-square)
+- [My Framework for Cutting Things I Just Built](https://vaporjawn.dev/blog/framework-for-cutting-things) ![Published Aug 1, 2026](https://img.shields.io/badge/Aug_1%2C_2026-30363d?style=flat-square)
+- [Building a Modern Portfolio with React \+ TypeScript](https://vaporjawn.dev/blog/building-modern-portfolio) ![Published Dec 25, 2025](https://img.shields.io/badge/Dec_25%2C_2025-30363d?style=flat-square)
+- [Mastering Core Web Vitals for Peak Performance](https://vaporjawn.dev/blog/mastering-core-web-vitals) ![Published Dec 20, 2025](https://img.shields.io/badge/Dec_20%2C_2025-30363d?style=flat-square)
 
 [More posts on vaporjawn.dev](https://vaporjawn.dev/blog) · [RSS feed](https://vaporjawn.dev/rss.xml)
 <!-- BLOG_POSTS:END -->
@@ -121,7 +121,7 @@ Hi, I'm Victor, a full-stack engineer from Philadelphia. I build with TypeScript
 
 <div align="center">
 
-<a href="https://wakatime.com/@Vaporjawn"><img src="./assets/wakatime-languages.svg" alt="Languages by coding time on WakaTime, all time, excluding unclassified time" width="800"></a>
+<a href="https://wakatime.com/@Vaporjawn"><img src="./assets/wakatime-languages.svg?v=ca8d2286" alt="Languages by coding time on WakaTime, all time, excluding unclassified time" width="800"></a>
 
 <img src="https://github-trophies.vercel.app/?username=Vaporjawn" alt="GitHub trophies for Vaporjawn">
 

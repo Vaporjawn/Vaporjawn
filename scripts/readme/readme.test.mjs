@@ -7,6 +7,7 @@ import { escapeMarkdown } from "./escapeMarkdown.mjs";
 import { fetchArtistImage } from "./fetchArtistImage.mjs";
 import { fetchLanguageIcons } from "./fetchLanguageIcons.mjs";
 import { fetchLanguageColors } from "./fetchLanguageColors.mjs";
+import { stampAssetVersion } from "./stampAssetVersion.mjs";
 import { fetchBlogPosts } from "./fetchBlogPosts.mjs";
 import { fetchRecentRepos } from "./fetchRecentRepos.mjs";
 import { fetchTopArtists } from "./fetchTopArtists.mjs";
@@ -14,6 +15,7 @@ import { fetchTotalStars } from "./fetchTotalStars.mjs";
 import { fetchWakatimeLanguages } from "./fetchWakatimeLanguages.mjs";
 import { parseRssItems } from "./parseRssItems.mjs";
 import { renderBlogPosts } from "./renderBlogPosts.mjs";
+import { renderDateChip } from "./renderDateChip.mjs";
 import { renderLanguageChartSvg } from "./renderLanguageChartSvg.mjs";
 import { renderRecentRepos } from "./renderRecentRepos.mjs";
 import { renderStarBadge } from "./renderStarBadge.mjs";
@@ -80,6 +82,28 @@ test("renderTopArtistsSvg draws a tile per artist, escapes names and falls back 
   assert.ok(renderTopArtistsSvg([]).includes("Top Artists"));
 });
 
+test("renderLanguageChartSvg highlights each language label in its colour with readable text", () => {
+  const svg = renderLanguageChartSvg(
+    [{ name: "JavaScript", percent: 70 }, { name: "TypeScript", percent: 30 }],
+    new Map([["javascript", "#f1e05a"], ["typescript", "#3178c6"]]),
+    "x",
+  );
+  assert.match(svg, /<rect x="58" y="\d+" width="\d+" height="22" rx="5" fill="#f1e05a"\/>/);
+  assert.match(svg, /fill="#10161d">JavaScript \(70\.0%\)<\/text>/);
+  assert.match(svg, /fill="#ffffff">TypeScript \(30\.0%\)<\/text>/);
+  assert.match(svg, /textLength="\d+" lengthAdjust="spacingAndGlyphs"/);
+});
+
+test("stampAssetVersion adds and refreshes a content-hash query on matching images only", () => {
+  const once = stampAssetVersion('<img src="./a/x.svg"> <img src="./a/other.svg">', "./a/x.svg", "one");
+  assert.match(once, /src="\.\/a\/x\.svg\?v=[0-9a-f]{8}"/);
+  assert.match(once, /src="\.\/a\/other\.svg"/);
+  const twice = stampAssetVersion(once, "./a/x.svg", "two");
+  assert.notEqual(twice, once);
+  assert.equal(stampAssetVersion(twice, "./a/x.svg", "two"), twice);
+  assert.equal((twice.match(/\?v=/g) ?? []).length, 1);
+});
+
 test("fetchArtistImage accepts only an exact-name match with a small JPEG", async () => {
   const jpeg = Buffer.from("fakejpeg");
   const route = (search, imageHeaders = { "content-type": "image/jpeg" }, imageBody = jpeg) => async (url) =>
@@ -114,7 +138,8 @@ test("fetchBlogPosts rejects an empty feed and a failed request", async () => {
 
 test("renderBlogPosts lists posts with dates", () => {
   const text = renderBlogPosts([{ title: "T", link: "https://a/1", publishedAt: new Date("2026-08-10T00:00:00Z") }]);
-  assert.match(text, /^- \[T\]\(https:\/\/a\/1\) \(2026-08-10\)/);
+  assert.equal(text.split("\n")[0], "- [T](https://a/1) ![Published Aug 10, 2026](https://img.shields.io/badge/Aug_10%2C_2026-30363d?style=flat-square)");
+  assert.equal(renderBlogPosts([{ title: "N", link: "https://a/2", publishedAt: null }]).split("\n")[0], "- [N](https://a/2)");
 });
 
 test("fetchRecentRepos skips forks, archived repos and the profile repo", async () => {
@@ -129,9 +154,16 @@ test("fetchRecentRepos skips forks, archived repos and the profile repo", async 
   ]);
 });
 
+test("renderDateChip formats compact dates and rejects invalid ones", () => {
+  assert.equal(renderDateChip("2025-12-05", "Updated"), "![Updated Dec 5, 2025](https://img.shields.io/badge/Dec_5%2C_2025-30363d?style=flat-square)");
+  for (const bad of ["", "2026-13-01", "2026-00-10", "yesterday", "2026-1-1"]) {
+    assert.equal(renderDateChip(bad, "Updated"), "");
+  }
+});
+
 test("renderRecentRepos formats description and language", () => {
   const text = renderRecentRepos([{ name: "r", url: "u", description: "d", language: "Rust", pushedAt: "2026-11-02" }]);
-  assert.equal(text, "- [**r**](u): d <sub>(updated 2026-11-02, Rust)</sub>");
+  assert.equal(text, "- [**r**](u): d ![Updated Nov 2, 2026](https://img.shields.io/badge/Nov_2%2C_2026-30363d?style=flat-square) <sub>Rust</sub>");
 });
 
 test("fetchTotalStars sums stars across pages and ignores forks", async () => {
@@ -211,7 +243,7 @@ test("renderLanguageChartSvg draws logos for known languages and letter badges f
   assert.match(svg, /d="M1 1h2" fill="#d6dde6"/);
   assert.match(svg, />C#<\/text>/);
   assert.equal((svg.match(/<rect x="30" /g) ?? []).length, 3);
-  assert.match(svg, /<rect x="30" y="\d+" width="14" height="14" rx="3" fill="hsl\(/);
+  assert.equal((svg.match(/<rect x="58" /g) ?? []).length, 3);
 });
 
 test("updateReadme isolates failures, skips keyless sections and never leaks the key", async () => {
@@ -230,7 +262,7 @@ test("updateReadme isolates failures, skips keyless sections and never leaks the
       return new Response("", { status: 503 });
     };
     try {
-      const result = await updateReadme({ readmePath, artistsSvgPath: join(dir, "a", "top.svg"), artistsSvgHref: "./a/top.svg", wakatimeSvgPath: join(dir, "a", "waka.svg"), wakatimeUser: "Vaporjawn", githubUser: "Vaporjawn", lastfmUser: "Vaporjawn", feedUrl: "https://x/rss.xml", lastfmApiKey: "SECRETKEY123" });
+      const result = await updateReadme({ readmePath, artistsSvgPath: join(dir, "a", "top.svg"), artistsSvgHref: "./a/top.svg", wakatimeSvgPath: join(dir, "a", "waka.svg"), wakatimeSvgHref: "./a/waka.svg", wakatimeUser: "Vaporjawn", githubUser: "Vaporjawn", lastfmUser: "Vaporjawn", feedUrl: "https://x/rss.xml", lastfmApiKey: "SECRETKEY123" });
       assert.equal(result.changed, true);
       assert.equal(result.failures.length, 3);
       assert.ok(result.failures.every((failure) => !failure.includes("SECRETKEY123")));
@@ -239,7 +271,7 @@ test("updateReadme isolates failures, skips keyless sections and never leaks the
       assert.match(text, /old BLOG_POSTS/);
       assert.match(text, /old TOP_ARTISTS/);
 
-      const keyless = await updateReadme({ readmePath, artistsSvgPath: join(dir, "a", "top.svg"), artistsSvgHref: "./a/top.svg", wakatimeSvgPath: join(dir, "a", "waka.svg"), wakatimeUser: "Vaporjawn", githubUser: "Vaporjawn", lastfmUser: "Vaporjawn", feedUrl: "https://x/rss.xml" });
+      const keyless = await updateReadme({ readmePath, artistsSvgPath: join(dir, "a", "top.svg"), artistsSvgHref: "./a/top.svg", wakatimeSvgPath: join(dir, "a", "waka.svg"), wakatimeSvgHref: "./a/waka.svg", wakatimeUser: "Vaporjawn", githubUser: "Vaporjawn", lastfmUser: "Vaporjawn", feedUrl: "https://x/rss.xml" });
       assert.deepEqual(keyless.skipped, ["TOP_ARTISTS (no API key)"]);
     } finally {
       globalThis.fetch = realFetch;

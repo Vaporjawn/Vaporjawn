@@ -16,6 +16,7 @@ const main = async () => {
     artistsSvgPath: fileURLToPath(new URL("../assets/top-artists.svg", import.meta.url)),
     artistsSvgHref: "./assets/top-artists.svg",
     wakatimeSvgPath: fileURLToPath(new URL("../assets/wakatime-languages.svg", import.meta.url)),
+    wakatimeSvgHref: "./assets/wakatime-languages.svg",
     wakatimeUser: "Vaporjawn",
     githubUser: "Vaporjawn",
     lastfmUser: "Vaporjawn",
