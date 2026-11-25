@@ -6,41 +6,32 @@
                \/|__|             \______|    \/           \/  -->
 <div align="center">
 
-<img src="./.vscode/1.png" alt="Vaporjawn banner" width="60%">
+<img src="./.vscode/1.png" alt="Vaporjawn banner" width="45%">
 
-<br/>
-<br/>
+# Victor Williams
 
-[![LinkedIn Badge](https://img.shields.io/badge/-LinkedIn-0e76a8?style=flat-square&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0yMC40NDcgMjAuNDUyaC0zLjU1NHYtNS41NjljMC0xLjMyOC0uMDI3LTMuMDM3LTEuODUyLTMuMDM3LTEuODUzIDAtMi4xMzYgMS40NDUtMi4xMzYgMi45Mzl2NS42NjdIOS4zNTFWOWgzLjQxNHYxLjU2MWguMDQ2Yy40NzctLjkgMS42MzctMS44NSAzLjM3LTEuODUgMy42MDEgMCA0LjI2NyAyLjM3IDQuMjY3IDUuNDU1djYuMjg2ek01LjMzNyA3LjQzM2EyLjA2MiAyLjA2MiAwIDAxLTIuMDYzLTIuMDY1IDIuMDY0IDIuMDY0IDAgMTEyLjA2MyAyLjA2NXptMS43ODIgMTMuMDE5SDMuNTU1VjloMy41NjR2MTEuNDUyek0yMi4yMjUgMEgxLjc3MUMuNzkyIDAgMCAuNzc0IDAgMS43Mjl2MjAuNTQyQzAgMjMuMjI3Ljc5MiAyNCAxLjc3MSAyNGgyMC40NTFDMjMuMiAyNCAyNCAyMy4yMjcgMjQgMjIuMjcxVjEuNzI5QzI0IC43NzQgMjMuMiAwIDIyLjIyMiAwaC4wMDN6Ii8%2BPC9zdmc%2B&logoColor=white)](https://linkedin.com/in/victorwilliams719) [![Instagram Badge](https://img.shields.io/badge/-Instagram-pink?style=flat-square&logo=Instagram&logoColor=white)](https://instagram.com/Vaporjawn) [![X Badge](https://img.shields.io/badge/-X-000000?style=flat-square&logo=x&logoColor=white)](https://x.com/Vaporjawn) [![Threads Badge](https://img.shields.io/badge/-Threads-000000?style=flat-square&logo=threads&logoColor=white)](https://threads.com/@vaporjawn) [![Bluesky Badge](https://img.shields.io/badge/-Bluesky-0085ff?style=flat-square&logo=bluesky&logoColor=white)](https://bsky.app/profile/vaporjawn.bsky.social) [![Reddit Badge](https://img.shields.io/badge/-Reddit-ff4500?style=flat-square&logo=reddit&logoColor=white)](https://reddit.com/user/vaporjawn) [![Pinterest Badge](https://img.shields.io/badge/-Pinterest-e60023?style=flat-square&logo=pinterest&logoColor=white)](https://pinterest.com/vaporjawn) [![TikTok Badge](https://img.shields.io/badge/-TikTok-000000?style=flat-square&logo=tiktok&logoColor=white)](https://tiktok.com/@vaporjawn) [![Last.fm Badge](https://img.shields.io/badge/-Last.fm-d51007?style=flat-square&logo=lastdotfm&logoColor=white)](https://last.fm/user/Vaporjawn) [![Twitch Badge](https://img.shields.io/badge/-Twitch-6441a5?style=flat-square&logo=Twitch&logoColor=white)](https://twitch.tv/Vaporjawn) [![YouTube Badge](https://img.shields.io/badge/-YouTube-e00000?style=flat-square&logo=YouTube&logoColor=white)](https://www.youtube.com/channel/UCK6-NQMyD3TREhUFU5Ithlg) [![Steam Badge](https://img.shields.io/badge/-Steam-black?style=flat-square&logo=Steam&logoColor=white)](https://steamcommunity.com/id/vaporjawn)
+**Full-stack engineer in Philadelphia.** I turn messy problems into small tools people actually use.<br/>
+Currently building native Mac apps in Rust and Swift. Open to collaborating on web projects.
 
-[![Portfolio](https://img.shields.io/badge/-Portfolio-6366f1?style=flat-square&logo=googlechrome&logoColor=white)](https://vaporjawn.dev) [![Music](https://img.shields.io/badge/-Music-7c3aed?style=flat-square&logo=applemusic&logoColor=white)](https://vaporjawn.com) [![Resume](https://img.shields.io/badge/-Resume-0f766e?style=flat-square&logo=readdotcv&logoColor=white)](https://vaporjawn.dev/resume) [![Blog RSS](https://img.shields.io/badge/-Blog_RSS-ee802f?style=flat-square&logo=rss&logoColor=white)](https://vaporjawn.dev/rss.xml) [![Sponsor](https://img.shields.io/badge/-Sponsor-ea4aaa?style=flat-square&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/Vaporjawn)
-
-<!-- https://shields.io/badges -->
-[![Profile visitors](https://komarev.com/ghpvc/?username=Vaporjawn&color=blueviolet&label=Visitors&style=plastic)](https://github.com/Vaporjawn) [![Status: Coding](https://img.shields.io/badge/Status-Coding-c70000)](https://github.com/Vaporjawn?tab=repositories&sort=updated) [![Operating systems: macOS, Windows, Linux](https://img.shields.io/badge/Operating_Systems:-macOS,_Windows,_Linux-253469)](https://wakatime.com/@Vaporjawn) [![Coding hours on WakaTime](https://wakatime.com/badge/user/a582e39e-ff7e-4474-95bf-f5e003eb3d40.svg)](https://wakatime.com/@a582e39e-ff7e-4474-95bf-f5e003eb3d40)
-
-### Hey 👋🏽, I'm [Victor!](https://vaporjawn.dev) <img src="https://media.giphy.com/media/mGcNjsfWAjY5AEZNw6/giphy.gif" alt="Waving hand animation" width="50">
-
-</div>
-
-<div align="center">
-
-Hi, I'm Victor, a full-stack engineer from Philadelphia. I build with <a href="https://github.com/search?q=user%3AVaporjawn+fork%3Afalse+is%3Apublic+language%3ATypeScript&amp;type=repositories"><img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&amp;logo=typescript&amp;logoColor=white" height="20" align="absmiddle"></a> <a href="https://github.com/search?q=user%3AVaporjawn+fork%3Afalse+is%3Apublic+topic%3Areact&amp;type=repositories"><img alt="React" src="https://img.shields.io/badge/React-20232a?style=flat-square&amp;logo=react&amp;logoColor=61DAFB" height="20" align="absmiddle"></a> and <a href="https://github.com/search?q=user%3AVaporjawn+fork%3Afalse+is%3Apublic+node+in%3Aname%2Cdescription%2Ctopics&amp;type=repositories"><img alt="Node.js" src="https://img.shields.io/badge/Node.js-339933?style=flat-square&amp;logo=nodedotjs&amp;logoColor=white" height="20" align="absmiddle"></a>, and lately with <a href="https://github.com/search?q=user%3AVaporjawn+fork%3Afalse+is%3Apublic+language%3ARust&amp;type=repositories"><img alt="Rust" src="https://img.shields.io/badge/Rust-b7410e?style=flat-square&amp;logo=rust&amp;logoColor=white" height="20" align="absmiddle"></a> and <a href="https://github.com/search?q=user%3AVaporjawn+fork%3Afalse+is%3Apublic+language%3ASwift&amp;type=repositories"><img alt="Swift" src="https://img.shields.io/badge/Swift-F05138?style=flat-square&amp;logo=swift&amp;logoColor=white" height="20" align="absmiddle"></a> for native <a href="https://github.com/search?q=user%3AVaporjawn+fork%3Afalse+is%3Apublic+topic%3Amacos&amp;type=repositories"><img alt="Mac" src="https://img.shields.io/badge/Mac-555555?style=flat-square&amp;logo=apple&amp;logoColor=white" height="20" align="absmiddle"></a> apps. I like turning messy problems into small tools people actually use, and I'm always picking up a new language, human or programming: I even build tools for <a href="https://github.com/search?q=user%3AVaporjawn+fork%3Afalse+is%3Apublic+esperanto+in%3Aname%2Cdescription%2Ctopics&amp;type=repositories"><img alt="Esperanto" src="https://img.shields.io/badge/Esperanto-009900?style=flat-square" height="20" align="absmiddle"></a>. Off the clock I make music as <a href="https://vaporjawn.com"><img alt="Vaporjawn" src="https://img.shields.io/badge/Vaporjawn-7c3aed?style=flat-square" height="20" align="absmiddle"></a> and play <a href="https://github.com/search?q=user%3AVaporjawn+fork%3Afalse+is%3Apublic+smash+in%3Aname%2Cdescription%2Ctopics&amp;type=repositories"><img alt="Super Smash Bros. Melee" src="https://img.shields.io/badge/Super_Smash_Bros._Melee-5a4fcf?style=flat-square" height="20" align="absmiddle"></a>.
-
-🍎 I'm currently building native Mac apps in Rust and Swift<br/>
-🌐 I'm looking to collaborate on web projects<br/>
-🎧 I make music as [Vaporjawn](https://vaporjawn.com)<br/>
-🌍 I build tools for Esperanto at [esperantaskanaduko.com](https://esperantaskanaduko.com)<br/>
-💬 Ask me about anything, I am happy to help<br/>
-⚡️ Fun fact: anything is possible<br/>
-📫 How to reach me: [victor.williams.dev@gmail.com](mailto:victor.williams.dev@gmail.com)<br/>
-💖 Like what I build? [Sponsor me on GitHub](https://github.com/sponsors/Vaporjawn)
+<table>
+<tr><td align="right"><b>💼 Work</b></td><td align="left"><a href="https://vaporjawn.dev"><img alt="Portfolio" src="https://img.shields.io/badge/-Portfolio-6366f1?style=flat-square&amp;logo=googlechrome&amp;logoColor=white" height="20" align="absmiddle"></a> <a href="https://vaporjawn.dev/resume"><img alt="Resume" src="https://img.shields.io/badge/-Resume-0f766e?style=flat-square&amp;logo=readdotcv&amp;logoColor=white" height="20" align="absmiddle"></a> <a href="https://vaporjawn.dev/blog"><img alt="Blog" src="https://img.shields.io/badge/-Blog-ee802f?style=flat-square&amp;logo=rss&amp;logoColor=white" height="20" align="absmiddle"></a> <a href="https://vaporjawn.dev/rss.xml"><img alt="RSS" src="https://img.shields.io/badge/-RSS_feed-ee802f?style=flat-square&amp;logo=rss&amp;logoColor=white" height="20" align="absmiddle"></a> <a href="https://esperantaskanaduko.com"><img alt="Esperanto tools" src="https://img.shields.io/badge/-Esperanto_tools-009900?style=flat-square&amp;logo=googletranslate&amp;logoColor=white" height="20" align="absmiddle"></a></td></tr>
+<tr><td align="right"><b>🎧 Music</b></td><td align="left"><a href="https://vaporjawn.com"><img alt="Vaporjawn" src="https://img.shields.io/badge/-Vaporjawn-7c3aed?style=flat-square&amp;logo=applemusic&amp;logoColor=white" height="20" align="absmiddle"></a> <a href="https://last.fm/user/Vaporjawn"><img alt="Last.fm Badge" src="https://img.shields.io/badge/-Last.fm-d51007?style=flat-square&amp;logo=lastdotfm&amp;logoColor=white" height="20" align="absmiddle"></a> <a href="https://www.youtube.com/channel/UCK6-NQMyD3TREhUFU5Ithlg"><img alt="YouTube Badge" src="https://img.shields.io/badge/-YouTube-e00000?style=flat-square&amp;logo=YouTube&amp;logoColor=white" height="20" align="absmiddle"></a> <a href="https://tiktok.com/@vaporjawn"><img alt="TikTok Badge" src="https://img.shields.io/badge/-TikTok-000000?style=flat-square&amp;logo=tiktok&amp;logoColor=white" height="20" align="absmiddle"></a></td></tr>
+<tr><td align="right"><b>🎮 Gaming</b></td><td align="left"><a href="https://steamcommunity.com/id/vaporjawn"><img alt="Steam Badge" src="https://img.shields.io/badge/-Steam-1b2838?style=flat-square&amp;logo=Steam&amp;logoColor=white" height="20" align="absmiddle"></a> <a href="https://twitch.tv/Vaporjawn"><img alt="Twitch Badge" src="https://img.shields.io/badge/-Twitch-6441a5?style=flat-square&amp;logo=Twitch&amp;logoColor=white" height="20" align="absmiddle"></a></td></tr>
+<tr><td align="right"><b>💬 Social</b></td><td align="left"><a href="https://instagram.com/Vaporjawn"><img alt="Instagram Badge" src="https://img.shields.io/badge/-Instagram-e4405f?style=flat-square&amp;logo=Instagram&amp;logoColor=white" height="20" align="absmiddle"></a> <a href="https://x.com/Vaporjawn"><img alt="X Badge" src="https://img.shields.io/badge/-X-000000?style=flat-square&amp;logo=x&amp;logoColor=white" height="20" align="absmiddle"></a> <a href="https://threads.com/@vaporjawn"><img alt="Threads Badge" src="https://img.shields.io/badge/-Threads-000000?style=flat-square&amp;logo=threads&amp;logoColor=white" height="20" align="absmiddle"></a> <a href="https://bsky.app/profile/vaporjawn.bsky.social"><img alt="Bluesky Badge" src="https://img.shields.io/badge/-Bluesky-0085ff?style=flat-square&amp;logo=bluesky&amp;logoColor=white" height="20" align="absmiddle"></a> <a href="https://reddit.com/user/vaporjawn"><img alt="Reddit Badge" src="https://img.shields.io/badge/-Reddit-ff4500?style=flat-square&amp;logo=reddit&amp;logoColor=white" height="20" align="absmiddle"></a> <a href="https://pinterest.com/vaporjawn"><img alt="Pinterest Badge" src="https://img.shields.io/badge/-Pinterest-e60023?style=flat-square&amp;logo=pinterest&amp;logoColor=white" height="20" align="absmiddle"></a></td></tr>
+<tr><td align="right"><b>📫 Contact</b></td><td align="left"><a href="mailto:victor.williams.dev@gmail.com"><img alt="Email" src="https://img.shields.io/badge/-Email-ea4335?style=flat-square&amp;logo=gmail&amp;logoColor=white" height="20" align="absmiddle"></a> <a href="https://linkedin.com/in/victorwilliams719"><img alt="LinkedIn Badge" src="https://img.shields.io/badge/-LinkedIn-0e76a8?style=flat-square&amp;logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0yMC40NDcgMjAuNDUyaC0zLjU1NHYtNS41NjljMC0xLjMyOC0uMDI3LTMuMDM3LTEuODUyLTMuMDM3LTEuODUzIDAtMi4xMzYgMS40NDUtMi4xMzYgMi45Mzl2NS42NjdIOS4zNTFWOWgzLjQxNHYxLjU2MWguMDQ2Yy40NzctLjkgMS42MzctMS44NSAzLjM3LTEuODUgMy42MDEgMCA0LjI2NyAyLjM3IDQuMjY3IDUuNDU1djYuMjg2ek01LjMzNyA3LjQzM2EyLjA2MiAyLjA2MiAwIDAxLTIuMDYzLTIuMDY1IDIuMDY0IDIuMDY0IDAgMTEyLjA2MyAyLjA2NXptMS43ODIgMTMuMDE5SDMuNTU1VjloMy41NjR2MTEuNDUyek0yMi4yMjUgMEgxLjc3MUMuNzkyIDAgMCAuNzc0IDAgMS43Mjl2MjAuNTQyQzAgMjMuMjI3Ljc5MiAyNCAxLjc3MSAyNGgyMC40NTFDMjMuMiAyNCAyNCAyMy4yMjcgMjQgMjIuMjcxVjEuNzI5QzI0IC43NzQgMjMuMiAwIDIyLjIyMiAwaC4wMDN6Ii8%2BPC9zdmc%2B&amp;logoColor=white" height="20" align="absmiddle"></a> <a href="https://github.com/sponsors/Vaporjawn"><img alt="Sponsor" src="https://img.shields.io/badge/-Sponsor-ea4aaa?style=flat-square&amp;logo=githubsponsors&amp;logoColor=white" height="20" align="absmiddle"></a></td></tr>
+<tr><td align="right"><b>🌐 Web</b></td><td align="left"><a href="https://github.com/search?q=user%3AVaporjawn+fork%3Afalse+is%3Apublic+language%3ATypeScript&amp;type=repositories"><img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&amp;logo=typescript&amp;logoColor=white" height="20" align="absmiddle"></a> <a href="https://github.com/search?q=user%3AVaporjawn+fork%3Afalse+is%3Apublic+topic%3Areact&amp;type=repositories"><img alt="React" src="https://img.shields.io/badge/React-20232a?style=flat-square&amp;logo=react&amp;logoColor=61DAFB" height="20" align="absmiddle"></a> <a href="https://github.com/search?q=user%3AVaporjawn+fork%3Afalse+is%3Apublic+node+in%3Aname%2Cdescription%2Ctopics&amp;type=repositories"><img alt="Node.js" src="https://img.shields.io/badge/Node.js-339933?style=flat-square&amp;logo=nodedotjs&amp;logoColor=white" height="20" align="absmiddle"></a></td></tr>
+<tr><td align="right"><b>🍎 Native Mac</b></td><td align="left"><a href="https://github.com/search?q=user%3AVaporjawn+fork%3Afalse+is%3Apublic+language%3ARust&amp;type=repositories"><img alt="Rust" src="https://img.shields.io/badge/Rust-b7410e?style=flat-square&amp;logo=rust&amp;logoColor=white" height="20" align="absmiddle"></a> <a href="https://github.com/search?q=user%3AVaporjawn+fork%3Afalse+is%3Apublic+language%3ASwift&amp;type=repositories"><img alt="Swift" src="https://img.shields.io/badge/Swift-F05138?style=flat-square&amp;logo=swift&amp;logoColor=white" height="20" align="absmiddle"></a> <a href="https://github.com/search?q=user%3AVaporjawn+fork%3Afalse+is%3Apublic+topic%3Amacos&amp;type=repositories"><img alt="Mac" src="https://img.shields.io/badge/Mac-555555?style=flat-square&amp;logo=apple&amp;logoColor=white" height="20" align="absmiddle"></a></td></tr>
+<tr><td align="right"><b>🌍 Off the clock</b></td><td align="left"><a href="https://github.com/search?q=user%3AVaporjawn+fork%3Afalse+is%3Apublic+esperanto+in%3Aname%2Cdescription%2Ctopics&amp;type=repositories"><img alt="Esperanto" src="https://img.shields.io/badge/Esperanto-009900?style=flat-square" height="20" align="absmiddle"></a> <a href="https://vaporjawn.com"><img alt="Vaporjawn" src="https://img.shields.io/badge/Vaporjawn-7c3aed?style=flat-square" height="20" align="absmiddle"></a> <a href="https://github.com/search?q=user%3AVaporjawn+fork%3Afalse+is%3Apublic+smash+in%3Aname%2Cdescription%2Ctopics&amp;type=repositories"><img alt="Super Smash Bros. Melee" src="https://img.shields.io/badge/Super_Smash_Bros._Melee-5a4fcf?style=flat-square" height="20" align="absmiddle"></a></td></tr>
+</table>
 
 </div>
 
 <div align="center">
+
+## 📊 GitHub
 
 <!-- STARS:START -->
-[![Stars received: 39](https://img.shields.io/badge/Stars%20Received-39-black?style=for-the-badge)](https://github.com/Vaporjawn?tab=repositories&sort=stargazers)
+[![Stars received: 38](https://img.shields.io/badge/Stars%20Received-38-black?style=for-the-badge)](https://github.com/Vaporjawn?tab=repositories&sort=stargazers)
 <!-- STARS:END -->
 
 <table>
@@ -64,25 +55,11 @@ Hi, I'm Victor, a full-stack engineer from Philadelphia. I build with <a href="h
 </tr>
 </table>
 
+[![Coding hours on WakaTime](https://wakatime.com/badge/user/a582e39e-ff7e-4474-95bf-f5e003eb3d40.svg)](https://wakatime.com/@a582e39e-ff7e-4474-95bf-f5e003eb3d40)
+
+<a href="https://wakatime.com/@Vaporjawn"><img src="./assets/wakatime-languages.svg?v=ca8d2286" alt="Languages by coding time on WakaTime, all time, excluding unclassified time" width="800"></a>
+
 </div>
-
-<!-- TOP_ARTISTS:START -->
-<a href="https://www.last.fm/user/Vaporjawn/library/artists?date_preset=LAST_30_DAYS"><img src="./assets/top-artists.svg?v=bf5ab743" alt="Top artists over the last 30 days: Future, 207 plays; Yeat, 84 plays; Drake, 70 plays; driftive dreams, 61 plays; In Love With a Ghost, 56 plays; nettspend, 52 plays; Adamn Killa, 49 plays; Karrahbooo, 42 plays" width="100%"></a>
-
-<details>
-<summary>Artist list (from <a href="https://www.last.fm/user/Vaporjawn">Last.fm</a>)</summary>
-
-1. [**Future**](https://www.last.fm/music/Future): 207 plays
-2. [**Yeat**](https://www.last.fm/music/Yeat): 84 plays
-3. [**Drake**](https://www.last.fm/music/Drake): 70 plays
-4. [**driftive dreams**](https://www.last.fm/music/driftive+dreams): 61 plays
-5. [**In Love With a Ghost**](https://www.last.fm/music/In+Love+With+a+Ghost): 56 plays
-6. [**nettspend**](https://www.last.fm/music/nettspend): 52 plays
-7. [**Adamn Killa**](https://www.last.fm/music/Adamn+Killa): 49 plays
-8. [**Karrahbooo**](https://www.last.fm/music/Karrahbooo): 42 plays
-
-</details>
-<!-- TOP_ARTISTS:END -->
 
 <table>
 <tr>
@@ -119,17 +96,26 @@ Hi, I'm Victor, a full-stack engineer from Philadelphia. I build with <a href="h
 
 <div align="center">
 
-<a href="https://wakatime.com/@Vaporjawn"><img src="./assets/wakatime-languages.svg?v=ca8d2286" alt="Languages by coding time on WakaTime, all time, excluding unclassified time" width="800"></a>
+## 🎵 Off the clock
 
-<img src="https://github-trophies.vercel.app/?username=Vaporjawn" alt="GitHub trophies for Vaporjawn">
+<!-- TOP_ARTISTS:START -->
+<a href="https://www.last.fm/user/Vaporjawn/library/artists?date_preset=LAST_30_DAYS"><img src="./assets/top-artists.svg?v=bf5ab743" alt="Top artists over the last 30 days: Future, 207 plays; Yeat, 84 plays; Drake, 70 plays; driftive dreams, 61 plays; In Love With a Ghost, 56 plays; nettspend, 52 plays; Adamn Killa, 49 plays; Karrahbooo, 42 plays" width="100%"></a>
 
-⭐️ [Vaporjawn](https://github.com/vaporjawn) ⭐️
+<details>
+<summary>Artist list (from <a href="https://www.last.fm/user/Vaporjawn">Last.fm</a>)</summary>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical">
-  <img alt="Random programming quote" src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=default">
-</picture>
+1. [**Future**](https://www.last.fm/music/Future): 207 plays
+2. [**Yeat**](https://www.last.fm/music/Yeat): 84 plays
+3. [**Drake**](https://www.last.fm/music/Drake): 70 plays
+4. [**driftive dreams**](https://www.last.fm/music/driftive+dreams): 61 plays
+5. [**In Love With a Ghost**](https://www.last.fm/music/In+Love+With+a+Ghost): 56 plays
+6. [**nettspend**](https://www.last.fm/music/nettspend): 52 plays
+7. [**Adamn Killa**](https://www.last.fm/music/Adamn+Killa): 49 plays
+8. [**Karrahbooo**](https://www.last.fm/music/Karrahbooo): 42 plays
 
-<!-- The artists, repositories and blog sections refresh daily through [a GitHub Action](.github/workflows/update-readme.yml). Credits: waving hand GIF via [GIPHY](https://giphy.com); stats cards by [github-readme-stats](https://github.com/anuraghazra/github-readme-stats), [streak-stats](https://github.com/DenverCoder1/github-readme-streak-stats), [github-trophies](https://github-trophies.vercel.app) and [quotes-github-readme](https://github.com/PiyushSuthar/github-readme-quotes); badges by [Shields.io](https://shields.io); coding time by [WakaTime](https://wakatime.com); listening data by [Last.fm](https://www.last.fm). -->
+</details>
+<!-- TOP_ARTISTS:END -->
 
 </div>
+
+<!-- The sections between markers refresh daily through [a GitHub Action](.github/workflows/update-readme.yml). Coding time by [WakaTime](https://wakatime.com), listening data by [Last.fm](https://www.last.fm), badges by [Shields.io](https://shields.io). -->
