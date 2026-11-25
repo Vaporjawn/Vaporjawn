@@ -69,7 +69,7 @@ Hi, I'm Victor, a full-stack engineer from Philadelphia. I build with TypeScript
 </div>
 
 <!-- TOP_ARTISTS:START -->
-<a href="https://www.last.fm/user/Vaporjawn/library/artists?date_preset=LAST_30_DAYS"><img src="./assets/top-artists.svg?v=bf5ab743" alt="Top artists over the last 30 days: Future, 207 plays; Yeat, 84 plays; Drake, 70 plays; driftive dreams, 61 plays; In Love With a Ghost, 56 plays; nettspend, 52 plays; Adamn Killa, 49 plays; Karrahbooo, 42 plays" width="100%"></a>
+<a href="https://www.last.fm/user/Vaporjawn/library/artists?date_preset=LAST_30_DAYS"><img src="./assets/top-artists.svg?v=c6aaa0d9" alt="Top artists over the last 30 days: Future, 207 plays; Yeat, 84 plays; Drake, 70 plays; driftive dreams, 61 plays; In Love With a Ghost, 56 plays; nettspend, 52 plays; Adamn Killa, 49 plays; Karrahbooo, 42 plays" width="100%"></a>
 
 <details>
 <summary>Artist list (from <a href="https://www.last.fm/user/Vaporjawn">Last.fm</a>)</summary>
