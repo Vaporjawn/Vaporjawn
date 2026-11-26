@@ -40,7 +40,7 @@ Hi, I'm Victor, a full-stack engineer from Philadelphia. I build with <a href="h
 <div align="center">
 
 <!-- STARS:START -->
-[![Stars received: 38](https://img.shields.io/badge/Stars%20Received-38-black?style=for-the-badge)](https://github.com/Vaporjawn?tab=repositories&sort=stargazers)
+[![Stars received: 34](https://img.shields.io/badge/Stars%20Received-34-black?style=for-the-badge)](https://github.com/Vaporjawn?tab=repositories&sort=stargazers)
 <!-- STARS:END -->
 
 <!-- GITHUB_CARDS:START -->
@@ -48,12 +48,12 @@ Hi, I'm Victor, a full-stack engineer from Philadelphia. I build with <a href="h
 <tr>
 <td width="50%">
 
-<img src="./assets/github-stats.svg?v=6699759f" alt="Victor Williams&#39;s GitHub stats: 38 stars, 14,950 contributions in the last year, 176 pull requests, 99 issues, 129 public repositories" width="100%">
+<img src="./assets/github-stats.svg?v=f64b3b94" alt="Victor Williams&#39;s GitHub stats: 34 stars, 15,699 contributions in the last year, 172 pull requests, 96 issues, 131 public repositories" width="100%">
 
 </td>
 <td width="50%">
 
-<img src="./assets/github-streak.svg?v=d1cf5a1e" alt="GitHub contribution streak: 26,707 total contributions, 45 day current streak, 858 day longest streak" width="100%">
+<img src="./assets/github-streak.svg?v=cf416bd6" alt="GitHub contribution streak: 27,493 total contributions, 464 day current streak, 858 day longest streak" width="100%">
 
 </td>
 </tr>
@@ -63,17 +63,17 @@ Hi, I'm Victor, a full-stack engineer from Philadelphia. I build with <a href="h
 </div>
 
 <!-- TOP_ARTISTS:START -->
-<a href="https://www.last.fm/user/Vaporjawn/library/artists?date_preset=LAST_30_DAYS"><img src="./assets/top-artists.svg?v=73344cb4" alt="Top artists over the last 30 days: Future, 207 plays; Yeat, 84 plays; Drake, 68 plays; driftive dreams, 61 plays; In Love With a Ghost, 56 plays; Luxury Elite, 55 plays; nettspend, 52 plays; Adamn Killa, 49 plays" width="100%"></a>
+<a href="https://www.last.fm/user/Vaporjawn/library/artists?date_preset=LAST_30_DAYS"><img src="./assets/top-artists.svg?v=c08d7c1f" alt="Top artists over the last 30 days: Future, 207 plays; Luxury Elite, 105 plays; Yeat, 84 plays; Drake, 68 plays; driftive dreams, 61 plays; In Love With a Ghost, 58 plays; nettspend, 52 plays; Adamn Killa, 49 plays" width="100%"></a>
 
 <details>
 <summary>Artist list (from <a href="https://www.last.fm/user/Vaporjawn">Last.fm</a>)</summary>
 
 1. [**Future**](https://www.last.fm/music/Future): 207 plays
-2. [**Yeat**](https://www.last.fm/music/Yeat): 84 plays
-3. [**Drake**](https://www.last.fm/music/Drake): 68 plays
-4. [**driftive dreams**](https://www.last.fm/music/driftive+dreams): 61 plays
-5. [**In Love With a Ghost**](https://www.last.fm/music/In+Love+With+a+Ghost): 56 plays
-6. [**Luxury Elite**](https://www.last.fm/music/Luxury+Elite): 55 plays
+2. [**Luxury Elite**](https://www.last.fm/music/Luxury+Elite): 105 plays
+3. [**Yeat**](https://www.last.fm/music/Yeat): 84 plays
+4. [**Drake**](https://www.last.fm/music/Drake): 68 plays
+5. [**driftive dreams**](https://www.last.fm/music/driftive+dreams): 61 plays
+6. [**In Love With a Ghost**](https://www.last.fm/music/In+Love+With+a+Ghost): 58 plays
 7. [**nettspend**](https://www.last.fm/music/nettspend): 52 plays
 8. [**Adamn Killa**](https://www.last.fm/music/Adamn+Killa): 49 plays
 
@@ -103,11 +103,11 @@ Hi, I'm Victor, a full-stack engineer from Philadelphia. I build with <a href="h
 ### 🛠️ Recently active repositories
 
 <!-- RECENT_REPOS:START -->
-- [**better-discord-themes**](https://github.com/Vaporjawn/better-discord-themes): A curated collection of BetterDiscord themes with attribution and licenses for each [![Updated Nov 25, 2026](https://img.shields.io/badge/Nov_25%2C_2026-30363d?style=flat-square)](https://github.com/Vaporjawn/better-discord-themes/commits) <sub>CSS</sub>
-- [**universities**](https://github.com/Vaporjawn/universities): instant access to a global list of institutions plus an optional, rate‑limited scraper that augments each with descriptive, academic, and classification metadata via a TypeScript API \& CLI [![Updated Nov 25, 2026](https://img.shields.io/badge/Nov_25%2C_2026-30363d?style=flat-square)](https://github.com/Vaporjawn/universities/commits) <sub>TypeScript</sub>
-- [**extension-stale-check**](https://github.com/Vaporjawn/extension-stale-check): Detect a stale Chrome extension: compare the manifest the browser loaded against dist/ on disk, in a Playwright run or in your real Chrome profile. [![Updated Nov 25, 2026](https://img.shields.io/badge/Nov_25%2C_2026-30363d?style=flat-square)](https://github.com/Vaporjawn/extension-stale-check/commits) <sub>TypeScript</sub>
-- [**eslint-plugin-one-function-per-file**](https://github.com/Vaporjawn/eslint-plugin-one-function-per-file): ESLint plugin and preset: one function per file, const arrow functions only, and a TSDoc comment on every named function. [![Updated Nov 25, 2026](https://img.shields.io/badge/Nov_25%2C_2026-30363d?style=flat-square)](https://github.com/Vaporjawn/eslint-plugin-one-function-per-file/commits) <sub>TypeScript</sub>
-- [**Vaporjawn.github.io**](https://github.com/Vaporjawn/Vaporjawn.github.io): my personal website [![Updated Nov 9, 2026](https://img.shields.io/badge/Nov_9%2C_2026-30363d?style=flat-square)](https://github.com/Vaporjawn/Vaporjawn.github.io/commits) <sub>TypeScript</sub>
+- [**awesome-esports-apis**](https://github.com/Vaporjawn/awesome-esports-apis): Curated esports and game stats APIs: Riot, Valve, Blizzard, PandaScore, Liquipedia, OpenDota, STRATZ, SDKs, bots and datasets for League of Legends, Dota 2, VALORANT, CS2 and more. [![Updated Nov 26, 2026](https://img.shields.io/badge/Nov_26%2C_2026-30363d?style=flat-square)](https://github.com/Vaporjawn/awesome-esports-apis/commits) <sub>JavaScript</sub>
+- [**awesome-genealogy-dev**](https://github.com/Vaporjawn/awesome-genealogy-dev): Awesome list of verified GEDCOM parsers, family tree chart libraries, genealogy APIs \(FamilySearch, WikiTree, Geni, archives\), DNA tools, historical OCR/HTR, gazetteers, schemas and specs for genealogy developers. [![Updated Nov 26, 2026](https://img.shields.io/badge/Nov_26%2C_2026-30363d?style=flat-square)](https://github.com/Vaporjawn/awesome-genealogy-dev/commits) <sub>Python</sub>
+- [**env-audit**](https://github.com/Vaporjawn/env-audit): �� A comprehensive environment variable scanner and auditor for modern applications. Scans JavaScript/TypeScript, .env files, Docker Compose, GitHub Actions, and shell scripts to detect and analyze environment variable usage with framework-aware context and security insights. [![Updated Nov 26, 2026](https://img.shields.io/badge/Nov_26%2C_2026-30363d?style=flat-square)](https://github.com/Vaporjawn/env-audit/commits) <sub>TypeScript</sub>
+- [**RegexPlay**](https://github.com/Vaporjawn/RegexPlay): A regex playground for testing and learning regular expressions [![Updated Nov 26, 2026](https://img.shields.io/badge/Nov_26%2C_2026-30363d?style=flat-square)](https://github.com/Vaporjawn/RegexPlay/commits) <sub>JavaScript</sub>
+- [**eslint-plugin-one-function-per-file**](https://github.com/Vaporjawn/eslint-plugin-one-function-per-file): ESLint plugin and preset: one function per file, const arrow functions only, and a TSDoc comment on every named function. [![Updated Nov 26, 2026](https://img.shields.io/badge/Nov_26%2C_2026-30363d?style=flat-square)](https://github.com/Vaporjawn/eslint-plugin-one-function-per-file/commits) <sub>TypeScript</sub>
 <!-- RECENT_REPOS:END -->
 
 </td>
@@ -131,7 +131,7 @@ Hi, I'm Victor, a full-stack engineer from Philadelphia. I build with <a href="h
 
 <div align="center">
 
-<a href="https://wakatime.com/@Vaporjawn"><img src="./assets/wakatime-languages.svg?v=35438d42" alt="Languages by coding time on WakaTime, all time, excluding unclassified time" width="800"></a>
+<a href="https://wakatime.com/@Vaporjawn"><img src="./assets/wakatime-languages.svg?v=5c51891d" alt="Languages by coding time on WakaTime, all time, excluding unclassified time" width="800"></a>
 
 <img src="https://github-trophies.vercel.app/?username=Vaporjawn" alt="GitHub trophies for Vaporjawn">
 
