@@ -5,6 +5,7 @@ import { contentHash } from "./contentHash.mjs";
 import { fetchArtistImage } from "./fetchArtistImage.mjs";
 import { fetchBlogPosts } from "./fetchBlogPosts.mjs";
 import { fetchLanguageColors } from "./fetchLanguageColors.mjs";
+import { fetchLineCounts } from "./fetchLineCounts.mjs";
 import { fetchLanguageIcons } from "./fetchLanguageIcons.mjs";
 import { fetchRecentRepos } from "./fetchRecentRepos.mjs";
 import { fetchTopArtists } from "./fetchTopArtists.mjs";
@@ -16,6 +17,7 @@ import { renderRecentRepos } from "./renderRecentRepos.mjs";
 import { renderStarBadge } from "./renderStarBadge.mjs";
 import { renderTopArtists } from "./renderTopArtists.mjs";
 import { renderTopArtistsSvg } from "./renderTopArtistsSvg.mjs";
+import { escapeXml } from "./escapeXml.mjs";
 import { replaceSection } from "./replaceSection.mjs";
 import { stampAssetVersion } from "./stampAssetVersion.mjs";
 import { writeFileIfChanged } from "./writeFileIfChanged.mjs";
@@ -28,7 +30,7 @@ import { writeFileIfChanged } from "./writeFileIfChanged.mjs";
  * previous text and the failure is reported, but the others still update.
  * Secrets are masked in any reported error.
  *
- * @param {{ readmePath: string, githubUser: string, githubDisplayName: string, githubToken?: string, githubStatsSvgPath: string, githubStatsSvgHref: string, githubStreakSvgPath: string, githubStreakSvgHref: string, lastfmUser: string, lastfmApiKey?: string, artistsSvgPath: string, artistsSvgHref: string, steamVanity: string, steamApiKey?: string, steamSvgPath: string, steamSvgHref: string, wakatimeUser: string, wakatimeSvgPath: string, wakatimeSvgHref: string, feedUrl: string }} options - Where to read and write, which accounts to read, and optional credentials.
+ * @param {{ readmePath: string, githubUser: string, githubDisplayName: string, githubToken?: string, githubStatsSvgPath: string, githubStatsSvgHref: string, githubStreakSvgPath: string, githubStreakSvgHref: string, lastfmUser: string, lastfmApiKey?: string, artistsSvgPath: string, artistsSvgHref: string, steamVanity: string, steamApiKey?: string, steamSvgPath: string, steamSvgHref: string, wakatimeUser: string, wakatimeSvgPath: string, wakatimeSvgHref: string, linesSvgPath?: string, linesSvgHref?: string, linesCachePath?: string, linesExcludedRepositories?: string[], feedUrl: string }} options - Where to read and write, which accounts to read, and optional credentials.
  * @returns {Promise<{ changed: boolean, failures: string[], skipped: string[] }>} What happened.
  */
 export const updateReadme = async (options) => {
@@ -123,6 +125,24 @@ export const updateReadme = async (options) => {
     updated = stampAssetVersion(updated, options.wakatimeSvgHref, chartSvg);
   } catch (error) {
     failures.push(`WAKATIME_CHART: ${maskSecrets(error.message)}`);
+  }
+
+  if (options.linesSvgPath && options.linesSvgHref && options.linesCachePath) {
+    try {
+      const { languages, repositoryCount, totalLines, cache } = await fetchLineCounts(options.githubUser, options.githubToken, options.linesCachePath, { excludedRepositories: options.linesExcludedRepositories });
+      const colors = await fetchLanguageColors();
+      const icons = await fetchLanguageIcons(languages.slice(0, 16).map((language) => language.name));
+      const chartSvg = renderLanguageChartSvg(languages, colors, "", icons, {
+        title: "Languages by lines of code",
+        subtitle: escapeXml(`${totalLines.toLocaleString("en-US")} lines across ${repositoryCount} public repositories · docs and data excluded`),
+        ariaLabel: "Languages by lines of code across public repositories, excluding docs and data files",
+      });
+      await writeSvg(options.linesSvgPath, chartSvg);
+      await writeSvg(options.linesCachePath, `${JSON.stringify(cache, null, 1)}\n`);
+      updated = stampAssetVersion(updated, options.linesSvgHref, chartSvg);
+    } catch (error) {
+      failures.push(`LINES_CHART: ${maskSecrets(error.message)}`);
+    }
   }
 
   const changed = updated !== original || svgChanged;

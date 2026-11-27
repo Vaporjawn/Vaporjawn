@@ -1,8 +1,11 @@
 import assert from "node:assert/strict";
-import { mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
+import { mkdir, mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { test } from "node:test";
+import { countLinesInDirectory } from "./countLinesInDirectory.mjs";
+import { fetchLineCounts } from "./fetchLineCounts.mjs";
+import { languageForFile } from "./languageForFile.mjs";
 import { escapeMarkdown } from "./escapeMarkdown.mjs";
 import { fetchArtistImage } from "./fetchArtistImage.mjs";
 import { fetchLanguageIcons } from "./fetchLanguageIcons.mjs";
@@ -279,4 +282,60 @@ test("updateReadme isolates failures, skips keyless sections and never leaks the
   } finally {
     await rm(dir, { recursive: true });
   }
+});
+
+test("languageForFile names code files and ignores prose and data", () => {
+  assert.equal(languageForFile("a/b.tsx"), "TypeScript");
+  assert.equal(languageForFile("x.RS"), "Rust");
+  for (const name of ["README.md", "package-lock.json", "logo.svg", "Makefile"]) assert.equal(languageForFile(name), null);
+});
+
+test("countLinesInDirectory counts non-blank lines per language and skips dependency folders, binaries and huge files", async () => {
+  const dir = await mkdtemp(join(tmpdir(), "lines-test-"));
+  try {
+    await mkdir(join(dir, "src"));
+    await mkdir(join(dir, "node_modules"));
+    await writeFile(join(dir, "src", "a.ts"), "one\n\n  \ntwo\n");
+    await writeFile(join(dir, "b.ts"), "three");
+    await writeFile(join(dir, "node_modules", "dep.js"), "x\ny\n");
+    await writeFile(join(dir, "bin.js"), "a\u0000b\nc");
+    await writeFile(join(dir, "big.js"), "x\n".repeat(600_000));
+    await writeFile(join(dir, "notes.md"), "words\n");
+    assert.deepEqual([...(await countLinesInDirectory(dir))], [["TypeScript", 3]]);
+  } finally {
+    await rm(dir, { recursive: true });
+  }
+});
+
+test("fetchLineCounts skips forks, private and excluded repos, reuses the cache for unchanged pushes, and keeps cache on clone failure", async () => {
+  const dir = await mkdtemp(join(tmpdir(), "lines-test-"));
+  const cachePath = join(dir, "cache.json");
+  const repo = (name, extra = {}) => ({ name, fork: false, archived: false, private: false, pushed_at: "t1", clone_url: `https://x/${name}.git`, ...extra });
+  const listing = async () => new Response(JSON.stringify([repo("keep"), repo("same"), repo("broken"), repo("curated"), repo("f", { fork: true }), repo("p", { private: true })]));
+  const cloned = [];
+  try {
+    await writeFile(cachePath, JSON.stringify({ same: { pushedAt: "t1", counts: { Rust: 10 } }, broken: { pushedAt: "old", counts: { Go: 5 } } }));
+    const result = await fetchLineCounts("u", undefined, cachePath, {
+      fetchImplementation: listing,
+      excludedRepositories: ["curated"],
+      clone: async (url) => { cloned.push(url); if (url.includes("broken")) throw new Error("no"); },
+      count: async () => new Map([["TypeScript", 30]]),
+    });
+    assert.deepEqual(cloned, ["https://x/keep.git", "https://x/broken.git"]);
+    assert.equal(result.repositoryCount, 3);
+    assert.equal(result.totalLines, 45);
+    assert.deepEqual(result.languages.map((language) => [language.name, language.lines]), [["TypeScript", 30], ["Rust", 10], ["Go", 5]]);
+    assert.ok(Math.abs(result.languages[0].percent - (30 / 45) * 100) < 1e-9);
+    await assert.rejects(fetchLineCounts("u", undefined, join(dir, "none.json"), { fetchImplementation: async () => new Response("[]") }), /No lines of code/);
+  } finally {
+    await rm(dir, { recursive: true });
+  }
+});
+
+test("renderLanguageChartSvg accepts custom headings and escapes the title", () => {
+  const svg = renderLanguageChartSvg([{ name: "Rust", percent: 100 }], new Map(), "", new Map(), { title: "A & B", subtitle: "sub", ariaLabel: "x<y" });
+  assert.match(svg, />A &#38; B<\/text>/);
+  assert.match(svg, />sub<\/text>/);
+  assert.match(svg, /aria-label="x&#60;y"/);
+  assert.ok(!svg.includes("wakatime.com"));
 });

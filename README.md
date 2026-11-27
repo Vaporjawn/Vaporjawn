@@ -133,6 +133,8 @@ Hi, I'm Victor, a full-stack engineer from Philadelphia. I build with <a href="h
 
 <a href="https://wakatime.com/@Vaporjawn"><img src="./assets/wakatime-languages.svg?v=c9cf99dc" alt="Languages by coding time on WakaTime, all time, excluding unclassified time" width="800"></a>
 
+<img src="./assets/lines-of-code-languages.svg?v=df7dcc23" alt="Languages by lines of code across public repositories, excluding docs and data files" width="800">
+
 <img src="https://github-trophies.vercel.app/?username=Vaporjawn" alt="GitHub trophies for Vaporjawn">
 
 ⭐️ [Vaporjawn](https://github.com/vaporjawn) ⭐️

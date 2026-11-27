@@ -8,6 +8,8 @@ const NAME_OVERRIDES = new Map([
   ["git config", "git"],
   ["vue.js", "vuedotjs"],
   ["node.js", "nodedotjs"],
+  ["css", "css3"],
+  ["scss", "sass"],
 ]);
 
 /**

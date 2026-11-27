@@ -25,6 +25,10 @@ const main = async () => {
     steamApiKey: process.env.STEAM_API_KEY || undefined,
     steamSvgPath: fileURLToPath(new URL("../assets/steam-games.svg", import.meta.url)),
     steamSvgHref: "./assets/steam-games.svg",
+    linesSvgPath: fileURLToPath(new URL("../assets/lines-of-code-languages.svg", import.meta.url)),
+    linesSvgHref: "./assets/lines-of-code-languages.svg",
+    linesExcludedRepositories: ["better-discord-themes"], // a curated collection of other people's themes
+    linesCachePath: fileURLToPath(new URL("../assets/lines-of-code-cache.json", import.meta.url)),
     wakatimeSvgHref: "./assets/wakatime-languages.svg",
     wakatimeUser: "Vaporjawn",
     githubUser: "Vaporjawn",

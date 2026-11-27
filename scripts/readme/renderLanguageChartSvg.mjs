@@ -78,9 +78,13 @@ const slicePath = (centerY, startAngle, endAngle) => {
  * @param {Map<string, string>} colors - Lower-cased language name to colour.
  * @param {string} rangeText - WakaTime's wording for the date range, e.g. "since Feb 28 2020".
  * @param {Map<string, { path: string, hex: string }>} [icons] - Lower-cased language name to logo path and colour; languages without one get a letter badge.
+ * @param {{ title?: string, subtitle?: string, ariaLabel?: string }} [labels] - Heading, sub-heading (already XML-safe text; defaults to the WakaTime wording) and accessible name.
  * @returns {string} The SVG document text.
  */
-export const renderLanguageChartSvg = (languages, colors, rangeText, icons = new Map()) => {
+export const renderLanguageChartSvg = (languages, colors, rangeText, icons = new Map(), labels = {}) => {
+  const title = labels.title ?? "Languages by coding time";
+  const subtitle = labels.subtitle ?? `Excluding &quot;Other&quot; · ${escapeXml(rangeText)} · powered by wakatime.com`;
+  const ariaLabel = labels.ariaLabel ?? "Languages by coding time, all time, excluding unclassified time";
   const height = 96 + LEGEND_ROWS * ROW_HEIGHT + 24;
   const centerY = 96 + (LEGEND_ROWS * ROW_HEIGHT) / 2;
   const colorOf = (language) => colors.get(language.name.toLowerCase()) ?? fallbackColor(language.name);
@@ -114,10 +118,10 @@ export const renderLanguageChartSvg = (languages, colors, rangeText, icons = new
     })
     .join("\n  ");
 
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="${WIDTH}" height="${height}" viewBox="0 0 ${WIDTH} ${height}" role="img" aria-label="Languages by coding time, all time, excluding unclassified time" font-family="${FONT}">
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${WIDTH}" height="${height}" viewBox="0 0 ${WIDTH} ${height}" role="img" aria-label="${escapeXml(ariaLabel)}" font-family="${FONT}">
   <rect width="${WIDTH}" height="${height}" fill="#1f2933"/>
-  <text x="${WIDTH / 2}" y="34" font-size="19" fill="#4aa3df" text-anchor="middle">Languages by coding time</text>
-  <text x="${WIDTH / 2}" y="58" font-size="13" fill="#8a97a6" text-anchor="middle">Excluding &quot;Other&quot; · ${escapeXml(rangeText)} · powered by wakatime.com</text>
+  <text x="${WIDTH / 2}" y="34" font-size="19" fill="#4aa3df" text-anchor="middle">${escapeXml(title)}</text>
+  <text x="${WIDTH / 2}" y="58" font-size="13" fill="#8a97a6" text-anchor="middle">${subtitle}</text>
   ${legend}
   ${slices}
 </svg>
