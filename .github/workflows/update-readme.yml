@@ -2,10 +2,12 @@ name: Update README
 
 # Refreshes the auto-generated README sections and images (GitHub stats and
 # streak cards, Steam games, most played artists, WakaTime languages, recent
-# repositories, latest blog posts) and commits the result to main.
+# repositories, latest blog posts) and commits the result to main. It runs
+# hourly (at 17 minutes past) so the Last.fm artist tiles stay current; a
+# commit is only made when something actually changed.
 on:
   schedule:
-    - cron: "17 9 * * *"
+    - cron: "17 * * * *"
   workflow_dispatch:
   push:
     branches: [main]
