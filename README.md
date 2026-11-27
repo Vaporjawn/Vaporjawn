@@ -48,12 +48,12 @@ Hi, I'm Victor, a full-stack engineer from Philadelphia. I build with <a href="h
 <tr>
 <td width="50%">
 
-<img src="./assets/github-stats.svg?v=d42cd208" alt="Victor Williams&#39;s GitHub stats: 34 stars, 15,893 contributions in the last year, 172 pull requests, 96 issues, 131 public repositories" width="100%">
+<img src="./assets/github-stats.svg?v=0af892b5" alt="Victor Williams&#39;s GitHub stats: 34 stars, 15,917 contributions in the last year, 172 pull requests, 96 issues, 131 public repositories" width="100%">
 
 </td>
 <td width="50%">
 
-<img src="./assets/github-streak.svg?v=2ed4940c" alt="GitHub contribution streak: 27,688 total contributions, 465 day current streak, 858 day longest streak" width="100%">
+<img src="./assets/github-streak.svg?v=4e3cb0f2" alt="GitHub contribution streak: 27,712 total contributions, 465 day current streak, 858 day longest streak" width="100%">
 
 </td>
 </tr>
@@ -63,7 +63,7 @@ Hi, I'm Victor, a full-stack engineer from Philadelphia. I build with <a href="h
 </div>
 
 <!-- TOP_ARTISTS:START -->
-<a href="https://www.last.fm/user/Vaporjawn/library/artists?date_preset=LAST_30_DAYS"><img src="./assets/top-artists.svg?v=2074f5c0" alt="Top artists over the last 30 days: Future, 207 plays; Luxury Elite, 105 plays; Yeat, 70 plays; Drake, 68 plays; driftive dreams, 61 plays; In Love With a Ghost, 58 plays; nettspend, 52 plays; VirtualRealityDeluxe, 48 plays" width="100%"></a>
+<a href="https://www.last.fm/user/Vaporjawn/library/artists?date_preset=LAST_30_DAYS"><img src="./assets/top-artists.svg?v=6bea8ab4" alt="Top artists over the last 30 days: Future, 207 plays; Luxury Elite, 105 plays; Yeat, 70 plays; Drake, 68 plays; driftive dreams, 61 plays; In Love With a Ghost, 58 plays; VirtualRealityDeluxe, 48 plays; 猫 シ Corp., 48 plays" width="100%"></a>
 
 <details>
 <summary>Artist list (from <a href="https://www.last.fm/user/Vaporjawn">Last.fm</a>)</summary>
@@ -74,8 +74,8 @@ Hi, I'm Victor, a full-stack engineer from Philadelphia. I build with <a href="h
 4. [**Drake**](https://www.last.fm/music/Drake): 68 plays
 5. [**driftive dreams**](https://www.last.fm/music/driftive+dreams): 61 plays
 6. [**In Love With a Ghost**](https://www.last.fm/music/In+Love+With+a+Ghost): 58 plays
-7. [**nettspend**](https://www.last.fm/music/nettspend): 52 plays
-8. [**VirtualRealityDeluxe**](https://www.last.fm/music/VirtualRealityDeluxe): 48 plays
+7. [**VirtualRealityDeluxe**](https://www.last.fm/music/VirtualRealityDeluxe): 48 plays
+8. [**猫 シ Corp.**](https://www.last.fm/music/%E7%8C%AB+%E3%82%B7+Corp.): 48 plays
 
 </details>
 <!-- TOP_ARTISTS:END -->
