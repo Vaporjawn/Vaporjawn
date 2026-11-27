@@ -48,12 +48,12 @@ Hi, I'm Victor, a full-stack engineer from Philadelphia. I build with <a href="h
 <tr>
 <td width="50%">
 
-<img src="./assets/github-stats.svg?v=0af892b5" alt="Victor Williams&#39;s GitHub stats: 34 stars, 15,917 contributions in the last year, 172 pull requests, 96 issues, 131 public repositories" width="100%">
+<img src="./assets/github-stats.svg?v=b3525936" alt="Victor Williams&#39;s GitHub stats: 34 stars, 15,918 contributions in the last year, 172 pull requests, 96 issues, 131 public repositories" width="100%">
 
 </td>
 <td width="50%">
 
-<img src="./assets/github-streak.svg?v=4e3cb0f2" alt="GitHub contribution streak: 27,712 total contributions, 465 day current streak, 858 day longest streak" width="100%">
+<img src="./assets/github-streak.svg?v=a5a52466" alt="GitHub contribution streak: 27,713 total contributions, 465 day current streak, 858 day longest streak" width="100%">
 
 </td>
 </tr>
@@ -133,7 +133,7 @@ Hi, I'm Victor, a full-stack engineer from Philadelphia. I build with <a href="h
 
 <a href="https://wakatime.com/@Vaporjawn"><img src="./assets/wakatime-languages.svg?v=c9cf99dc" alt="Languages by coding time on WakaTime, all time, excluding unclassified time" width="800"></a>
 
-<img src="./assets/lines-of-code-languages.svg?v=df7dcc23" alt="Languages by lines of code across public repositories, excluding docs and data files" width="800">
+<img src="./assets/lines-of-code-languages.svg?v=e5a13198" alt="Languages by lines of code across public repositories, excluding docs and data files" width="800">
 
 <img src="https://github-trophies.vercel.app/?username=Vaporjawn" alt="GitHub trophies for Vaporjawn">
 
