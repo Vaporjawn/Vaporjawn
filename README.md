@@ -48,12 +48,12 @@ Hi, I'm Victor, a full-stack engineer from Philadelphia. I build with <a href="h
 <tr>
 <td width="50%">
 
-<img src="./assets/github-stats.svg?v=302ff281" alt="Victor Williams&#39;s GitHub stats: 34 stars, 16,031 contributions in the last year, 172 pull requests, 96 issues, 131 public repositories" width="100%">
+<img src="./assets/github-stats.svg?v=12cd5137" alt="Victor Williams&#39;s GitHub stats: 34 stars, 16,032 contributions in the last year, 172 pull requests, 96 issues, 131 public repositories" width="100%">
 
 </td>
 <td width="50%">
 
-<img src="./assets/github-streak.svg?v=ced80b53" alt="GitHub contribution streak: 27,829 total contributions, 466 day current streak, 858 day longest streak" width="100%">
+<img src="./assets/github-streak.svg?v=172d3c31" alt="GitHub contribution streak: 27,830 total contributions, 466 day current streak, 858 day longest streak" width="100%">
 
 </td>
 </tr>
@@ -63,7 +63,7 @@ Hi, I'm Victor, a full-stack engineer from Philadelphia. I build with <a href="h
 </div>
 
 <!-- TOP_ARTISTS:START -->
-<a href="https://www.last.fm/user/Vaporjawn/library/artists?date_preset=LAST_30_DAYS"><img src="./assets/top-artists.svg?v=c1f1cac0" alt="Top artists over the last 30 days: Future, 207 plays; Luxury Elite, 105 plays; Men I Trust, 104 plays; driftive dreams, 61 plays; Drake, 60 plays; In Love With a Ghost, 58 plays; Yeat, 56 plays; VirtualRealityDeluxe, 48 plays" width="100%"></a>
+<a href="https://www.last.fm/user/Vaporjawn/library/artists?date_preset=LAST_30_DAYS"><img src="./assets/top-artists.svg?v=e8626576" alt="Top artists over the last 30 days: Future, 207 plays; Luxury Elite, 105 plays; Men I Trust, 104 plays; driftive dreams, 61 plays; Drake, 60 plays; In Love With a Ghost, 58 plays; Yeat, 56 plays; VirtualRealityDeluxe, 48 plays" width="100%"></a>
 
 <details>
 <summary>Artist list (from <a href="https://www.last.fm/user/Vaporjawn">Last.fm</a>)</summary>
