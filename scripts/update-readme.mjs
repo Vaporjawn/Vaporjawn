@@ -33,6 +33,7 @@ const main = async () => {
       "Morgan-Lewis-Vault", // notes vault holding many duplicate snapshots of the same work source
     ],
     linesCachePath: fileURLToPath(new URL("../assets/lines-of-code-cache.json", import.meta.url)),
+    linesPrivateCachePath: fileURLToPath(new URL("../.cache/lines-of-code-private-cache.json", import.meta.url)), // never committed: holds private repository names
     wakatimeSvgHref: "./assets/wakatime-languages.svg",
     wakatimeUser: "Vaporjawn",
     githubUser: "Vaporjawn",

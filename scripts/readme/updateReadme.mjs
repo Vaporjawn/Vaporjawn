@@ -30,7 +30,7 @@ import { writeFileIfChanged } from "./writeFileIfChanged.mjs";
  * previous text and the failure is reported, but the others still update.
  * Secrets are masked in any reported error.
  *
- * @param {{ readmePath: string, githubUser: string, githubDisplayName: string, githubToken?: string, githubStatsSvgPath: string, githubStatsSvgHref: string, githubStreakSvgPath: string, githubStreakSvgHref: string, lastfmUser: string, lastfmApiKey?: string, artistsSvgPath: string, artistsSvgHref: string, steamVanity: string, steamApiKey?: string, steamSvgPath: string, steamSvgHref: string, wakatimeUser: string, wakatimeSvgPath: string, wakatimeSvgHref: string, linesSvgPath?: string, linesSvgHref?: string, linesToken?: string, linesCachePath?: string, linesExcludedRepositories?: string[], feedUrl: string }} options - Where to read and write, which accounts to read, and optional credentials.
+ * @param {{ readmePath: string, githubUser: string, githubDisplayName: string, githubToken?: string, githubStatsSvgPath: string, githubStatsSvgHref: string, githubStreakSvgPath: string, githubStreakSvgHref: string, lastfmUser: string, lastfmApiKey?: string, artistsSvgPath: string, artistsSvgHref: string, steamVanity: string, steamApiKey?: string, steamSvgPath: string, steamSvgHref: string, wakatimeUser: string, wakatimeSvgPath: string, wakatimeSvgHref: string, linesSvgPath?: string, linesSvgHref?: string, linesToken?: string, linesCachePath?: string, linesPrivateCachePath?: string, linesExcludedRepositories?: string[], feedUrl: string }} options - Where to read and write, which accounts to read, and optional credentials.
  * @returns {Promise<{ changed: boolean, failures: string[], skipped: string[] }>} What happened.
  */
 export const updateReadme = async (options) => {
@@ -131,7 +131,7 @@ export const updateReadme = async (options) => {
     skipped.push("LINES_CHART (no token that can read private repositories)");
   } else if (options.linesSvgPath && options.linesSvgHref && options.linesCachePath) {
     try {
-      const { languages, repositoryCount, totalLines, cache } = await fetchLineCounts(options.githubUser, options.linesToken, options.linesCachePath, { excludedRepositories: options.linesExcludedRepositories });
+      const { languages, repositoryCount, totalLines, cache, privateCache } = await fetchLineCounts(options.githubUser, options.linesToken, options.linesCachePath, options.linesPrivateCachePath, { excludedRepositories: options.linesExcludedRepositories });
       const colors = await fetchLanguageColors();
       const icons = await fetchLanguageIcons(languages.slice(0, 16).map((language) => language.name));
       const chartSvg = renderLanguageChartSvg(languages, colors, "", icons, {
@@ -141,6 +141,9 @@ export const updateReadme = async (options) => {
       });
       await writeSvg(options.linesSvgPath, chartSvg);
       await writeSvg(options.linesCachePath, `${JSON.stringify(cache, null, 1)}\n`);
+      if (options.linesPrivateCachePath) {
+        await writeSvg(options.linesPrivateCachePath, `${JSON.stringify(privateCache, null, 1)}\n`);
+      }
       updated = stampAssetVersion(updated, options.linesSvgHref, chartSvg);
     } catch (error) {
       failures.push(`LINES_CHART: ${maskSecrets(error.message)}`);

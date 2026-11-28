@@ -1,5 +1,4 @@
 import assert from "node:assert/strict";
-import { createHash } from "node:crypto";
 import { mkdir, mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
@@ -308,30 +307,32 @@ test("countLinesInDirectory counts non-blank lines per language and skips depend
   }
 });
 
-test("fetchLineCounts skips forks and excluded repos, includes private ones when a token is given, hashes cache keys, reuses the cache for unchanged pushes, and keeps cache on clone failure", async () => {
+test("fetchLineCounts skips forks and excluded repos, includes private ones when a token is given, keeps private repos out of the public cache, reuses the cache for unchanged pushes, and keeps cache on clone failure", async () => {
   const dir = await mkdtemp(join(tmpdir(), "lines-test-"));
   const cachePath = join(dir, "cache.json");
   const repo = (name, extra = {}) => ({ name, fork: false, archived: false, private: false, pushed_at: "t1", clone_url: `https://x/${name}.git`, ...extra });
-  const listing = async () => new Response(JSON.stringify([repo("keep"), repo("same"), repo("broken"), repo("curated"), repo("f", { fork: true }), repo("p", { private: true }), repo("huge", { size: 5_000_000 })]));
+  const listing = async () => new Response(JSON.stringify([repo("keep"), repo("same"), repo("broken", { private: true }), repo("curated"), repo("f", { fork: true }), repo("p", { private: true }), repo("huge", { size: 5_000_000 })]));
   const urls = [];
   const recording = async (url) => { urls.push(String(url)); return listing(); };
   const cloned = [];
   try {
-    const key = (name) => createHash("sha256").update(name).digest("hex").slice(0, 12);
-    await writeFile(cachePath, JSON.stringify({ [key("same")]: { pushedAt: "t1", counts: { Rust: 10 } }, [key("broken")]: { pushedAt: "old", counts: { Go: 5 } } }));
-    const result = await fetchLineCounts("u", "TOKEN", cachePath, {
+    const privateCachePath = join(dir, "private.json");
+    await writeFile(cachePath, JSON.stringify({ same: { pushedAt: "t1", counts: { Rust: 10 } } }));
+    await writeFile(privateCachePath, JSON.stringify({ broken: { pushedAt: "old", counts: { Go: 5 } } }));
+    const result = await fetchLineCounts("u", "TOKEN", cachePath, privateCachePath, {
       fetchImplementation: recording,
       excludedRepositories: ["curated"],
       clone: async (url, folder, token) => { cloned.push(`${url} ${token ?? "-"}`); if (url.includes("broken")) throw new Error("no"); },
       count: async () => new Map([["TypeScript", 30]]),
     });
-    assert.deepEqual(cloned, ["https://x/keep.git -", "https://x/broken.git -", "https://x/p.git TOKEN"]);
+    assert.deepEqual(cloned, ["https://x/keep.git -", "https://x/broken.git TOKEN", "https://x/p.git TOKEN"]);
     assert.ok(urls[0].includes("/user/repos?affiliation=owner&visibility=all"));
     assert.equal(result.repositoryCount, 4);
     assert.equal(result.totalLines, 75);
     assert.deepEqual(result.languages.map((language) => [language.name, language.lines]), [["TypeScript", 60], ["Rust", 10], ["Go", 5]]);
-    assert.ok(!Object.keys(result.cache).some((name) => ["keep", "same", "p"].includes(name)));
-    await assert.rejects(fetchLineCounts("u", undefined, join(dir, "none.json"), { fetchImplementation: async () => new Response("[]") }), /No lines of code/);
+    assert.deepEqual(Object.keys(result.cache).sort(), ["keep", "same"]);
+    assert.deepEqual(Object.keys(result.privateCache).sort(), ["broken", "p"]);
+    await assert.rejects(fetchLineCounts("u", undefined, join(dir, "none.json"), undefined, { fetchImplementation: async () => new Response("[]") }), /No lines of code/);
   } finally {
     await rm(dir, { recursive: true });
   }

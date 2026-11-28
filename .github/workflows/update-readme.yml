@@ -36,6 +36,15 @@ jobs:
         with:
           node-version: 22
 
+      # Per-repository counts for private repositories must stay out of this
+      # public repo, so they are kept in the Actions cache instead of git.
+      - name: Restore private line counts
+        uses: actions/cache@v4
+        with:
+          path: .cache
+          key: lines-private-${{ github.run_id }}
+          restore-keys: lines-private-
+
       - name: Run script tests
         run: node --test "scripts/**/*.test.mjs"
 
