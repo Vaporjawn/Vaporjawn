@@ -4,7 +4,7 @@ import { updateReadme } from "./readme/updateReadme.mjs";
 
 /**
  * Command-line entry point: refreshes the README's auto-generated sections.
- * Reads `LASTFM_API_KEY` and `GITHUB_TOKEN` from the environment. Exits with
+ * Reads `LASTFM_API_KEY`, `GITHUB_TOKEN` and `LINES_GITHUB_TOKEN` (a personal access token that can read private repositories, for the lines-of-code chart) from the environment. Exits with
  * code 1 when any section that was attempted failed, so the workflow run
  * shows red instead of silently serving stale content.
  *
@@ -27,7 +27,11 @@ const main = async () => {
     steamSvgHref: "./assets/steam-games.svg",
     linesSvgPath: fileURLToPath(new URL("../assets/lines-of-code-languages.svg", import.meta.url)),
     linesSvgHref: "./assets/lines-of-code-languages.svg",
-    linesExcludedRepositories: ["better-discord-themes"], // a curated collection of other people's themes
+    linesExcludedRepositories: [
+      "better-discord-themes", // a curated collection of other people's themes
+      "Ludaro", // bundles other people's emulator engines and their upstream sources
+      "Morgan-Lewis-Vault", // notes vault holding many duplicate snapshots of the same work source
+    ],
     linesCachePath: fileURLToPath(new URL("../assets/lines-of-code-cache.json", import.meta.url)),
     wakatimeSvgHref: "./assets/wakatime-languages.svg",
     wakatimeUser: "Vaporjawn",
@@ -36,6 +40,7 @@ const main = async () => {
     feedUrl: "https://vaporjawn.dev/rss.xml",
     lastfmApiKey: process.env.LASTFM_API_KEY || undefined,
     githubToken: process.env.GITHUB_TOKEN || undefined,
+    linesToken: process.env.LINES_GITHUB_TOKEN || undefined,
   });
 
   console.log(result.changed ? "README.md updated." : "README.md already up to date.");

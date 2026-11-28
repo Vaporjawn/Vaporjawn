@@ -1,3 +1,4 @@
+import { createHash } from "node:crypto";
 import { mkdtemp, readFile, rm } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
@@ -6,26 +7,29 @@ import { countLinesInDirectory } from "./countLinesInDirectory.mjs";
 import { fetchJson } from "./fetchJson.mjs";
 
 /**
- * Counts lines of code per language across a user's public, non-fork,
- * non-archived repositories. A repository is cloned and recounted only when
+ * Counts lines of code per language across a user's non-fork, non-archived
+ * repositories: all of them (private included) when the token can list them,
+ * otherwise only the public ones. A repository is cloned and recounted only when
  * its last push time differs from the one in the cache, so hourly runs
- * normally clone nothing. Repositories named in `excludedRepositories` (collections of other people's code) are skipped. A repository that cannot be cloned keeps its cached
+ * normally clone nothing. The cache is keyed by a hash of the repository name so private names never appear in it. Repositories larger than `maxRepositoryKilobytes` (default 1 GB, almost always media rather than code) and those named in `excludedRepositories` (collections of other people's code) are skipped. A repository that cannot be cloned keeps its cached
  * counts (or counts as empty) instead of failing the chart.
  *
  * @param {string} user - The GitHub username.
- * @param {string | undefined} token - Optional GitHub token (raises the API rate limit).
+ * @param {string | undefined} token - Optional GitHub token. A token owned by `user` with repository read access also covers private repositories.
  * @param {string} cachePath - JSON file holding `{ [repo]: { pushedAt, counts } }` from the last run.
- * @param {{ excludedRepositories?: string[], fetchImplementation?: typeof fetch, clone?: typeof cloneRepository, count?: typeof countLinesInDirectory }} [overrides] - Injectable pieces, for tests.
+ * @param {{ excludedRepositories?: string[], maxRepositoryKilobytes?: number, fetchImplementation?: typeof fetch, clone?: typeof cloneRepository, count?: typeof countLinesInDirectory }} [overrides] - Injectable pieces, for tests.
  * @returns {Promise<{ languages: { name: string, lines: number, percent: number }[], repositoryCount: number, totalLines: number, cache: Record<string, { pushedAt: string, counts: Record<string, number> }> }>} Languages, largest first, and the updated cache.
  * @throws {Error} When the repository list is unavailable or no code is found.
  */
 export const fetchLineCounts = async (user, token, cachePath, overrides = {}) => {
-  const { excludedRepositories = [], fetchImplementation = fetch, clone = cloneRepository, count = countLinesInDirectory } = overrides;
+  const { excludedRepositories = [], maxRepositoryKilobytes = 1_000_000, fetchImplementation = fetch, clone = cloneRepository, count = countLinesInDirectory } = overrides;
   const headers = { Accept: "application/vnd.github+json", ...(token ? { Authorization: `Bearer ${token}` } : {}) };
   const repos = [];
   for (let page = 1; page <= 10; page += 1) {
     const batch = await fetchJson(
-      `https://api.github.com/users/${encodeURIComponent(user)}/repos?type=owner&per_page=100&page=${page}`,
+      token
+        ? `https://api.github.com/user/repos?affiliation=owner&visibility=all&per_page=100&page=${page}`
+        : `https://api.github.com/users/${encodeURIComponent(user)}/repos?type=owner&per_page=100&page=${page}`,
       headers,
       fetchImplementation,
     );
@@ -33,21 +37,22 @@ export const fetchLineCounts = async (user, token, cachePath, overrides = {}) =>
     repos.push(...batch);
     if (batch.length < 100) break;
   }
-  const wanted = repos.filter((repo) => !repo.fork && !repo.archived && !repo.private && !excludedRepositories.includes(repo.name));
+  const wanted = repos.filter((repo) => !repo.fork && !repo.archived && !excludedRepositories.includes(repo.name) && !(repo.size > maxRepositoryKilobytes));
   const previous = JSON.parse(await readFile(cachePath, "utf8").catch(() => "{}"));
   const cache = {};
   for (const repo of wanted) {
     const pushedAt = String(repo.pushed_at);
-    if (previous[repo.name]?.pushedAt === pushedAt) {
-      cache[repo.name] = previous[repo.name];
+    const key = createHash("sha256").update(repo.name).digest("hex").slice(0, 12);
+    if (previous[key]?.pushedAt === pushedAt) {
+      cache[key] = previous[key];
       continue;
     }
     const folder = await mkdtemp(join(tmpdir(), "lines-"));
     try {
-      await clone(repo.clone_url, folder);
-      cache[repo.name] = { pushedAt, counts: Object.fromEntries(await count(folder)) };
+      await clone(repo.clone_url, folder, repo.private ? token : undefined);
+      cache[key] = { pushedAt, counts: Object.fromEntries(await count(folder)) };
     } catch {
-      cache[repo.name] = previous[repo.name] ?? { pushedAt: "", counts: {} };
+      cache[key] = previous[key] ?? { pushedAt: "", counts: {} };
     } finally {
       await rm(folder, { recursive: true, force: true });
     }

@@ -30,7 +30,7 @@ import { writeFileIfChanged } from "./writeFileIfChanged.mjs";
  * previous text and the failure is reported, but the others still update.
  * Secrets are masked in any reported error.
  *
- * @param {{ readmePath: string, githubUser: string, githubDisplayName: string, githubToken?: string, githubStatsSvgPath: string, githubStatsSvgHref: string, githubStreakSvgPath: string, githubStreakSvgHref: string, lastfmUser: string, lastfmApiKey?: string, artistsSvgPath: string, artistsSvgHref: string, steamVanity: string, steamApiKey?: string, steamSvgPath: string, steamSvgHref: string, wakatimeUser: string, wakatimeSvgPath: string, wakatimeSvgHref: string, linesSvgPath?: string, linesSvgHref?: string, linesCachePath?: string, linesExcludedRepositories?: string[], feedUrl: string }} options - Where to read and write, which accounts to read, and optional credentials.
+ * @param {{ readmePath: string, githubUser: string, githubDisplayName: string, githubToken?: string, githubStatsSvgPath: string, githubStatsSvgHref: string, githubStreakSvgPath: string, githubStreakSvgHref: string, lastfmUser: string, lastfmApiKey?: string, artistsSvgPath: string, artistsSvgHref: string, steamVanity: string, steamApiKey?: string, steamSvgPath: string, steamSvgHref: string, wakatimeUser: string, wakatimeSvgPath: string, wakatimeSvgHref: string, linesSvgPath?: string, linesSvgHref?: string, linesToken?: string, linesCachePath?: string, linesExcludedRepositories?: string[], feedUrl: string }} options - Where to read and write, which accounts to read, and optional credentials.
  * @returns {Promise<{ changed: boolean, failures: string[], skipped: string[] }>} What happened.
  */
 export const updateReadme = async (options) => {
@@ -38,7 +38,7 @@ export const updateReadme = async (options) => {
   const failures = [];
   const skipped = [];
   let svgChanged = false;
-  const secrets = [options.lastfmApiKey, options.steamApiKey, options.githubToken].filter(Boolean);
+  const secrets = [options.lastfmApiKey, options.steamApiKey, options.githubToken, options.linesToken].filter(Boolean);
 
   const writeSvg = async (path, text) => {
     svgChanged = (await writeFileIfChanged(path, text)) || svgChanged;
@@ -127,15 +127,17 @@ export const updateReadme = async (options) => {
     failures.push(`WAKATIME_CHART: ${maskSecrets(error.message)}`);
   }
 
-  if (options.linesSvgPath && options.linesSvgHref && options.linesCachePath) {
+  if (options.linesSvgPath && options.linesSvgHref && options.linesCachePath && !options.linesToken) {
+    skipped.push("LINES_CHART (no token that can read private repositories)");
+  } else if (options.linesSvgPath && options.linesSvgHref && options.linesCachePath) {
     try {
-      const { languages, repositoryCount, totalLines, cache } = await fetchLineCounts(options.githubUser, options.githubToken, options.linesCachePath, { excludedRepositories: options.linesExcludedRepositories });
+      const { languages, repositoryCount, totalLines, cache } = await fetchLineCounts(options.githubUser, options.linesToken, options.linesCachePath, { excludedRepositories: options.linesExcludedRepositories });
       const colors = await fetchLanguageColors();
       const icons = await fetchLanguageIcons(languages.slice(0, 16).map((language) => language.name));
       const chartSvg = renderLanguageChartSvg(languages, colors, "", icons, {
         title: "Languages by lines of code",
-        subtitle: escapeXml(`${totalLines.toLocaleString("en-US")} lines across ${repositoryCount} public repositories · docs and data excluded`),
-        ariaLabel: "Languages by lines of code across public repositories, excluding docs and data files",
+        subtitle: escapeXml(`${totalLines.toLocaleString("en-US")} lines across ${repositoryCount} repositories (public and private) · docs and data excluded`),
+        ariaLabel: "Languages by lines of code across public and private repositories, excluding docs and data files",
       });
       await writeSvg(options.linesSvgPath, chartSvg);
       await writeSvg(options.linesCachePath, `${JSON.stringify(cache, null, 1)}\n`);

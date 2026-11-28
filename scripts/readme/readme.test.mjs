@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { createHash } from "node:crypto";
 import { mkdir, mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
@@ -307,25 +308,29 @@ test("countLinesInDirectory counts non-blank lines per language and skips depend
   }
 });
 
-test("fetchLineCounts skips forks, private and excluded repos, reuses the cache for unchanged pushes, and keeps cache on clone failure", async () => {
+test("fetchLineCounts skips forks and excluded repos, includes private ones when a token is given, hashes cache keys, reuses the cache for unchanged pushes, and keeps cache on clone failure", async () => {
   const dir = await mkdtemp(join(tmpdir(), "lines-test-"));
   const cachePath = join(dir, "cache.json");
   const repo = (name, extra = {}) => ({ name, fork: false, archived: false, private: false, pushed_at: "t1", clone_url: `https://x/${name}.git`, ...extra });
-  const listing = async () => new Response(JSON.stringify([repo("keep"), repo("same"), repo("broken"), repo("curated"), repo("f", { fork: true }), repo("p", { private: true })]));
+  const listing = async () => new Response(JSON.stringify([repo("keep"), repo("same"), repo("broken"), repo("curated"), repo("f", { fork: true }), repo("p", { private: true }), repo("huge", { size: 5_000_000 })]));
+  const urls = [];
+  const recording = async (url) => { urls.push(String(url)); return listing(); };
   const cloned = [];
   try {
-    await writeFile(cachePath, JSON.stringify({ same: { pushedAt: "t1", counts: { Rust: 10 } }, broken: { pushedAt: "old", counts: { Go: 5 } } }));
-    const result = await fetchLineCounts("u", undefined, cachePath, {
-      fetchImplementation: listing,
+    const key = (name) => createHash("sha256").update(name).digest("hex").slice(0, 12);
+    await writeFile(cachePath, JSON.stringify({ [key("same")]: { pushedAt: "t1", counts: { Rust: 10 } }, [key("broken")]: { pushedAt: "old", counts: { Go: 5 } } }));
+    const result = await fetchLineCounts("u", "TOKEN", cachePath, {
+      fetchImplementation: recording,
       excludedRepositories: ["curated"],
-      clone: async (url) => { cloned.push(url); if (url.includes("broken")) throw new Error("no"); },
+      clone: async (url, folder, token) => { cloned.push(`${url} ${token ?? "-"}`); if (url.includes("broken")) throw new Error("no"); },
       count: async () => new Map([["TypeScript", 30]]),
     });
-    assert.deepEqual(cloned, ["https://x/keep.git", "https://x/broken.git"]);
-    assert.equal(result.repositoryCount, 3);
-    assert.equal(result.totalLines, 45);
-    assert.deepEqual(result.languages.map((language) => [language.name, language.lines]), [["TypeScript", 30], ["Rust", 10], ["Go", 5]]);
-    assert.ok(Math.abs(result.languages[0].percent - (30 / 45) * 100) < 1e-9);
+    assert.deepEqual(cloned, ["https://x/keep.git -", "https://x/broken.git -", "https://x/p.git TOKEN"]);
+    assert.ok(urls[0].includes("/user/repos?affiliation=owner&visibility=all"));
+    assert.equal(result.repositoryCount, 4);
+    assert.equal(result.totalLines, 75);
+    assert.deepEqual(result.languages.map((language) => [language.name, language.lines]), [["TypeScript", 60], ["Rust", 10], ["Go", 5]]);
+    assert.ok(!Object.keys(result.cache).some((name) => ["keep", "same", "p"].includes(name)));
     await assert.rejects(fetchLineCounts("u", undefined, join(dir, "none.json"), { fetchImplementation: async () => new Response("[]") }), /No lines of code/);
   } finally {
     await rm(dir, { recursive: true });
@@ -338,4 +343,23 @@ test("renderLanguageChartSvg accepts custom headings and escapes the title", () 
   assert.match(svg, />sub<\/text>/);
   assert.match(svg, /aria-label="x&#60;y"/);
   assert.ok(!svg.includes("wakatime.com"));
+});
+
+test("updateReadme skips the lines-of-code chart, without touching its files, when no private-capable token is set", async () => {
+  const dir = await mkdtemp(join(tmpdir(), "readme-test-"));
+  try {
+    await writeFile(join(dir, "README.md"), "x");
+    const realFetch = globalThis.fetch;
+    globalThis.fetch = async () => new Response("", { status: 503 });
+    try {
+      const result = await updateReadme({ readmePath: join(dir, "README.md"), artistsSvgPath: join(dir, "t.svg"), artistsSvgHref: "./t.svg", wakatimeSvgPath: join(dir, "w.svg"), wakatimeSvgHref: "./w.svg", wakatimeUser: "u", githubUser: "u", lastfmUser: "u", feedUrl: "https://x/rss.xml", linesSvgPath: join(dir, "l.svg"), linesSvgHref: "./l.svg", linesCachePath: join(dir, "l.json") });
+      assert.ok(result.skipped.includes("LINES_CHART (no token that can read private repositories)"));
+      assert.ok(!result.failures.some((failure) => failure.startsWith("LINES_CHART")));
+      await assert.rejects(readFile(join(dir, "l.svg")));
+    } finally {
+      globalThis.fetch = realFetch;
+    }
+  } finally {
+    await rm(dir, { recursive: true });
+  }
 });

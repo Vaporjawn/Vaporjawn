@@ -44,6 +44,7 @@ jobs:
           LASTFM_API_KEY: ${{ secrets.LASTFM_API_KEY }}
           STEAM_API_KEY: ${{ secrets.STEAM_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          LINES_GITHUB_TOKEN: ${{ secrets.LINES_GITHUB_TOKEN }}
         run: node scripts/update-readme.mjs
 
       - name: Commit changes
