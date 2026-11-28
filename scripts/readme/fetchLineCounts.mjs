@@ -4,6 +4,7 @@ import { join } from "node:path";
 import { cloneRepository } from "./cloneRepository.mjs";
 import { countLinesInDirectory } from "./countLinesInDirectory.mjs";
 import { fetchJson } from "./fetchJson.mjs";
+import { openPrivateCache } from "./openPrivateCache.mjs";
 
 /**
  * Counts lines of code per language across a user's non-fork, non-archived
@@ -12,7 +13,8 @@ import { fetchJson } from "./fetchJson.mjs";
  * its last push time differs from the one in the cache, so hourly runs
  * normally clone nothing. Public repositories are cached in `cachePath`, which
  * is committed, but private ones (their names, push times and per-language
- * counts) go only in `privateCachePath`, which must never be committed.
+ * counts) go only in `privateCachePath`, an encrypted file (see
+ * `sealPrivateCache`) that must never be committed.
  * Repositories larger than `maxRepositoryKilobytes` (default 1 GB, almost always media rather than code) and those named in `excludedRepositories` (collections of other people's code) are skipped. A repository that cannot be cloned keeps its cached
  * counts (or counts as empty) instead of failing the chart.
  *
@@ -41,9 +43,8 @@ export const fetchLineCounts = async (user, token, cachePath, privateCachePath, 
     if (batch.length < 100) break;
   }
   const wanted = repos.filter((repo) => !repo.fork && !repo.archived && !excludedRepositories.includes(repo.name) && !(repo.size > maxRepositoryKilobytes));
-  const readCache = async (path) => (path ? JSON.parse(await readFile(path, "utf8").catch(() => "{}")) : {});
-  const previousPublic = await readCache(cachePath);
-  const previousPrivate = await readCache(privateCachePath);
+  const previousPublic = JSON.parse(await readFile(cachePath, "utf8").catch(() => "{}"));
+  const previousPrivate = privateCachePath ? openPrivateCache(await readFile(privateCachePath, "utf8").catch(() => ""), token) : {};
   const cache = {};
   const privateCache = {};
   for (const repo of wanted) {

@@ -5,6 +5,7 @@ import { contentHash } from "./contentHash.mjs";
 import { fetchArtistImage } from "./fetchArtistImage.mjs";
 import { fetchBlogPosts } from "./fetchBlogPosts.mjs";
 import { fetchLanguageColors } from "./fetchLanguageColors.mjs";
+import { sealPrivateCache } from "./sealPrivateCache.mjs";
 import { fetchLineCounts } from "./fetchLineCounts.mjs";
 import { fetchLanguageIcons } from "./fetchLanguageIcons.mjs";
 import { fetchRecentRepos } from "./fetchRecentRepos.mjs";
@@ -142,7 +143,7 @@ export const updateReadme = async (options) => {
       await writeSvg(options.linesSvgPath, chartSvg);
       await writeSvg(options.linesCachePath, `${JSON.stringify(cache, null, 1)}\n`);
       if (options.linesPrivateCachePath) {
-        await writeSvg(options.linesPrivateCachePath, `${JSON.stringify(privateCache, null, 1)}\n`);
+        await writeSvg(options.linesPrivateCachePath, `${sealPrivateCache(privateCache, options.linesToken)}\n`);
       }
       updated = stampAssetVersion(updated, options.linesSvgHref, chartSvg);
     } catch (error) {

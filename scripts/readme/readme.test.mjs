@@ -5,6 +5,8 @@ import { join } from "node:path";
 import { test } from "node:test";
 import { countLinesInDirectory } from "./countLinesInDirectory.mjs";
 import { fetchLineCounts } from "./fetchLineCounts.mjs";
+import { openPrivateCache } from "./openPrivateCache.mjs";
+import { sealPrivateCache } from "./sealPrivateCache.mjs";
 import { languageForFile } from "./languageForFile.mjs";
 import { escapeMarkdown } from "./escapeMarkdown.mjs";
 import { fetchArtistImage } from "./fetchArtistImage.mjs";
@@ -318,7 +320,7 @@ test("fetchLineCounts skips forks and excluded repos, includes private ones when
   try {
     const privateCachePath = join(dir, "private.json");
     await writeFile(cachePath, JSON.stringify({ same: { pushedAt: "t1", counts: { Rust: 10 } } }));
-    await writeFile(privateCachePath, JSON.stringify({ broken: { pushedAt: "old", counts: { Go: 5 } } }));
+    await writeFile(privateCachePath, sealPrivateCache({ broken: { pushedAt: "old", counts: { Go: 5 } } }, "TOKEN"));
     const result = await fetchLineCounts("u", "TOKEN", cachePath, privateCachePath, {
       fetchImplementation: recording,
       excludedRepositories: ["curated"],
@@ -363,4 +365,15 @@ test("updateReadme skips the lines-of-code chart, without touching its files, wh
   } finally {
     await rm(dir, { recursive: true });
   }
+});
+
+test("sealPrivateCache hides repository names and only opens with the same token", () => {
+  const cache = { "secret-repo": { pushedAt: "t", counts: { Rust: 1 } } };
+  const sealed = sealPrivateCache(cache, "TOKEN");
+  assert.ok(!Buffer.from(sealed, "base64").toString("latin1").includes("secret-repo"));
+  assert.notEqual(sealPrivateCache(cache, "TOKEN"), sealed);
+  assert.deepEqual(openPrivateCache(sealed, "TOKEN"), cache);
+  assert.deepEqual(openPrivateCache(sealed, "OTHER"), {});
+  assert.deepEqual(openPrivateCache(JSON.stringify(cache), "TOKEN"), {});
+  assert.deepEqual(openPrivateCache("", "TOKEN"), {});
 });
