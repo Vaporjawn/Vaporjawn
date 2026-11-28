@@ -48,12 +48,12 @@ Hi, I'm Victor, a full-stack engineer from Philadelphia. I build with <a href="h
 <tr>
 <td width="50%">
 
-<img src="./assets/github-stats.svg?v=4d08307c" alt="Victor Williams&#39;s GitHub stats: 34 stars, 15,952 contributions in the last year, 172 pull requests, 96 issues, 131 public repositories" width="100%">
+<img src="./assets/github-stats.svg?v=836d6e5b" alt="Victor Williams&#39;s GitHub stats: 34 stars, 16,029 contributions in the last year, 172 pull requests, 96 issues, 131 public repositories" width="100%">
 
 </td>
 <td width="50%">
 
-<img src="./assets/github-streak.svg?v=942ab856" alt="GitHub contribution streak: 27,750 total contributions, 466 day current streak, 858 day longest streak" width="100%">
+<img src="./assets/github-streak.svg?v=da6fffac" alt="GitHub contribution streak: 27,827 total contributions, 466 day current streak, 858 day longest streak" width="100%">
 
 </td>
 </tr>
@@ -63,18 +63,18 @@ Hi, I'm Victor, a full-stack engineer from Philadelphia. I build with <a href="h
 </div>
 
 <!-- TOP_ARTISTS:START -->
-<a href="https://www.last.fm/user/Vaporjawn/library/artists?date_preset=LAST_30_DAYS"><img src="./assets/top-artists.svg?v=665d5323" alt="Top artists over the last 30 days: Future, 207 plays; Luxury Elite, 105 plays; Men I Trust, 69 plays; Yeat, 69 plays; Drake, 68 plays; driftive dreams, 61 plays; In Love With a Ghost, 58 plays; VirtualRealityDeluxe, 48 plays" width="100%"></a>
+<a href="https://www.last.fm/user/Vaporjawn/library/artists?date_preset=LAST_30_DAYS"><img src="./assets/top-artists.svg?v=e8626576" alt="Top artists over the last 30 days: Future, 207 plays; Luxury Elite, 105 plays; Men I Trust, 104 plays; driftive dreams, 61 plays; Drake, 60 plays; In Love With a Ghost, 58 plays; Yeat, 56 plays; VirtualRealityDeluxe, 48 plays" width="100%"></a>
 
 <details>
 <summary>Artist list (from <a href="https://www.last.fm/user/Vaporjawn">Last.fm</a>)</summary>
 
 1. [**Future**](https://www.last.fm/music/Future): 207 plays
 2. [**Luxury Elite**](https://www.last.fm/music/Luxury+Elite): 105 plays
-3. [**Men I Trust**](https://www.last.fm/music/Men+I+Trust): 69 plays
-4. [**Yeat**](https://www.last.fm/music/Yeat): 69 plays
-5. [**Drake**](https://www.last.fm/music/Drake): 68 plays
-6. [**driftive dreams**](https://www.last.fm/music/driftive+dreams): 61 plays
-7. [**In Love With a Ghost**](https://www.last.fm/music/In+Love+With+a+Ghost): 58 plays
+3. [**Men I Trust**](https://www.last.fm/music/Men+I+Trust): 104 plays
+4. [**driftive dreams**](https://www.last.fm/music/driftive+dreams): 61 plays
+5. [**Drake**](https://www.last.fm/music/Drake): 60 plays
+6. [**In Love With a Ghost**](https://www.last.fm/music/In+Love+With+a+Ghost): 58 plays
+7. [**Yeat**](https://www.last.fm/music/Yeat): 56 plays
 8. [**VirtualRealityDeluxe**](https://www.last.fm/music/VirtualRealityDeluxe): 48 plays
 
 </details>
