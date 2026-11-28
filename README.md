@@ -48,12 +48,12 @@ Hi, I'm Victor, a full-stack engineer from Philadelphia. I build with <a href="h
 <tr>
 <td width="50%">
 
-<img src="./assets/github-stats.svg?v=38c4fad2" alt="Victor Williams&#39;s GitHub stats: 34 stars, 16,030 contributions in the last year, 172 pull requests, 96 issues, 131 public repositories" width="100%">
+<img src="./assets/github-stats.svg?v=302ff281" alt="Victor Williams&#39;s GitHub stats: 34 stars, 16,031 contributions in the last year, 172 pull requests, 96 issues, 131 public repositories" width="100%">
 
 </td>
 <td width="50%">
 
-<img src="./assets/github-streak.svg?v=1837ff08" alt="GitHub contribution streak: 27,828 total contributions, 466 day current streak, 858 day longest streak" width="100%">
+<img src="./assets/github-streak.svg?v=ced80b53" alt="GitHub contribution streak: 27,829 total contributions, 466 day current streak, 858 day longest streak" width="100%">
 
 </td>
 </tr>
