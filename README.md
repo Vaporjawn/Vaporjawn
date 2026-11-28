@@ -48,12 +48,12 @@ Hi, I'm Victor, a full-stack engineer from Philadelphia. I build with <a href="h
 <tr>
 <td width="50%">
 
-<img src="./assets/github-stats.svg?v=8d2912b4" alt="Victor Williams&#39;s GitHub stats: 34 stars, 15,940 contributions in the last year, 172 pull requests, 96 issues, 131 public repositories" width="100%">
+<img src="./assets/github-stats.svg?v=4d08307c" alt="Victor Williams&#39;s GitHub stats: 34 stars, 15,952 contributions in the last year, 172 pull requests, 96 issues, 131 public repositories" width="100%">
 
 </td>
 <td width="50%">
 
-<img src="./assets/github-streak.svg?v=2bf28324" alt="GitHub contribution streak: 27,738 total contributions, 465 day current streak, 858 day longest streak" width="100%">
+<img src="./assets/github-streak.svg?v=942ab856" alt="GitHub contribution streak: 27,750 total contributions, 466 day current streak, 858 day longest streak" width="100%">
 
 </td>
 </tr>
@@ -63,15 +63,15 @@ Hi, I'm Victor, a full-stack engineer from Philadelphia. I build with <a href="h
 </div>
 
 <!-- TOP_ARTISTS:START -->
-<a href="https://www.last.fm/user/Vaporjawn/library/artists?date_preset=LAST_30_DAYS"><img src="./assets/top-artists.svg?v=c7889861" alt="Top artists over the last 30 days: Future, 207 plays; Luxury Elite, 105 plays; Men I Trust, 70 plays; Yeat, 70 plays; Drake, 68 plays; driftive dreams, 61 plays; In Love With a Ghost, 58 plays; VirtualRealityDeluxe, 48 plays" width="100%"></a>
+<a href="https://www.last.fm/user/Vaporjawn/library/artists?date_preset=LAST_30_DAYS"><img src="./assets/top-artists.svg?v=665d5323" alt="Top artists over the last 30 days: Future, 207 plays; Luxury Elite, 105 plays; Men I Trust, 69 plays; Yeat, 69 plays; Drake, 68 plays; driftive dreams, 61 plays; In Love With a Ghost, 58 plays; VirtualRealityDeluxe, 48 plays" width="100%"></a>
 
 <details>
 <summary>Artist list (from <a href="https://www.last.fm/user/Vaporjawn">Last.fm</a>)</summary>
 
 1. [**Future**](https://www.last.fm/music/Future): 207 plays
 2. [**Luxury Elite**](https://www.last.fm/music/Luxury+Elite): 105 plays
-3. [**Men I Trust**](https://www.last.fm/music/Men+I+Trust): 70 plays
-4. [**Yeat**](https://www.last.fm/music/Yeat): 70 plays
+3. [**Men I Trust**](https://www.last.fm/music/Men+I+Trust): 69 plays
+4. [**Yeat**](https://www.last.fm/music/Yeat): 69 plays
 5. [**Drake**](https://www.last.fm/music/Drake): 68 plays
 6. [**driftive dreams**](https://www.last.fm/music/driftive+dreams): 61 plays
 7. [**In Love With a Ghost**](https://www.last.fm/music/In+Love+With+a+Ghost): 58 plays
@@ -131,7 +131,7 @@ Hi, I'm Victor, a full-stack engineer from Philadelphia. I build with <a href="h
 
 <div align="center">
 
-<a href="https://wakatime.com/@Vaporjawn"><img src="./assets/wakatime-languages.svg?v=c9cf99dc" alt="Languages by coding time on WakaTime, all time, excluding unclassified time" width="800"></a>
+<a href="https://wakatime.com/@Vaporjawn"><img src="./assets/wakatime-languages.svg?v=3b25d727" alt="Languages by coding time on WakaTime, all time, excluding unclassified time" width="800"></a>
 
 <img src="./assets/lines-of-code-languages.svg?v=e5a13198" alt="Languages by lines of code across public repositories, excluding docs and data files" width="800">
 
